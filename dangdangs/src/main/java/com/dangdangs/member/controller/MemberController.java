@@ -1,5 +1,8 @@
 package com.dangdangs.member.controller;
 
+import java.util.List;
+
+>>>>>>> 09b753d154d9ddd5f7f491d0dcb78f36d51c8e78
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
@@ -17,6 +20,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.dangdangs.member.service.MemberService;
 import com.dangdangs.member.vo.MemberVO;
+<<<<<<< HEAD
+=======
+import com.dangdangs.pet.vo.PetVO;
+
 
 @Controller
 public class MemberController {
@@ -55,6 +62,7 @@ public class MemberController {
 		// 로그인 되었을 때
 		if (session.getAttribute("loginVO") != null) {
 			return "member/mypage";
+
 		}
 		else {
 			model.addAttribute("msg", "로그인 후 이용가능합니다.");

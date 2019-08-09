@@ -23,4 +23,10 @@ public class BoardServiceImpl implements BoardService {
 		return boardDAO.selectResult(bno);
 	}
 
+	@Override
+	public List<BoardVO> selectBnoBySpcode(String spcode) {
+		
+		return boardDAO.selectBnoBySpcode(spcode);
+	}
+
 }

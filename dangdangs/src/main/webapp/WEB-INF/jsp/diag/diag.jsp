@@ -34,6 +34,7 @@ ul {
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
 	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 	crossorigin="anonymous"></script>
+
 <script src="${ pageContext.request.contextPath }/resources/js/checkForm.js"></script>
 <script>
 	function setAge(age){
@@ -81,17 +82,19 @@ ul {
 				$("input:checkbox[id='"+id+j+"']").prop("checked", true);
 		}
 	}
-	
+
 	function checkVal(){
 		let form = document.diagForm;
 		if (isNull(form.spcode, "종을 선택하세요.")){
 			return false;
-		} else if (isNullCheckbox(form.syname, "증상을 선택하세요.")){
+
+		}if(checklist[0]==undefined){
+			console.log(checklist[0]==undefined);
 			alert("증상을 선택하세요.");
 			return false;
-		} else {
-			return true;
 		}
+		else
+			return true;
 	}
 
 </script>
@@ -100,15 +103,17 @@ ul {
 	<form method="post" name="diagForm" onsubmit="return checkVal()">
 		<div id="section1" style="display: block">
 			<button type="button" onclick=setAge(-1)>
-				<img src="${ pageContext.request.contextPath }/resources/img/1.png">
+
+				<img src="${ pageContext.request.contextPath }/resources/images/1.png">
 			</button>
 			<br>
 			<button type="button" onclick=setAge(0)>
-				<img src="${ pageContext.request.contextPath }/resources/img/2.png">
+				<img src="${ pageContext.request.contextPath }/resources/images/2.png">
 			</button>
 			<br>
 			<button type="button" onclick=setAge(1)>
-				<img src="${ pageContext.request.contextPath }/resources/img/3.png">
+				<img src="${ pageContext.request.contextPath }/resources/images/3.png">
+
 			</button>
 			<input type="hidden" name="dage" id="check">
 		</div>

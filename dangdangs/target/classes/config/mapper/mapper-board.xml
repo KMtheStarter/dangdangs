@@ -24,4 +24,11 @@
 		select bno, dname, bsum from d_board where dname=#{dname}
 	</select>
 	
+
+	<!-- 취약종에 따른 게시글 보여주기 -->
+	<select id="selectBnoBySp" parameterType="String" resultType="boardVO">
+				
+		select bno, dname from d_board where d_board.dname in(select dname from d_weaken 
+		where spcode=#{spcode}) order by bno desc
+	</select>
 </mapper>

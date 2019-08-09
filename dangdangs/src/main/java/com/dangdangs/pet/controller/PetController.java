@@ -1,5 +1,10 @@
 package com.dangdangs.pet.controller;
 
+<<<<<<< HEAD
+=======
+import java.util.List;
+
+>>>>>>> 09b753d154d9ddd5f7f491d0dcb78f36d51c8e78
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -7,8 +12,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+<<<<<<< HEAD
 import org.springframework.web.bind.annotation.PostMapping;
 
+=======
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.dangdangs.board.service.BoardService;
+import com.dangdangs.board.vo.BoardVO;
+import com.dangdangs.member.vo.MemberVO;
+>>>>>>> 09b753d154d9ddd5f7f491d0dcb78f36d51c8e78
 import com.dangdangs.pet.service.PetService;
 import com.dangdangs.pet.vo.PetVO;
 
@@ -17,6 +33,8 @@ public class PetController {
 
 	@Autowired
 	private PetService service;
+
+	
 	
 	@GetMapping("/pet")
 	public String petForm(HttpServletRequest req, Model model) {
@@ -36,4 +54,14 @@ public class PetController {
 		service.insertPet(petVO);
 		return "member/mypage";
 	}
+
+	@RequestMapping("mypage/{mid}")
+	public String myPet(@PathVariable("mid") String mid, Model model) {
+		
+		System.out.println(mid);
+		List<PetVO> list = service.selectPet(mid);
+		model.addAttribute("petList", list);
+		return "member/mypet";
+	}
+
 }

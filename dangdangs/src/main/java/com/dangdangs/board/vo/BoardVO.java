@@ -3,7 +3,9 @@ package com.dangdangs.board.vo;
 public class BoardVO {
 
 	private int bno;
+
 	private String dname, bsum, bcause, btreat, bcare, bdate;
+
 	public int getBno() {
 		return bno;
 	}
@@ -52,4 +54,5 @@ public class BoardVO {
 				+ btreat + ", bcare=" + bcare + ", bdate=" + bdate + "]";
 	}
 	
+
 }

@@ -5,7 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
 <script src="${ pageContext.request.contextPath }/resources/js/naverLogin-2.0.0.js" charset="utf-8"></script>
+
 <script src="${ pageContext.request.contextPath }/resources/js/checkForm.js"></script>
 <script>
 if("${ param.msg }") alert("${ param.msg }");
@@ -22,6 +24,7 @@ function checkVal(){
 	<h2>로그인화면</h2>
 	<hr>
 	<div align="center">
+
 		<div style="width: 40%">
 			<form method="post" name="loginForm" onsubmit="return checkVal()">
 				<table>
@@ -52,6 +55,7 @@ function checkVal(){
 				naverLogin.init();
 			</script>
 		</div>
+
 	</div>
 </body>
 </html>
