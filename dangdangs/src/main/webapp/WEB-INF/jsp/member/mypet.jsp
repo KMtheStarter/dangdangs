@@ -19,7 +19,7 @@
 				</tr>
 				<c:forEach items="${ petList }" var="pet">
 				<tr>
-					<td><a href="${ pageContext.request.contextPath }/mypage/mypet/${ pet.spcode }">${ pet.pname } 관련 정보 보러가기</a></td>
+					<td><a href="${ pageContext.request.contextPath }/board/spcode/${ pet.spcode }">${ pet.pname } 관련 정보 보러가기</a></td>
 					
 					<td>${ pet.spname }</td>
 					

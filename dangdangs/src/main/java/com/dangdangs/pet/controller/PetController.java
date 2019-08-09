@@ -47,7 +47,7 @@ public class PetController {
 		return "member/mypage";
 	}
 
-	@RequestMapping("mypage/{mid}")
+	@RequestMapping("/mypage/{mid}")
 	public String myPet(@PathVariable("mid") String mid, Model model) {
 		
 		System.out.println(mid);
