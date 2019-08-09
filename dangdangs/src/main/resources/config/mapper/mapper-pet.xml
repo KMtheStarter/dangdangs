@@ -12,10 +12,11 @@
 	<select id="selectSpnameBySpcode" parameterType="String" resultType="String">
 		select spname from d_species where spcode=#{spcode}
 	</select>
+
 	<!-- 내 댕댕이 정보 가져오기 -->
 	<select id="selectDpetByMid" parameterType="String" resultType="petVO">
 		select p.pname, p.spcode, s.spname from d_pet p, d_species s 
 		where p.spcode=s.spcode and p.mid=#{mid}
 	</select>
-		 
+
 </mapper>

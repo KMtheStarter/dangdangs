@@ -90,6 +90,7 @@ public class BoardTest {
 		System.out.println(orderedList);
 	}
 	
+
 	@Ignore
 	@Test
 	public void 결과테스트() {
@@ -110,6 +111,7 @@ public class BoardTest {
 			System.out.println("없음");
 		}
 	}
+
 	@Ignore
 	@Test
 	public void 매퍼테스트2() throws Exception{
@@ -127,4 +129,5 @@ public class BoardTest {
 	public void ServiceTest() throws Exception{
 		System.out.println(service.selectBnoBySpcode("mpoo"));
 	}
+
 }

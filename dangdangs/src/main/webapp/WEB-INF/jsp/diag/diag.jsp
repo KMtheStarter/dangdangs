@@ -87,6 +87,7 @@ ul {
 		let form = document.diagForm;
 		if (isNull(form.spcode, "종을 선택하세요.")){
 			return false;
+
 		}if(checklist[0]==undefined){
 			console.log(checklist[0]==undefined);
 			alert("증상을 선택하세요.");
@@ -102,6 +103,7 @@ ul {
 	<form method="post" name="diagForm" onsubmit="return checkVal()">
 		<div id="section1" style="display: block">
 			<button type="button" onclick=setAge(-1)>
+
 				<img src="${ pageContext.request.contextPath }/resources/images/1.png">
 			</button>
 			<br>
@@ -111,6 +113,7 @@ ul {
 			<br>
 			<button type="button" onclick=setAge(1)>
 				<img src="${ pageContext.request.contextPath }/resources/images/3.png">
+
 			</button>
 			<input type="hidden" name="dage" id="check">
 		</div>
