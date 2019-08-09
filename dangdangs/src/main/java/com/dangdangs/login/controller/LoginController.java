@@ -43,10 +43,4 @@ public class LoginController {
 		status.setComplete();
 		return "redirect:/";
 	}
-	
-	
-	@GetMapping("/login/naver")
-	public String naverLogin() {
-		return "member/naverLogin";
-	}
 }

@@ -31,8 +31,6 @@
 	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 	crossorigin="anonymous"></script>
 
-
-
 <script src="${ pageContext.request.contextPath }/resources/js/checkForm.js"></script>
 <script>
 	function checkVal(){
@@ -47,7 +45,6 @@
 			return true;
 	}
 </script>
-
 </head>
 <body>
 	<div align="center">
@@ -57,9 +54,8 @@
 		<hr>
 		<h3>로그인중인 아이디: ${ loginVO.mid }</h3>
 		<br>
-
+		
 		<form method="post" name="addPetForm" onsubmit="return checkVal()" >
-
 			
 		<!-- d_pet 테이블  pno(번호) mid(member id) spcode(dog code) pname(dog name)-->
 			

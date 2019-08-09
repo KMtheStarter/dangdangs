@@ -19,7 +19,7 @@ public class PetTest {
 	@Autowired
 	private PetDAO dao;
 
-
+	@Ignore
 	@Test
 	public void mapperTest() throws Exception{
 		

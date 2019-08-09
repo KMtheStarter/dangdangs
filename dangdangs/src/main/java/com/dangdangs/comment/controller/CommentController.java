@@ -5,10 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
-<<<<<<< HEAD
-=======
 import org.springframework.web.bind.annotation.RequestMapping;
->>>>>>> 09b753d154d9ddd5f7f491d0dcb78f36d51c8e78
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.dangdangs.comment.service.CommentService;
@@ -31,5 +28,5 @@ public class CommentController {
 	public int comment(@PathVariable("no") int no) {
 		return commentService.updateCtypeByCnoComment(no);
 	}
-
+	
 }

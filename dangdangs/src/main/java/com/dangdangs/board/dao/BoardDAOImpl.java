@@ -28,7 +28,6 @@ public class BoardDAOImpl implements BoardDAO {
 		return ss.selectOne("board.dao.BoardDAO.selectBnoByDname", dname);
 	}
 
-
 	@Override
 	public List<BoardVO> selectBnoBySpcode(String spcode) {
 		return ss.selectList("board.dao.BoardDAO.selectBnoBySp", spcode);

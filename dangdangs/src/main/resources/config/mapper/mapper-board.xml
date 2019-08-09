@@ -24,7 +24,6 @@
 		select bno, dname, bsum from d_board where dname=#{dname}
 	</select>
 	
-
 	<!-- 취약종에 따른 게시글 보여주기 -->
 	<select id="selectBnoBySp" parameterType="String" resultType="boardVO">
 				

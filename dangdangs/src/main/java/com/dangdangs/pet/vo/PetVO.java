@@ -3,7 +3,6 @@ package com.dangdangs.pet.vo;
 public class PetVO {
 
 	private int pno;
-
 	private String mid, spcode, pname, spname;
 	
 	public String getSpname() {
@@ -12,7 +11,6 @@ public class PetVO {
 	public void setSpname(String spname) {
 		this.spname = spname;
 	}
-
 	public int getPno() {
 		return pno;
 	}
@@ -39,10 +37,9 @@ public class PetVO {
 	}
 	@Override
 	public String toString() {
-
 		return "PetVO [pno=" + pno + ", mid=" + mid + ", spcode=" + spcode + ", pname=" + pname + ", spname=" + spname
 				+ "]";
 	}
 	
-
+	
 }
