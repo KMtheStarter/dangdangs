@@ -3,7 +3,7 @@ package com.dangdangs.board.vo;
 public class BoardVO {
 
 	private int bno;
-	private String dname, bsum, bcause, btreat, bcare, bdate, spcode;
+	private String dname, bsum, bcause, btreat, bcare, bdate;
 	
 	public int getBno() {
 		return bno;
@@ -47,17 +47,12 @@ public class BoardVO {
 	public void setBdate(String bdate) {
 		this.bdate = bdate;
 	}
-	public String getSpcode() {
-		return spcode;
-	}
-	public void setSpcode(String spcode) {
-		this.spcode = spcode;
-	}
 	@Override
 	public String toString() {
 		return "BoardVO [bno=" + bno + ", dname=" + dname + ", bsum=" + bsum + ", bcause=" + bcause + ", btreat="
-				+ btreat + ", bcare=" + bcare + ", bdate=" + bdate + ", spcode=" + spcode + "]";
+				+ btreat + ", bcare=" + bcare + ", bdate=" + bdate + "]";
 	}
+	
 	
 	
 }

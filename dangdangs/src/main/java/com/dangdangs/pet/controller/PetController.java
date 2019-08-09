@@ -25,8 +25,6 @@ public class PetController {
 
 	@Autowired
 	private PetService service;
-	@Autowired
-	private BoardService boardService;
 	
 	
 	
@@ -58,11 +56,5 @@ public class PetController {
 		return "member/mypet";
 	}
 	
-	@RequestMapping("mypage/mypet/{spcode}")
-	public String myPetBoard(@PathVariable("spcode") String spcode, Model model) {
-		
-		List<BoardVO> list = boardService.selectBnoBySpcode(spcode);
-		model.addAttribute("boardListBySp", list);
-		return "board/listbysp";
-	}
+
 }

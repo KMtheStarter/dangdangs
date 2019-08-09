@@ -40,4 +40,10 @@ public class BoardController {
 		return "board/detail";
 	}
 
+	@RequestMapping("board/spcode/{spcode}")
+	public String myPetBoard(@PathVariable("spcode") String spcode, Model model) {
+		List<BoardVO> list = boardService.selectBnoBySpcode(spcode);
+		model.addAttribute("boardListBySp", list);
+		return "board/listbysp";
+	}
 }
