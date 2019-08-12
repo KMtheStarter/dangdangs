@@ -34,9 +34,12 @@ public class BoardController {
 	public String detail(@PathVariable("no") int no, Model model) {
 		BoardVO vo = boardService.selectResultBoard(no);
 		List<CommentVO> list = commentService.selectByBnoComment(no);
-		System.out.println(list);
+		List<String> listSyname = boardService.selectSynameByBno(no);
+		//System.out.println(list);
+		System.out.println(listSyname);
 		model.addAttribute("vo", vo);
 		model.addAttribute("commentList", list);
+		model.addAttribute("syname", listSyname);
 		return "board/detail";
 	}
 

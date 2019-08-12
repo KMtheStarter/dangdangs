@@ -14,5 +14,6 @@
 	<select id="selectDnameByAge" resultType="String" parameterType="int">
 		select dname from d_disease where dage=#{dage}
 	</select>
+
 	
 </mapper>

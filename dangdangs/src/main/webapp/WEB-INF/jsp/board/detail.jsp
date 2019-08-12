@@ -47,14 +47,23 @@ table.list tr:nth-child(odd) {
 </script>
 </head>
 <body>
-   <h2>상세보기</h2>
-   <hr>
+	<br>
+   <h2 style="margin-left: 100px; margin-right: 100px;">상세보기</h2>
+   <hr style="margin-left: 100px; margin-right: 100px;">
    <div align="center">
       <table style="width: 80%;">
          <tr>
             <th style="width: 7%">${ vo.bno }</th>
             <th style="width: 80%">${ vo.dname }</th>
             <td>${ vo.bdate }</td>
+         </tr>
+         <tr>
+         	<th style="width: 7%">증상</th>
+	         	<td colspan="2">
+		         	<c:forEach items="${ syname }" var="syname">
+		         		<li style="list-style-type: circle;">${ syname }
+		         	</c:forEach>
+	         	</td>
          </tr>
          <tr>
             <th style="width: 7%">요약</th>
@@ -108,7 +117,7 @@ table.list tr:nth-child(odd) {
 	    </form>
 	    </c:when>
 	    <c:otherwise>
-	    	<div style="width:80%">로그인 후 댓글을 달 수 있습니다.</div>
+	    	<div style="width:80%; margin-bottom: 10px;">로그인 후 댓글을 달 수 있습니다.</div>
 	    </c:otherwise>
 	    </c:choose>
    </div>

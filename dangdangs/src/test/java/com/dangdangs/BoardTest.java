@@ -119,12 +119,20 @@ public class BoardTest {
 	@Ignore
 	@Test
 	public void DaoTest() throws Exception{
-		System.out.println(dao.selectBnoBySpcode("mpoo"));
+		System.out.println(dao.selectSynameByBno(1));
 	}
 	
 	@Ignore
 	@Test
 	public void ServiceTest() throws Exception{
 		System.out.println(service.selectBnoBySpcode("mpoo"));
+	}
+	
+	@Ignore
+	@Test
+	public void mapperTest() throws Exception{
+		
+		System.out.println(ss.selectList("board.dao.BoardDAO.selectSyNameByBno", 2));
+
 	}
 }

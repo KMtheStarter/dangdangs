@@ -63,21 +63,22 @@ body > div > span:hover{
 </script>
 </head>
 <body>
-	<h2>결과 페이지</h2>
-	<hr>
-	<div align="center">
-		<h2>가장 유력한 질병은 ${ dnameList[0] } 입니다.</h2>
-		<c:forEach items="${ voList }" var="vo" varStatus="status">
-			<span class="dname"><strong onclick="viewSummary('${ status.index }')">${ vo.dname }</strong></span>
-		</c:forEach>
-		<hr>
-		<c:forEach items="${ voList }" var="vo">
-			<div class="bsum">
-				<span>${fn:replace(vo.bsum, replaceChar, "<br/>") }</span>
-				<br><br><br>
-				<a href="${ pageContext.request.contextPath }/board/${ vo.bno }">자세히 보기</a>
-			</div>
-		</c:forEach>
-	</div>
+		<h2 style="margin-left: 100px; margin-right: 100px;">결과 페이지</h2>
+		<hr style="margin-left: 100px; margin-right: 100px;">
+		<div align="center" style="margin-left: 100px; margin-right: 100px;">
+			<h2>가장 유력한 질병은 ${ dnameList[0] } 입니다.</h2>
+			<c:forEach items="${ voList }" var="vo" varStatus="status">
+				<span class="dname"><strong onclick="viewSummary('${ status.index }')">${ vo.dname }</strong></span>
+			</c:forEach>
+			<hr>
+			<c:forEach items="${ voList }" var="vo">
+				<div class="bsum" style="border: 1px solid; border-color: #77C7D9; border-bottom-right-radius: 2em; background-color: ">
+					<span>${fn:replace(vo.bsum, replaceChar, "<br/>") }</span>
+					<br><br><br>
+					<a href="${ pageContext.request.contextPath }/board/${ vo.bno }">자세히 보기</a>
+				</div>
+			</c:forEach>
+		</div>
+
 </body>
 </html>

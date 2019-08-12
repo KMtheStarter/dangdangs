@@ -8,6 +8,8 @@
 <style>
 table {
 	width: 85%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 th {
@@ -20,6 +22,22 @@ ul {
 	text-align: left;
 	vertical-align: top;
 }
+
+.ageBtn{
+	background-color: transparent !important;
+	width: 200px;
+	height: 200px;
+	border-color: transparent;
+}
+
+.ageText{
+	 font-size:15px;
+	 line-height:16.5px;
+	 font-weight:bold;
+	 color:#191970;
+}
+
+
 </style>
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -100,28 +118,31 @@ ul {
 </head>
 <body>
 	<form method="post" name="diagForm" onsubmit="return checkVal()">
-		<div id="section1" style="display: block">
-			<button type="button" onclick=setAge(-1)>
-				<img src="${ pageContext.request.contextPath }/resources/images/1.png">
+		<div id="section1" style="display: block; text-align: center;">
+			<button class="ageBtn" type="button" style="margin-top: 100px;" onclick=setAge(-1)>
+				<img src="${ pageContext.request.contextPath }/resources/images/4.png">
 			</button>
+			<p>0~1세의 어린 강아지</p>
 			<br>
-			<button type="button" onclick=setAge(0)>
-				<img src="${ pageContext.request.contextPath }/resources/images/2.png">
+			<button class="ageBtn" type="button" onclick=setAge(0)>
+				<img src="${ pageContext.request.contextPath }/resources/images/5.png">
 			</button>
+			<p>1~7세의 성견 강아지</p>
 			<br>
-			<button type="button" onclick=setAge(1)>
-				<img src="${ pageContext.request.contextPath }/resources/images/3.png">
+			<button class="ageBtn" type="button" onclick=setAge(1)>
+				<img src="${ pageContext.request.contextPath }/resources/images/6.png">
 			</button>
+			<p>7세 이상의 노견 강아지</p>
 			<input type="hidden" name="dage" id="check">
 		</div>
-		<div id="section2" style="display: none">
+		<div id="section2" style="display: none; margin-left: 100px; margin-right: 100px; margin-top: 10px; text-align: center;">
 			<div class="accordion" id="accordionExample">
 				<div class="card">
-					<div class="card-header" id="headingOne">
+					<div class="card-header" id="headingOne" style="background-color: #FFFFFF">
 						<h2 class="mb-0">
 							<button class="btn btn-link" type="button" data-toggle="collapse"
 								data-target="#collapseOne" aria-expanded="true"
-								aria-controls="collapseOne">종을 입력하세요!</button>
+								aria-controls="collapseOne" style="color: #808080;;">종을 입력하세요!</button>
 						</h2>
 					</div>
 					<div id="collapseOne" class="collapse show"
@@ -224,12 +245,13 @@ ul {
 					</div>
 				</div>
 				<div class="card">
-					<div class="card-header" id="headingTwo">
+					<div class="card-header" id="headingTwo" style="background-color: #FFFFFF">
 						<h2 class="mb-0">
 							<button class="btn btn-link collapsed" type="button"
 								data-toggle="collapse" data-target="#collapseTwo"
-								aria-expanded="false" aria-controls="collapseTwo">증상을
-								체크해주세요!</button>
+								aria-expanded="false" aria-controls="collapseTwo"
+								style="color:#808080;">
+								증상을 체크해주세요! 증상을 체크할때는 평소에 비교하여 증가 혹은 감소 여부를 판단해주세요!</button>
 						</h2>
 					</div>
 					<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
@@ -237,13 +259,13 @@ ul {
 						<br>
 						<h2>부위별</h2>
 						<br>
-						<table>
+						<table style="margin-left: auto; margin-right: auto;">
 							<tr>
 								<th>
 									<div class="card-body">
 										<!-- Button trigger modal -->
-										<button type="button" class="btn btn-primary"
-											data-toggle="modal" data-target="#mouth">입</button>
+										<button type="button" class="btn btn-primary sym"
+											data-toggle="modal" data-target="#mouth" style="background-color: #FFB3B3; border-color: #FFB3B3;">입</button>
 
 										<!-- Modal -->
 										<div class="modal fade" id="mouth" tabindex="-1" role="dialog"
@@ -290,7 +312,7 @@ ul {
 									<div class="card-body">
 										<!-- Button trigger modal -->
 										<button type="button" class="btn btn-primary"
-											data-toggle="modal" data-target="#ear">귀</button>
+											data-toggle="modal" data-target="#ear" style="background-color: #FFB3B3; border-color: #FFB3B3;">귀</button>
 
 										<!-- Modal -->
 										<div class="modal fade" id="ear" tabindex="-1" role="dialog"
@@ -327,7 +349,7 @@ ul {
 									<div class="card-body">
 										<!-- Button trigger modal -->
 										<button type="button" class="btn btn-primary"
-											data-toggle="modal" data-target="#skin">피부</button>
+											data-toggle="modal" data-target="#skin" style="background-color: #FFB3B3; border-color: #FFB3B3;">피부</button>
 
 										<!-- Modal -->
 										<div class="modal fade" id="skin" tabindex="-1" role="dialog"
@@ -369,7 +391,7 @@ ul {
 									<div class="card-body">
 										<!-- Button trigger modal -->
 										<button type="button" class="btn btn-primary"
-											data-toggle="modal" data-target="#eye">눈</button>
+											data-toggle="modal" data-target="#eye" style="background-color: #FFB3B3; border-color: #FFB3B3;">눈</button>
 
 										<!-- Modal -->
 										<div class="modal fade" id="eye" tabindex="-1" role="dialog"
@@ -411,7 +433,7 @@ ul {
 									<div class="card-body">
 										<!-- Button trigger modal -->
 										<button type="button" class="btn btn-primary"
-											data-toggle="modal" data-target="#nose">코</button>
+											data-toggle="modal" data-target="#nose" style="background-color: #FFB3B3; border-color: #FFB3B3;">코</button>
 
 										<!-- Modal -->
 										<div class="modal fade" id="nose" tabindex="-1" role="dialog"
@@ -447,7 +469,7 @@ ul {
 									<div class="card-body">
 										<!-- Button trigger modal -->
 										<button type="button" class="btn btn-primary"
-											data-toggle="modal" data-target="#hair">털</button>
+											data-toggle="modal" data-target="#hair" style="background-color: #FFB3B3; border-color: #FFB3B3;">털</button>
 
 										<!-- Modal -->
 										<div class="modal fade" id="hair" tabindex="-1" role="dialog"
@@ -489,7 +511,7 @@ ul {
 									<div class="card-body">
 										<!-- Button trigger modal -->
 										<button type="button" class="btn btn-primary"
-											data-toggle="modal" data-target="#foot">발톱</button>
+											data-toggle="modal" data-target="#foot" style="background-color: #FFB3B3; border-color: #FFB3B3;">발톱</button>
 
 										<!-- Modal -->
 										<div class="modal fade" id="foot" tabindex="-1" role="dialog"
@@ -532,7 +554,7 @@ ul {
 									<div class="card-body">
 										<!-- Button trigger modal -->
 										<button type="button" class="btn btn-primary"
-											data-toggle="modal" data-target="#pee">소변</button>
+											data-toggle="modal" data-target="#pee" style="background-color: #FFB3B3; border-color: #FFB3B3;">소변</button>
 
 										<!-- Modal -->
 										<div class="modal fade" id="pee" tabindex="-1" role="dialog"
@@ -576,7 +598,7 @@ ul {
 									<div class="card-body">
 										<!-- Button trigger modal -->
 										<button type="button" class="btn btn-primary"
-											data-toggle="modal" data-target="#poo">대변</button>
+											data-toggle="modal" data-target="#poo" style="background-color: #FFB3B3; border-color: #FFB3B3;">대변</button>
 
 										<!-- Modal -->
 										<div class="modal fade" id="poo" tabindex="-1" role="dialog"
@@ -621,7 +643,7 @@ ul {
 						<h2>생활</h2>
 						<br>
 						<table style="font-size: 20px;">
-							<tr>
+							<tr style="color: #332621; font-size: 25px;">
 								<th>수면</th>
 								<th>음수량</th>
 								<th>호흡</th>
@@ -629,16 +651,16 @@ ul {
 								<th>무기력</th>
 								<th>식욕</th>
 								<th>걸음</th>
-								<th>무릎에서 소리가 남</th>
+								<th>무릎</th>
 							</tr>
 							<tr>
-								<th><input type="checkbox" name="syname" value="수면증가">증가
+								<th><input type="checkbox" name="syname" value="수면증가">증가 
 									<input type="checkbox" name="syname" value="수면감소">감소</th>
-								<th><input type="checkbox" name="syname" value="음수량증가">증가
+								<th><input type="checkbox" name="syname" value="음수량증가">증가 
 									<input type="checkbox" name="syname" value="음수량감소">감소</th>
-								<th><input type="checkbox" name="syname" value="과호흡">과호흡
+								<th><input type="checkbox" name="syname" value="과호흡">과호흡 
 									<input type="checkbox" name="syname" value="호흡곤란">호흡곤란</th>
-								<th><input type="checkbox" name="syname" value="공격성증가">증가
+								<th><input type="checkbox" name="syname" value="공격성증가">증가 
 								</th>
 								<th><input type="checkbox" name="syname" value="무기력">무기력</th>
 								<th><input type="checkbox" name="syname" value="식욕감소">감소</th>
@@ -669,8 +691,10 @@ ul {
 						</table>
 					</div>
 				</div>
+				
 			</div>
-			<button type="submit" class="btn btn-primary">제출</button>
+			<br>
+			<button type="submit" class="btn btn-primary" style="margin-bottom: 10px; background-color: #805959; border-color: #805959;">제출</button>
 		</div>
 	</form>
 </body>

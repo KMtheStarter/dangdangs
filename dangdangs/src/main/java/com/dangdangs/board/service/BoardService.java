@@ -9,4 +9,5 @@ public interface BoardService {
 	public List<BoardVO> selectAllBoard();
 	public BoardVO selectResultBoard(int bno);
 	public List<BoardVO> selectBnoBySpcode(String spcode);
+	public List<String> selectSynameByBno(int bno);
 }

@@ -55,6 +55,7 @@ public class MemberController {
 	@RequestMapping("/mypage")
 	public String mypage(HttpServletRequest req, Model model) {
 		HttpSession session = req.getSession();
+		
 		// 로그인 되었을 때
 		if (session.getAttribute("loginVO") != null) {
 			return "member/mypage";

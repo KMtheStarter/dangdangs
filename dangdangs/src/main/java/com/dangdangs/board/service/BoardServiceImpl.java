@@ -29,4 +29,10 @@ public class BoardServiceImpl implements BoardService {
 		return boardDAO.selectBnoBySpcode(spcode);
 	}
 
+	@Override
+	public List<String> selectSynameByBno(int bno) {
+		return boardDAO.selectSynameByBno(bno);
+	}
+
+	
 }

@@ -33,4 +33,10 @@ public class BoardDAOImpl implements BoardDAO {
 		return ss.selectList("board.dao.BoardDAO.selectBnoBySp", spcode);
 	}
 
+	@Override
+	public List<String> selectSynameByBno(int bno) {
+		return ss.selectList("board.dao.BoardDAO.selectSyNameByBno", bno);
+	}
+
+	
 }
