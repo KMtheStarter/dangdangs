@@ -105,9 +105,8 @@ ul {
 		let form = document.diagForm;
 		if (isNull(form.spcode, "종을 선택하세요.")){
 			return false;
-		}if(checklist[0]==undefined){
-			console.log(checklist[0]==undefined);
-			alert("증상을 선택하세요.");
+		}if(!$("input:checkbox[name='syname']").is(":checked")){
+			alert("증상을 입력하세요.");
 			return false;
 		}
 		else
