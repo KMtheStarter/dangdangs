@@ -47,14 +47,4 @@ public class PetController {
 		return "member/mypage";
 	}
 
-	@RequestMapping("/mypage/{mid}")
-	public String myPet(@PathVariable("mid") String mid, Model model) {
-		
-		System.out.println(mid);
-		List<PetVO> list = service.selectPet(mid);
-		model.addAttribute("petList", list);
-		return "member/mypet";
-	}
-	
-
 }
