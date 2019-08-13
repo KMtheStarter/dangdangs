@@ -24,12 +24,13 @@
   <li class="nav-item">
     <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">나의 댕댕이</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
-  </li>
 </ul>
 <div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">내 정보</div>
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+  	${ loginVO.mnick } 님 안녕하세요 <br>
+  	아이디 : ${ loginVO.mid }<br>
+  	<a href="${ pageContext.request.contextPath }/mypage/checkPwd">회원정보 수정하기</a>
+  </div>
   <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 	<h2>내 댕댕이</h2>
 		<hr>
@@ -51,7 +52,6 @@
 			<a href="${ pageContext.request.contextPath }/pet">댕댕이 등록하기</a>
 		</div>
 	</div>
-  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
 </div>
 	
 </body>

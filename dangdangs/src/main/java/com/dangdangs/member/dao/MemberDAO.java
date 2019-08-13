@@ -8,4 +8,5 @@ public interface MemberDAO {
 	public MemberVO checkId(String id);
 	public MemberVO checkNick(String nick);
 	public MemberVO login(MemberVO memberVO);
+	public void updateMember(MemberVO memberVO);
 }

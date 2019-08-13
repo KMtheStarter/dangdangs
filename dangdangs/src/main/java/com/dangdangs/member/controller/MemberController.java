@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.dangdangs.member.service.MemberService;
@@ -22,6 +24,7 @@ import com.dangdangs.member.vo.MemberVO;
 import com.dangdangs.pet.service.PetService;
 import com.dangdangs.pet.vo.PetVO;
 
+@SessionAttributes({"loginVO"})
 @Controller
 public class MemberController {
 
@@ -69,8 +72,42 @@ public class MemberController {
 			
 		}
 		else {
-			model.addAttribute("msg", "로그인 후 이용가능합니다.");
+			model.addAttribute("msg", "로그인 해주세요.");
 			return "fail";
 		}
 	}
+	
+	// 내 정보 수정
+	@GetMapping("/mypage/checkPwd")
+	public String checkPasswordForm() {
+		
+		return "member/checkPassword";
+	}
+	
+	@PostMapping("/mypage/check")
+	public String checkPassword(MemberVO memberVO, Model model) {
+		MemberVO member = service.loginMember(memberVO);
+		System.out.println("work");
+		if (member == null) {
+			//실패
+			model.addAttribute("msg", "패스워드가 잘못되었습니다.");
+			return "redirect:/mypage/checkPwd";
+		} else {
+			//성공
+			return "member/modifyMyInf";
+		}
+	}
+	
+	
+	@PostMapping("/mypage/modifyMyInf")
+	public String modifyMyInf(@Valid MemberVO memberVO, HttpServletRequest req, Model model) {
+			service.updateMember(memberVO);
+			HttpSession session = req.getSession();
+			MemberVO vo = ((MemberVO) session.getAttribute("loginVO"));
+			vo.setMnick(memberVO.getMnick());
+			vo.setMpassword(memberVO.getMpassword());
+			return "redirect:/";
+	}
+	
+	
 }

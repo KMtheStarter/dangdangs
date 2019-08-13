@@ -28,4 +28,10 @@ public class MemberServiceImpl implements MemberService {
 		return memberDAO.login(memberVO);
 	}
 
+	@Override
+	public void updateMember(MemberVO memberVO) {
+		memberDAO.updateMember(memberVO);
+	}
+
+	
 }
