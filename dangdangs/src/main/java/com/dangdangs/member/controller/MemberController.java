@@ -19,6 +19,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.dangdangs.member.service.MemberService;
 import com.dangdangs.member.vo.MemberVO;
+import com.dangdangs.pet.service.PetService;
 import com.dangdangs.pet.vo.PetVO;
 
 @Controller
@@ -26,6 +27,7 @@ public class MemberController {
 
 	@Autowired
 	private MemberService service;
+	@Autowired PetService petService;
 	
 	@GetMapping("/signup")
 	public ModelAndView signupForm() {
@@ -56,8 +58,13 @@ public class MemberController {
 	public String mypage(HttpServletRequest req, Model model) {
 		HttpSession session = req.getSession();
 		
-		// 로그인 되었을 때
+		// 로그인 되었을 때 mypet 정보도 함께 보내준다.
 		if (session.getAttribute("loginVO") != null) {
+			MemberVO membervo = (MemberVO) session.getAttribute("loginVO");
+			System.out.println(session.getAttribute("loginVO"));
+			System.out.println(membervo.getMid());
+			List<PetVO> list = petService.selectPet(membervo.getMid());
+			model.addAttribute("petList", list);
 			return "member/mypage";
 			
 		}

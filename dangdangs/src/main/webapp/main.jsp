@@ -6,7 +6,6 @@
 <meta charset="UTF-8">
 <title>DANGDANG'S</title>
 
- <head>
 
       <!-- Required meta tags -->
         <meta charset="utf-8">
