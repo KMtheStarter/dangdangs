@@ -26,5 +26,5 @@
 	<update id="updateMember" parameterType="memberVO">
 		update d_member set mnick=#{mnick}, mpassword=#{mpassword} where mid=#{mid}
 	</update>
-	
+
 </mapper>
