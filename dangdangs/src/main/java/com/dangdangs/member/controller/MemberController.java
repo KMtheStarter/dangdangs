@@ -61,12 +61,9 @@ public class MemberController {
 		// 로그인 되었을 때 mypet 정보도 함께 보내준다.
 		if (session.getAttribute("loginVO") != null) {
 			MemberVO membervo = (MemberVO) session.getAttribute("loginVO");
-			System.out.println(session.getAttribute("loginVO"));
-			System.out.println(membervo.getMid());
 			List<PetVO> list = petService.selectPet(membervo.getMid());
 			model.addAttribute("petList", list);
 			return "member/mypage";
-			
 		}
 		else {
 			model.addAttribute("msg", "로그인 후 이용가능합니다.");

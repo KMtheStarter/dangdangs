@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -24,7 +23,8 @@ public class BoardController {
 	private CommentService commentService;
 	
 	@RequestMapping("/board")
-	public String board(Model model) {
+	public String board(@RequestParam("query") String query, Model model) {
+		System.out.println(query);
 		List<BoardVO> list = boardService.selectAllBoard();
 		model.addAttribute("boardList", list);
 		return "board/board";

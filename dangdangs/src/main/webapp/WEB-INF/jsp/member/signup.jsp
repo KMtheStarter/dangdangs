@@ -23,35 +23,39 @@
       if (idx == 0) tagId = "#id";
       else tagId = "#nick";
       let val = $(tagId).val();
-      $.ajax({
-         url: "${ pageContext.request.contextPath }/signup/valid",
-         data: {
-            index: idx,
-            query: val
-         },
-         type: "post",
-         success: function(data){
-            if (data == ""){
-               if (idx == 0){
-                  $("#idchk").text(val + "은 사용 가능한 아이디입니다.");
-                  isChecked.id = 1;
-               } else{
-                  $("#nickchk").text(val + "은 사용 가능한 닉네임입니다.");
-                  isChecked.nickname = 1;
-               }
-            } else {
-               if (idx == 0) {
-                  $("#idchk").text(val + "은 사용 불가능한 아이디입니다." );
-                  isChecked.id = 0;
-               } else{
-                  $("#nickchk").text(val + "은 사용 불가능한 닉네임입니다." );
-                  isChecked.nickname = 0;
-               }
-            }
-            if (isChecked.id == 1 && isChecked.nickname == 1) $("#submit").attr("disabled", false)
-            else $("#submit").attr("disabled", true)
-         }
-      });
+      if (val != ""){
+    	  $.ajax({
+    	         url: "${ pageContext.request.contextPath }/signup/valid",
+    	         data: {
+    	            index: idx,
+    	            query: val
+    	         	},
+    	         type: "post",
+    	         success: function(data){
+    	            if (data == ""){
+    	               if (idx == 0){
+    	                  $("#idchk").text(val + "은 사용 가능한 아이디입니다.");
+    	                  isChecked.id = 1;
+    	               } else{
+    	                  $("#nickchk").text(val + "은 사용 가능한 닉네임입니다.");
+    	                  isChecked.nickname = 1;
+    	               }
+    	            } else {
+    	               if (idx == 0) {
+    	                  $("#idchk").text(val + "은 사용 불가능한 아이디입니다." );
+    	                  isChecked.id = 0;
+    	               } else{
+    	                  $("#nickchk").text(val + "은 사용 불가능한 닉네임입니다." );
+    	                  isChecked.nickname = 0;
+    	               }
+    	            }
+    	            if (isChecked.id == 1 && isChecked.nickname == 1) $("#submit").attr("disabled", false)
+    	            else $("#submit").attr("disabled", true)
+    	         }
+   	      });
+      } else {
+    	  alert("값을 입력하세요.");
+      }
    }
 </script>
 </head>

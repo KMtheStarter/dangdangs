@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!doctype html>
 <html lang="ko">
@@ -35,18 +36,27 @@
                      <li class="nav-item"  >
                          <a class="nav-link" href="${ pageContext.request.contextPath }/board"  >BOARD</a>
                      </li>
+                     <c:if test="${ empty loginVO }">
                      <li class="nav-item">
                          <a class="nav-link" href="${ pageContext.request.contextPath }/login">SIGN IN</a>
                      </li>
                      <li class="nav-item">
                          <a class="nav-link" href="${ pageContext.request.contextPath }/signup">SIGN UP</a>
                      </li>
+                     </c:if>
+                     <c:if test="${ not empty loginVO }">
                      <li class="nav-item">
                          <a class="nav-link" href="${ pageContext.request.contextPath }/mypage">MY PAGE</a>
                      </li>
                      <li class="nav-item">
                          <a class="nav-link" href="${ pageContext.request.contextPath }/logout">LOG OUT</a>
                      </li>
+                     </c:if>
+                     <c:if test="${ loginVO.mid == 'admin' }">
+                     <li class="nav-item">
+                         <a class="nav-link" href="${ pageContext.request.contextPath }/post">ADD POST</a>
+                     </li>
+                     </c:if>
                  </ul>
              </div>
           </div>

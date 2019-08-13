@@ -1,6 +1,5 @@
 package com.dangdangs.pet.service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,9 +24,7 @@ public class PetServiceImpl implements PetService {
 	@Override
 	public List<PetVO> selectPet(String mid) {
 		List<PetVO> petVO = petDAO.selectDpetByMid(mid);
-		
 		return petVO;
-		
 	}
 	
 	

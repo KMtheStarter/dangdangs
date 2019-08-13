@@ -18,7 +18,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.dangdangs.board.dao.BoardDAO;
 import com.dangdangs.board.service.BoardService;
-import com.dangdangs.board.vo.BoardVO;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations="classpath:config/**/*.xml")

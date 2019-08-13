@@ -43,9 +43,11 @@
 	<header>
 		<jsp:include page="/WEB-INF/jsp/include/topMenu.jsp" />
 	</header>
+	<form method="get" action="${ pageContext.request.contextPath }/board">
+	<input type="text" style="width:50%" name="query"><button type="submit">검색</button>
+	</form>
 	<div class="backgroundForm"
 		style="background-image: url('${ pageContext.request.contextPath }/resources/img/backgrounds/2.jpg'); ">
-
 		<div class="container-fluid" style="margin: 2rem; padding: 1rem;">
 			<c:forEach items="${ boardList }" var="board">
 				<div class="card"
