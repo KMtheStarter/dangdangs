@@ -6,8 +6,11 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.dangdangs.pet.service.PetService;
 import com.dangdangs.pet.vo.PetVO;
@@ -39,4 +42,10 @@ public class PetController {
 		return "redirect:/mypage";
 	}
 
+	@ResponseBody
+	@DeleteMapping("/pet/{no}")
+	public int deletePet(@PathVariable("no") int pno)
+	{
+		return service.deletePet(pno);
+	}
 }

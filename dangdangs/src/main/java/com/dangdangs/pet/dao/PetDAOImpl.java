@@ -29,4 +29,11 @@ public class PetDAOImpl implements PetDAO {
 		return ss.selectList("pet.dao.PetDAO.selectDpetByMid", mid);
 	}
 
+	@Override
+	public int delete(int pno) {
+		
+		return ss.delete("pet.dao.PetDAO.deleteDpetByPno", pno);
+		
+	}
+
 }
