@@ -26,8 +26,8 @@ footer a {
   color: #aaa;
 }
 
-footer a:hover {
-  color: #fff;
+footer i:hover {
+  color: #aaa;
 }
 
 footer h3 {
@@ -201,11 +201,11 @@ i.fab{
 					<div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
 						<h7 class="mb-4 font-weight-bold">CONNECT WITH US</h7>
 						
-						<div class="mt-4" >
-							<div class="row container" align="center"><a href="#" title="facebook"><i class="fab fa-facebook-f" ></i></a></div>
-							<div class="row container" align="center"><a href="#" title="twitter"><i class="fab fa-twitter" ></i></a></div>
-							<div class="row container" align="center"><a href="#" title="google-plus"><i class="fab fa-google-plus-g" ></i></a></div>
-							<div class="row container" align="center"><a href="#" title="instagram"><i class="fab fa-instagram"></i></a></div>
+						<div class="mt-4" style="position:relative;">
+							<div class="row" style="position: absolute; left:100%;" ><a href="#" title="facebook"><i class="fab fa-facebook-f"  ></i></a></div>
+							<div class="row" style="position: absolute; left:70%;"><a href="#" title="twitter"><i class="fab fa-twitter" ></i></a></div>
+							<div class="row" style="position: absolute; left:40%;"><a href="#" title="google-plus"><i class="fab fa-google-plus-g" ></i></a></div>
+							<div class="row" style="position: absolute; left:10%;"><a href="#" title="instagram"><i class="fab fa-instagram"></i></a></div>
 							
 						</div>
 					</div>
