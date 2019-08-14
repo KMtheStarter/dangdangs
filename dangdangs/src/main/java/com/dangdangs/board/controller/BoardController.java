@@ -24,7 +24,6 @@ public class BoardController {
 	
 	@RequestMapping("/board")
 	public String board(String query, Model model) {
-		System.out.println(query);
 		List<BoardVO> list = boardService.selectAllBoard(query);
 		model.addAttribute("boardList", list);
 		return "board/board";
