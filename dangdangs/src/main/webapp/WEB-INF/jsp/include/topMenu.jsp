@@ -12,12 +12,12 @@
         
         <!-- CSS -->
        
-      	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+         <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="${ pageContext.request.contextPath }/resources/css/animate.css">
         <link rel="stylesheet" type="text/css" href="${ pageContext.request.contextPath }/resources/css/style.css">
         <link rel="stylesheet" type="text/css" href="${ pageContext.request.contextPath }/resources/css/media-queries.css">
-		
+      
        
 <!-- Top menu -->
 <!-- 높이가 안 맞는 문제가 발생하여서 style.css에서 navbar-no-bg의 높이값도 5rem으로 지정하였음. -->
@@ -26,7 +26,7 @@
       
          <div class="container-fluid" >
             <a class="navbar-brand" href="${ pageContext.request.contextPath }/">
-            	
+               
             </a>
              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                  <span class="navbar-toggler-icon"></span>

@@ -1,124 +1,229 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Page</title>
-<meta name="generator" content="WYSIWYG Web Builder 15 Trial Version - http://www.wysiwygwebbuilder.com">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
+<script
+	src="${ pageContext.request.contextPath }/resources/js/jquery-3.3.1.min.js"></script>
+<script
+	src="${ pageContext.request.contextPath }/resources/js/jquery-migrate-3.0.0.min.js"></script>
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet"> 
 
 
-<script src="${ pageContext.request.contextPath }/resources/wbuilder/jquery-1.12.4.min.js"></script>
-<script src="${ pageContext.request.contextPath }/resources/wbuilder/jquery-ui.min.js"></script>
-<script src="${ pageContext.request.contextPath }/resources/wbuilder/wwb15.min.js"></script>
+<style>
 
+footer {
+  background: #222;
+  color: #aaa;
+  padding-top: 10px;
+}
+
+footer a {
+  color: #aaa;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+footer h3 {
+ color: #0894d1;
+  letter-spacing: 1px;
+  margin: 30px 0 20px;
+}
+
+footer .three-column {
+ overflow: hidden;
+}
+
+footer .three-column li{
+ width: 33.3333%;
+  float: left;
+  padding: 5px 0;
+}
+
+footer .socila-list {
+  overflow: hidden;
+  margin: 20px 0 10px;
+}
+
+footer .socila-list li {
+  float: left;
+  margin-right: 3px;
+  opacity: 0.7;
+  overflow: hidden;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+footer .socila-list li:hover {
+  opacity: 1;
+}
+
+footer .img-thumbnail {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid #444;
+  margin-bottom: 5px;
+}
+
+footer .copyright {
+  padding: 15px 0;
+  background: #333;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+footer .copyright span {
+  color: #0894d1;
+}
+
+h7{
+	color: white; font-size:1.7rem; white-space: nowrap;
+}
+h8{
+	font-size:1.4rem; white-space: nowrap;
+	font-weight:700;
+
+}
+h8:hover {
+	text-decoration: none;
+	color: #fff;
+}
+h8:focus {
+	color: #fff;
+}
+
+i.fab{
+	font-size:3rem; color:white;
+}
+</style>
 </head>
+
+
+
 <body>
-<div id="wb_social">
-<div id="social">
-<div class="row">
-<div class="col-1">
-<div id="wb_socialIcon1" style="display:inline-block;width:40px;height:40px;text-align:center;z-index:0;">
-<a href="./index.html"><div id="socialIcon1"><i class="fa fa-facebook"></i></div></a>
-</div>
-</div>
-<div class="col-2">
-<div id="wb_socialIcon2" style="display:inline-block;width:40px;height:40px;text-align:center;z-index:1;">
-<a href="./index.html"><div id="socialIcon2"><i class="fa fa-instagram"></i></div></a>
-</div>
-</div>
-<div class="col-3">
-<div id="wb_socialIcon3" style="display:inline-block;width:40px;height:40px;text-align:center;z-index:2;">
-<a href="./index.html"><div id="socialIcon3"><i class="fa fa-twitter"></i></div></a>
-</div>
-</div>
-<div class="col-4">
-<div id="wb_socialIcon4" style="display:inline-block;width:40px;height:40px;text-align:center;z-index:3;">
-<a href="./index.html"><div id="socialIcon4"><i class="fa fa-youtube"></i></div></a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="wb_links">
-<div id="links-divider-top">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 25" preserveAspectRatio="none">
-<path class="divider-fill" d="m 0,0 v 3.8265306 c 0,0 393.8,0 483.4,0 9.2,0 16.6,9.4387754 16.6,21.1734694 0,-11.607143 7.4,-21.1734694 16.6,-21.1734694 89.6,0 483.4,0 483.4,0 V 0 Z" />
-</svg>
-</div>
-<div id="links">
-<div class="row">
-<div class="col-1">
-<div id="wb_linksText1">
-<span style="color:#696969;"><strong>NAVIGATE</strong></span>
-</div>
-<div id="wb_linksMenu1" style="display:inline-block;width:100%;z-index:5;">
-<ul role="menubar">
-<li class="firstmain"><a role="menuitem" href="./index.html" target="_self">Home</a>
-</li>
-<li><a role="menuitem" href="#" target="_self">About</a>
-</li>
-<li><a role="menuitem" href="#" target="_self">Services</a>
-</li>
-<li><a role="menuitem" href="#" target="_self">Products</a>
-</li>
-</ul>
-
-</div>
-</div>
-<div class="col-2">
-<div id="wb_linksText2">
-<span style="color:#696969;"><strong>CONNECT</strong></span>
-</div>
-<div id="wb_linksMenu2" style="display:inline-block;width:100%;z-index:7;">
-<ul role="menubar">
-<li class="firstmain"><a role="menuitem" href="#" target="_self">Facebook</a>
-</li>
-<li><a role="menuitem" href="#" target="_self">Instagram</a>
-</li>
-<li><a role="menuitem" href="#" target="_self">Twitter</a>
-</li>
-<li><a role="menuitem" href="#" target="_self">YouTube</a>
-</li>
-</ul>
-
-</div>
-</div>
-<div class="col-3">
-<div id="wb_linksText3">
-<span style="color:#696969;"><strong>MORE LINKS</strong></span>
-</div>
-<div id="wb_linksMenu3" style="display:inline-block;width:100%;z-index:9;">
-<ul role="menubar">
-<li class="firstmain"><a role="menuitem" href="#" target="_self">Lorem&nbsp;Ipsum</a>
-</li>
-<li><a role="menuitem" href="#" target="_self">Dolor&nbsp;Sit&nbsp;Amet</a>
-</li>
-<li><a role="menuitem" href="#" target="_self">Consectetur&nbsp;Adipisicing</a>
-</li>
-<li><a role="menuitem" href="#" target="_self">Sed&nbsp;Do&nbsp;Eiusmod</a>
-</li>
-</ul>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="wb_footer">
-<div id="footer">
-<div class="row">
-<div class="col-1">
-<div id="wb_footerText">
-<span style="color:#000000;"><strong><em>Copyright 2019 DANGDANG'S.&nbsp; All Rights Reserved</em></strong></span>
-</div>
-</div>
-</div>
-</div>
-</div>
+<!-- Footer -->
+		<footer class="pt-5 pb-4" id="contact">
+		<form method="get" action="${ pageContext.request.contextPath }/board">
+						</form>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+						<h7 class="mb-4 font-weight-bold">ABOUT US</h7>
+						<h8 class="mb-4" >댕댕이를 사랑하는 사람들</h8>
+						<ul class="f-address">
+							<li>
+								<div class="row">
+									<div class="col-1"><i class="fas fa-map-marker"></i></div>
+									<div class="col-10">
+										<h6 class="font-weight-bold mb-0">Address:</h6>
+										<p>서울특별시 서초구 서초대로74길33 비트빌 3층</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="row">
+									<div class="col-1"><i class="far fa-envelope"></i></div>
+									<div class="col-10">
+										<h6 class="font-weight-bold mb-0">Anything to ask?</h6>
+										<p>wkrleksm1@naver.com</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="row">
+									<div class="col-1"><i class="fas fa-phone-volume"></i></div>
+									<div class="col-10">
+										<h6 class="font-weight-bold mb-0">Address:</h6>
+										<p>010-2051-2131</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+						<h7 class="mb-4 font-weight-bold">NAVIGATION</h7>
+						<ul class="f-address" style=" margin-top:1rem; " >
+							<li style="padding-top: 1rem;padding-bottom: 1rem;">
+								<div class="row">
+									<div class="col-1"><i class="fas fa-arrow-right"></i></div>
+									<div class="col-10">
+									
+										<h8 onclick="location.href='${ pageContext.request.contextPath }/board'"> 게시판 </h8>
+										
+									</div>
+								</div>
+							</li>
+							<li style="padding-top: 1rem;padding-bottom: 1rem;">
+								<div class="row">
+									<div class="col-1"><i class="fas fa-arrow-right"></i></div>
+									<div class="col-10">
+										<h8 onclick="location.href='${ pageContext.request.contextPath }/diag'"> 진단하기</h8>
+										
+									</div>
+								</div>
+							</li>
+							<li style="padding-top: 1rem;padding-bottom: 1rem;">
+								<div class="row">
+									<div class="col-1"><i class="fas fa-arrow-right"></i></div>
+									<div class="col-10">
+										<h8 onclick="location.href='${ pageContext.request.contextPath }/login'">로그인 </h8> 
+										
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+						<h7 class="mb-4 font-weight-bold">LATEST UPDATES</h7>
+						<ul class="recent-post">
+						<c:choose>
+						<c:when test="${ not empty bList }">
+							<c:forEach items="${ bList }" var="board" begin="1" end="3">
+								<li>
+									<div>${ board.dname}</div>
+									<div>안녕나는동우기얌</div>
+								</li>
+							</c:forEach>
+						</c:when>
+						<c:otherwise>
+						<li>
+							<h8 class="mb-4 font-weight-bold"> 글이 없습니다.</h7>
+							</li>
+						</c:otherwise>
+						</c:choose>
+					</ul>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+						<h7 class="mb-4 font-weight-bold">CONNECT WITH US</h7>
+						
+						<div class="mt-4" >
+							<div class="row container" align="center"><a href="#" title="facebook"><i class="fab fa-facebook-f" ></i></a></div>
+							<div class="row container" align="center"><a href="#" title="twitter"><i class="fab fa-twitter" ></i></a></div>
+							<div class="row container" align="center"><a href="#" title="google-plus"><i class="fab fa-google-plus-g" ></i></a></div>
+							<div class="row container" align="center"><a href="#" title="instagram"><i class="fab fa-instagram"></i></a></div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- Copyright -->
+		<section class="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 ">
+						<div class="text-center text-white">
+							&copy; 2018 Your Company. All Rights Reserved.
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 </body>
 </html>
 
