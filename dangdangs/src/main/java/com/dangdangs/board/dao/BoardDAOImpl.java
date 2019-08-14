@@ -38,5 +38,9 @@ public class BoardDAOImpl implements BoardDAO {
 		return ss.selectList("board.dao.BoardDAO.selectSyNameByBno", bno);
 	}
 
+	@Override
+	public void insert(BoardVO boardVO) {
+		ss.insert("board.dao.BoardDAO.insert", boardVO);
+	}
 	
 }
