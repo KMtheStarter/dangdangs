@@ -26,7 +26,12 @@ public class PetServiceImpl implements PetService {
 		List<PetVO> petVO = petDAO.selectDpetByMid(mid);
 		return petVO;
 	}
-	
+
+
+	@Override
+	public int deletePet(int pno) {
+		return petDAO.delete(pno);
+	}
 	
 
 }

@@ -18,8 +18,8 @@
 		bsum like '%${query}%' or
 		bcause like '%${query}%' or
 		btreat like '%${query}%' or
-		bcare like '%${query}%'
-		]]>
+		bcare like '%${query}%']]>
+		
 		</where>
 		order by bno desc
 	</select>
