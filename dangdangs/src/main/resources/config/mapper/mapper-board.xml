@@ -13,11 +13,13 @@
 	<select id="selectAll" resultMap="boardVOMap" parameterType="String">
 		select * from d_board
 		<where>
-		<![CDATA[dname like '%${query}%' or
-			bsum like '%${query}%' or
-			bcause like '%${query}%' or
-			btreat like '%${query}%' or
-			bcare like '%${query}%']]>
+		<![CDATA[
+		dname like '%${query}%' or
+		bsum like '%${query}%' or
+		bcause like '%${query}%' or
+		btreat like '%${query}%' or
+		bcare like '%${query}%'
+		]]>
 		</where>
 		order by bno desc
 	</select>
