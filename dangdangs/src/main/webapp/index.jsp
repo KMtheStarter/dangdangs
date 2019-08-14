@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>dang</title>
+<title>dangdang</title>
 </head>
 <body>
 	<jsp:include page="/WEB-INF/jsp/main/main.jsp" />
