@@ -6,6 +6,9 @@ h4,h5,h6{white-space: nowrap;}
 @media (min-width: 1040px) and (max-width: 1400px) 
 {
 	.navbar-expand-md .navbar-nav .nav-link {	padding-left: 0.4rem; padding-right: 0.4rem; font-size:1.9rem ; letter-spacing: 0}
+	
+	
+	
 }
 
 
@@ -23,6 +26,10 @@ h5{
 }
 h6{
 	font-size:0.9rem;font-weight:400;
+}
+
+h7{
+	font-size: 1.7rem;
 }	
 
 }

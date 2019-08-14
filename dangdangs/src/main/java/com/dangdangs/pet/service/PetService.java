@@ -8,4 +8,5 @@ public interface PetService {
 	
 	public void insertPet(PetVO petVO);
 	public List<PetVO> selectPet(String mid);
+	public int deletePet(int pno);
 }

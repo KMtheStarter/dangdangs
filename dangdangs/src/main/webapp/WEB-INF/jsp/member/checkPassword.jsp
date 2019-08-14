@@ -22,12 +22,21 @@
 </script>
 </head>
 <body>
-	비밀번호 확인창입니다.
-	현재 비밀번호를 입력해주세요
-	<form method="post" action="${ pageContext.request.contextPath }/mypage/check">
-		<input type="hidden" name="mid" value="${ loginVO.mid }">
-		<input type="password" id="pwd" name="mpassword" size="20">
-		<button id="submit" type="submit" class="btn btn-outline-danger">확인</button>
-	</form>
+	<header>
+		<jsp:include page="/WEB-INF/jsp/include/topMenu.jsp" />
+	</header>
+	<div class="backgroundForm" style="background-image:url('${ pageContext.request.contextPath }/resources/img/backgrounds/mypage.jpg');">
+	<div style="margin-top: -50px;">
+	<h3 style="color: white;">
+		비밀번호 확인창입니다.
+		현재 비밀번호를 입력해주세요
+	</h3><br>
+		<form method="post" action="${ pageContext.request.contextPath }/mypage/check">
+			<input type="hidden" name="mid" value="${ loginVO.mid }">
+			<input type="password" id="pwd" name="mpassword" size="20" style="width: 20em;">
+			<button id="submit" type="submit" class="btn btn-outline-danger">확인</button>
+		</form>
+	</div>
+	</div>
 </body>
 </html>

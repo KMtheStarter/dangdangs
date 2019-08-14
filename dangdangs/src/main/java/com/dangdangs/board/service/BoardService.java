@@ -2,6 +2,8 @@ package com.dangdangs.board.service;
 
 import java.util.List;
 
+import org.springframework.web.multipart.MultipartFile;
+
 import com.dangdangs.board.vo.BoardVO;
 
 public interface BoardService {
@@ -10,4 +12,5 @@ public interface BoardService {
 	public BoardVO selectResultBoard(int bno);
 	public List<BoardVO> selectBnoBySpcode(String spcode);
 	public List<String> selectSynameByBno(int bno);
+	public void insertBoard(BoardVO boardVO, MultipartFile mFile);
 }
