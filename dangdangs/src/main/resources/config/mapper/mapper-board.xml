@@ -8,6 +8,7 @@
 		<result column="bcause" property="bcause" javaType="String" jdbcType="CLOB"/>
 		<result column="btreat" property="btreat" javaType="String" jdbcType="CLOB"/>
 		<result column="bcare" property="bcare" javaType="String" jdbcType="CLOB"/>
+		<result column="bfpath" property="bfpath" javaType="String" jdbcType="CLOB"/>
 	</resultMap>
 	
 	<select id="selectAll" resultMap="boardVOMap" parameterType="String">
@@ -18,8 +19,8 @@
 		bsum like '%${query}%' or
 		bcause like '%${query}%' or
 		btreat like '%${query}%' or
-		bcare like '%${query}%'
-		]]>
+		bcare like '%${query}%']]>
+		
 		</where>
 		order by bno desc
 	</select>
@@ -40,10 +41,15 @@
 	</select>
 	
 	<!-- 취약종에 따른 게시글 보여주기 -->
-	<select id="selectBnoBySp" parameterType="String" resultType="boardVO">
-				
+	<select id="selectBnoBySp" parameterType="String" resultType="boardVO">	
 		select bno, dname from d_board where d_board.dname in(select dname from d_weaken 
 		where spcode=#{spcode}) order by bno desc
 	</select>
 
+	<!-- 운영자가 게시글 추가 -->
+	<insert id="insert" parameterType="boardVO">
+		insert into d_board(bno, dname, bsum, bcause, btreat, bcare, bdate, bfname)
+		values (d_board_seq.nextval, #{dname}, #{bsum}, #{bcause}, #{btreat}, #{bcare}, sysdate, #{bfname})
+	</insert>
+	
 </mapper>

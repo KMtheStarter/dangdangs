@@ -42,6 +42,7 @@ create table d_board(
     btreat clob,
     bcare clob,
     bdate date default sysdate,
+    bfname clob,
     constraint d_board_dname_fk foreign key(dname) references d_disease(dname)
 );
 create sequence d_board_seq nocache;

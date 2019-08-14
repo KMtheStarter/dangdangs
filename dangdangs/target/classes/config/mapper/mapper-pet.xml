@@ -14,8 +14,12 @@
 	</select>
 	<!-- 내 댕댕이 정보 가져오기 -->
 	<select id="selectDpetByMid" parameterType="String" resultType="petVO">
-		select p.pname, p.spcode, s.spname from d_pet p, d_species s 
+		select p.pno, p.pname, p.spcode, s.spname from d_pet p, d_species s 
 		where p.spcode=s.spcode and p.mid=#{mid}
 	</select>
-		 
+	
+	<!-- 내 댕댕이 삭제 -->
+	<delete id="deleteDpetByPno" parameterType="int">
+		delete d_pet where pno=#{pno}
+	</delete>
 </mapper>

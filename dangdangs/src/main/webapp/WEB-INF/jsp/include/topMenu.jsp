@@ -13,6 +13,7 @@
         <!-- CSS -->
        
          <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="${ pageContext.request.contextPath }/resources/css/style.css">
         <link rel="stylesheet" type="text/css" href="${ pageContext.request.contextPath }/resources/css/media-queries.css">
       
@@ -34,6 +35,11 @@
                      <li class="nav-item"  >
                          <a class="nav-link" href="${ pageContext.request.contextPath }/board"  >BOARD</a>
                      </li>
+                     <c:if test="${ loginVO.mid == 'admin' }">
+                     <li class="nav-item">
+                         <a class="nav-link" href="${ pageContext.request.contextPath }/post">POSTING</a>
+                     </li>
+                     </c:if>
                      <c:if test="${ empty loginVO }">
                      <li class="nav-item">
                          <a class="nav-link" href="${ pageContext.request.contextPath }/login">SIGN IN</a>
@@ -48,11 +54,6 @@
                      </li>
                      <li class="nav-item">
                          <a class="nav-link" href="${ pageContext.request.contextPath }/logout">LOG OUT</a>
-                     </li>
-                     </c:if>
-                     <c:if test="${ loginVO.mid == 'admin' }">
-                     <li class="nav-item">
-                         <a class="nav-link" href="${ pageContext.request.contextPath }/post">ADD POST</a>
                      </li>
                      </c:if>
                  </ul>

@@ -11,4 +11,5 @@ public interface BoardDAO {
 	public BoardVO selectBnoByDname(String dname);
 	public List<BoardVO> selectBnoBySpcode(String spcode);
 	public List<String> selectSynameByBno(int bno);
+	public void insert(BoardVO boardVO);
 }

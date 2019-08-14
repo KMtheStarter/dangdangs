@@ -60,15 +60,22 @@ function validCheck(idx){
 </script>
 </head>
 <body>
+<header>
+		<jsp:include page="/WEB-INF/jsp/include/topMenu.jsp" />
+	</header>
+	<div class="backgroundForm" style="background-image:url('${ pageContext.request.contextPath }/resources/img/backgrounds/mypage.jpg');">
+	<div class="container ourstyle"   align="center"    >
 <h1>내 정보 수정</h1>
+
 <form:form method="post" commandName="memberVO" action="${ pageContext.request.contextPath }/mypage/modifyMyInf">
 <form:hidden path="mid"	value="${ loginVO.mid }"/>
-	<table>
-		<tr>
+	<table style="margin-right: auto; margin-left: auto;">
+		<tr style="font-size: large;">
 			<td>id</td>
 			<td>${ loginVO.mid }</td>
 			<td></td>
 		</tr>
+		
 		<tr>
 			<td>닉네임</td>
 			<td><form:input id="nick" path="mnick" size="30"></form:input></td>
@@ -87,5 +94,7 @@ function validCheck(idx){
 	</table>
 	<button id="submit" type="submit" class="btn btn-outline-success">수정하기</button>
 </form:form>
+</div>
+</div>
 </body>
 </html>
