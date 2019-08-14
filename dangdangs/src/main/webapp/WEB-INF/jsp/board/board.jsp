@@ -55,7 +55,7 @@
 				<div class="card"
 					style="width: 18rem; padding:0.25rem; border-radius:1rem; display: inline-block; margin-top: 4rem; margin-left: 1rem; margin-right: 1rem; border: 2px solid rgba(255,255,255,0.6);">
 					<img class="card-img-top" style="border-top-left-radius:1rem; border-top-right-radius:1rem;"
-						src="${ pageContext.request.contextPath }/resources/img/dogimg.jpg"
+						src="${ pageContext.request.contextPath }/upload/${ board.bfname }"
 						alt="Card image cap" >
 					<div class="card-body" style="background-color:rgba(0,0,0,0.8); border-bottom-left-radius:1rem; border-bottom-right-radius:1rem; ">
 						<h5 class="card-title"

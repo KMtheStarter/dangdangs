@@ -36,6 +36,11 @@
                      <li class="nav-item"  >
                          <a class="nav-link" href="${ pageContext.request.contextPath }/board"  >BOARD</a>
                      </li>
+                     <c:if test="${ loginVO.mid == 'admin' }">
+                     <li class="nav-item">
+                         <a class="nav-link" href="${ pageContext.request.contextPath }/post">POSTING</a>
+                     </li>
+                     </c:if>
                      <c:if test="${ empty loginVO }">
                      <li class="nav-item">
                          <a class="nav-link" href="${ pageContext.request.contextPath }/login">SIGN IN</a>
@@ -50,11 +55,6 @@
                      </li>
                      <li class="nav-item">
                          <a class="nav-link" href="${ pageContext.request.contextPath }/logout">LOG OUT</a>
-                     </li>
-                     </c:if>
-                     <c:if test="${ loginVO.mid == 'admin' }">
-                     <li class="nav-item">
-                         <a class="nav-link" href="${ pageContext.request.contextPath }/post">ADD POST</a>
                      </li>
                      </c:if>
                  </ul>
