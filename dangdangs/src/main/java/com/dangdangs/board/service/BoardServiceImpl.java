@@ -14,8 +14,8 @@ public class BoardServiceImpl implements BoardService {
 	@Autowired
 	private BoardDAO boardDAO;
 	
-	public List<BoardVO> selectAllBoard() {
-		return boardDAO.selectAll();
+	public List<BoardVO> selectAllBoard(String query) {
+		return boardDAO.selectAll(query);
 	}
 
 	@Override

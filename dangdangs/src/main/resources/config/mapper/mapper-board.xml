@@ -10,8 +10,16 @@
 		<result column="bcare" property="bcare" javaType="String" jdbcType="CLOB"/>
 	</resultMap>
 	
-	<select id="selectAll" resultMap="boardVOMap">
-		select * from d_board order by bno desc
+	<select id="selectAll" resultMap="boardVOMap" parameterType="String">
+		select * from d_board
+		<where>
+			dname like '%${query}%' or
+			bsum like '%${query}%' or
+			bcause like '%${query}%' or
+			btreat like '%${query}%' or
+			bcare like '%${query}%'
+		</where>
+		order by bno desc
 	</select>
 	
 	<!-- 글 번호에 따른 게시글 보여주기 -->

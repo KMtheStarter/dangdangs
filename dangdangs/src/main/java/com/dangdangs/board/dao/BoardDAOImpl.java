@@ -14,8 +14,8 @@ public class BoardDAOImpl implements BoardDAO {
 	@Autowired
 	private SqlSessionTemplate ss;
 	
-	public List<BoardVO> selectAll() {
-		return ss.selectList("board.dao.BoardDAO.selectAll");
+	public List<BoardVO> selectAll(String query) {
+		return ss.selectList("board.dao.BoardDAO.selectAll", query);
 	}
 
 	@Override

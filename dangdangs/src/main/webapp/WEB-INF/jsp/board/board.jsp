@@ -48,6 +48,8 @@
 	</form>
 	<div class="backgroundForm"
 		style="background-image: url('${ pageContext.request.contextPath }/resources/img/backgrounds/2.jpg'); ">
+		<c:choose>
+		<c:when test="${ not empty boardList }">
 		<div class="container-fluid" style="margin: 2rem; padding: 1rem;">
 			<c:forEach items="${ boardList }" var="board">
 				<div class="card"
@@ -66,7 +68,11 @@
 				</div>
 			</c:forEach>
 		</div>
-
+		</c:when>
+		<c:otherwise>
+			<h2 style="color: white">검색 결과가 존재하지 않습니다.</h2>
+		</c:otherwise>
+		</c:choose>
 
 
 	</div>

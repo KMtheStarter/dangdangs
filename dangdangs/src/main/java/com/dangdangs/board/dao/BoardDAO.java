@@ -6,7 +6,7 @@ import com.dangdangs.board.vo.BoardVO;
 
 public interface BoardDAO {
 
-	public List<BoardVO> selectAll(); 
+	public List<BoardVO> selectAll(String query); 
 	public BoardVO selectResult(int bno);
 	public BoardVO selectBnoByDname(String dname);
 	public List<BoardVO> selectBnoBySpcode(String spcode);
