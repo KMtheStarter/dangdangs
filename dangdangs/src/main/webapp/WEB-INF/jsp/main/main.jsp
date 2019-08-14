@@ -46,14 +46,10 @@
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
 	integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
 	crossorigin="anonymous"></script>
-<script
-	src="${ pageContext.request.contextPath }/resources/js/jquery.backstretch.min.js"></script>
-<script
-	src="${ pageContext.request.contextPath }/resources/js/wow.min.js"></script>
-<script
-	src="${ pageContext.request.contextPath }/resources/js/waypoints.min.js"></script>
-<script
-	src="${ pageContext.request.contextPath }/resources/js/scripts.js"></script>
+
+
+
+
 
 </head>
 
@@ -79,10 +75,9 @@
 						data-ride="carousel">
 
 						<div class="carousel-inner">
-							<div class="carousel-item active" style="background-size:100% 100%">
-								<img
-									src="${ pageContext.request.contextPath }/resources/img/backgrounds/1.jpg"
-									alt="img1" style="background-size:100% 100%">
+							<div class="carousel-item active" style="background-size:100% 100%; 
+							background-image:url(${ pageContext.request.contextPath }/resources/img/backgrounds/1.jpg);">
+								
 								<div class="carousel-caption">
 									<h4>
 										소중한 우리 아이<br>
@@ -107,10 +102,9 @@
 									</div>
 								</div>
 							</div>
-							<div class="carousel-item" style="background-size:100% 100%">
-								<img
-									src="${ pageContext.request.contextPath }/resources/img/backgrounds/2.jpg"
-									alt="img2" style="background-size:100% 100%">
+							<div class="carousel-item" style="background-size:100% 100%; 
+							background-image:url(${ pageContext.request.contextPath }/resources/img/backgrounds/2.jpg);">
+								
 								<div class="carousel-caption">
 
 									<h4 class="c1">
@@ -136,10 +130,9 @@
 									</div>
 								</div>
 							</div>
-							<div class="carousel-item" style="background-size:100% 100%">
-								<img
-									src="${ pageContext.request.contextPath }/resources/img/backgrounds/3.jpg"
-									alt="img3" style="background-size:100% 100%">
+							<div class="carousel-item" style="background-size:100% 100%; 
+							background-image:url(${ pageContext.request.contextPath }/resources/img/backgrounds/3.jpg);">
+								
 								<div class="carousel-caption">
 
 									<h4 class="c1">
@@ -182,7 +175,9 @@
 		</div>
 	</div>
 
-
+	<header>
+		<jsp:include page="/WEB-INF/jsp/include/footer.jsp" />
+	</header>
 
 	
 

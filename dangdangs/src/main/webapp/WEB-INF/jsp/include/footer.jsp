@@ -4,121 +4,157 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Page</title>
-<meta name="generator" content="WYSIWYG Web Builder 15 Trial Version - http://www.wysiwygwebbuilder.com">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-
-
-<script src="${ pageContext.request.contextPath }/resources/wbuilder/jquery-1.12.4.min.js"></script>
-<script src="${ pageContext.request.contextPath }/resources/wbuilder/jquery-ui.min.js"></script>
-<script src="${ pageContext.request.contextPath }/resources/wbuilder/wwb15.min.js"></script>
+<script
+	src="${ pageContext.request.contextPath }/resources/js/jquery-3.3.1.min.js"></script>
+<script
+	src="${ pageContext.request.contextPath }/resources/js/jquery-migrate-3.0.0.min.js"></script>
 
 </head>
+
+<style>
+footer {
+  background: #222;
+  color: #aaa;
+  padding-top: 10px;
+}
+
+footer a {
+  color: #aaa;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+footer h3 {
+ color: #0894d1;
+  letter-spacing: 1px;
+  margin: 30px 0 20px;
+}
+
+footer .three-column {
+ overflow: hidden;
+}
+
+footer .three-column li{
+ width: 33.3333%;
+  float: left;
+  padding: 5px 0;
+}
+
+footer .socila-list {
+  overflow: hidden;
+  margin: 20px 0 10px;
+}
+
+footer .socila-list li {
+  float: left;
+  margin-right: 3px;
+  opacity: 0.7;
+  overflow: hidden;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+footer .socila-list li:hover {
+  opacity: 1;
+}
+
+footer .img-thumbnail {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid #444;
+  margin-bottom: 5px;
+}
+
+footer .copyright {
+  padding: 15px 0;
+  background: #333;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+footer .copyright span {
+  color: #0894d1;
+}
+</style>
 <body>
-<div id="wb_social">
-<div id="social">
-<div class="row">
-<div class="col-1">
-<div id="wb_socialIcon1" style="display:inline-block;width:40px;height:40px;text-align:center;z-index:0;">
-<a href="./index.html"><div id="socialIcon1"><i class="fa fa-facebook"></i></div></a>
-</div>
-</div>
-<div class="col-2">
-<div id="wb_socialIcon2" style="display:inline-block;width:40px;height:40px;text-align:center;z-index:1;">
-<a href="./index.html"><div id="socialIcon2"><i class="fa fa-instagram"></i></div></a>
-</div>
-</div>
-<div class="col-3">
-<div id="wb_socialIcon3" style="display:inline-block;width:40px;height:40px;text-align:center;z-index:2;">
-<a href="./index.html"><div id="socialIcon3"><i class="fa fa-twitter"></i></div></a>
-</div>
-</div>
-<div class="col-4">
-<div id="wb_socialIcon4" style="display:inline-block;width:40px;height:40px;text-align:center;z-index:3;">
-<a href="./index.html"><div id="socialIcon4"><i class="fa fa-youtube"></i></div></a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="wb_links">
-<div id="links-divider-top">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 25" preserveAspectRatio="none">
-<path class="divider-fill" d="m 0,0 v 3.8265306 c 0,0 393.8,0 483.4,0 9.2,0 16.6,9.4387754 16.6,21.1734694 0,-11.607143 7.4,-21.1734694 16.6,-21.1734694 89.6,0 483.4,0 483.4,0 V 0 Z" />
-</svg>
-</div>
-<div id="links">
-<div class="row">
-<div class="col-1">
-<div id="wb_linksText1">
-<span style="color:#696969;"><strong>NAVIGATE</strong></span>
-</div>
-<div id="wb_linksMenu1" style="display:inline-block;width:100%;z-index:5;">
-<ul role="menubar">
-<li class="firstmain"><a role="menuitem" href="./index.html" target="_self">Home</a>
-</li>
-<li><a role="menuitem" href="#" target="_self">About</a>
-</li>
-<li><a role="menuitem" href="#" target="_self">Services</a>
-</li>
-<li><a role="menuitem" href="#" target="_self">Products</a>
-</li>
-</ul>
+<footer>
 
-</div>
-</div>
-<div class="col-2">
-<div id="wb_linksText2">
-<span style="color:#696969;"><strong>CONNECT</strong></span>
-</div>
-<div id="wb_linksMenu2" style="display:inline-block;width:100%;z-index:7;">
-<ul role="menubar">
-<li class="firstmain"><a role="menuitem" href="#" target="_self">Facebook</a>
-</li>
-<li><a role="menuitem" href="#" target="_self">Instagram</a>
-</li>
-<li><a role="menuitem" href="#" target="_self">Twitter</a>
-</li>
-<li><a role="menuitem" href="#" target="_self">YouTube</a>
-</li>
-</ul>
+	<div class="container">
+		<div class="row">
 
-</div>
-</div>
-<div class="col-3">
-<div id="wb_linksText3">
-<span style="color:#696969;"><strong>MORE LINKS</strong></span>
-</div>
-<div id="wb_linksMenu3" style="display:inline-block;width:100%;z-index:9;">
-<ul role="menubar">
-<li class="firstmain"><a role="menuitem" href="#" target="_self">Lorem&nbsp;Ipsum</a>
-</li>
-<li><a role="menuitem" href="#" target="_self">Dolor&nbsp;Sit&nbsp;Amet</a>
-</li>
-<li><a role="menuitem" href="#" target="_self">Consectetur&nbsp;Adipisicing</a>
-</li>
-<li><a role="menuitem" href="#" target="_self">Sed&nbsp;Do&nbsp;Eiusmod</a>
-</li>
-</ul>
+			<div class="col-lg-4 col-md-6">
+				<h3>Site Map</h3>
+				<ul class="list-unstyled three-column">
+					<li>Home</li>
+					<li>Services</li>
+					<li>About</li>
+					<li>Code</li>
+					<li>Design</li>
+					<li>Host</li>
+					<li>Contact</li>
+					<li>Company</li>
+				</ul>
+				<ul class="list-unstyled socila-list">
+					<li><img src="http://placehold.it/48x48" alt="" /></li>
+					<li><img src="http://placehold.it/48x48" alt="" /></li>
+					<li><img src="http://placehold.it/48x48" alt="" /></li>
+					<li><img src="http://placehold.it/48x48" alt="" /></li>
+					<li><img src="http://placehold.it/48x48" alt="" /></li>
+					<li><img src="http://placehold.it/48x48" alt="" /></li>
+				</ul>
+			</div>
 
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="wb_footer">
-<div id="footer">
-<div class="row">
-<div class="col-1">
-<div id="wb_footerText">
-<span style="color:#000000;"><strong><em>Copyright 2019 DANGDANG'S.&nbsp; All Rights Reserved</em></strong></span>
-</div>
-</div>
-</div>
-</div>
-</div>
+			<div class="col-lg-4 col-md-6">
+				<h3>latest Articles</h3>
+				<div class="media">
+					<a href="#" class="pull-left"> <img
+						src="http://placehold.it/64x64" alt="" class="media-object" />
+					</a>
+					<div class="media-body">
+						<h4 class="media-heading">Programming</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					</div>
+				</div>
+
+				<div class="media">
+					<a href="#" class="pull-left"> <img
+						src="http://placehold.it/64x64" alt="" class="media-object" />
+					</a>
+					<div class="media-body">
+						<h4 class="media-heading">Coding</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					</div>
+				</div>
+
+				<div class="media">
+					<a href="#" class="pull-left"> <img
+						src="http://placehold.it/64x64" alt="" class="media-object" />
+					</a>
+					<div class="media-body">
+						<h4 class="media-heading">Web Sesign</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="col-lg-4">
+				<h3>Our Work</h3>
+				<img class="img-thumbnail" src="http://placehold.it/150x100" alt="" />
+				<img class="img-thumbnail" src="http://placehold.it/150x100" alt="" />
+				<img class="img-thumbnail" src="http://placehold.it/150x100" alt="" />
+				<img class="img-thumbnail" src="http://placehold.it/150x100" alt="" />
+			</div>
+
+		</div>
+	</div>
+	<div class="copyright text-center">
+		Copyright &copy; 2017 <span>Your Template Name</span>
+	</div>
+</footer>
 </body>
 </html>
 
