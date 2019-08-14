@@ -31,8 +31,8 @@
              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                  <span class="navbar-toggler-icon"></span>
              </button>
-             <div class="collapse navbar-collapse" id="navbarNav">
-                 <ul class="navbar-nav ml-auto"  >
+             <div class="collapse navbar-collapse" id="navbarNav" style="position: relative;">
+                 <ul class="navbar-nav ml-auto" style="position: absolute; left: 35%;" >
                      <li class="nav-item"  >
                          <a class="nav-link" href="${ pageContext.request.contextPath }/board"  >BOARD</a>
                      </li>
@@ -68,10 +68,5 @@
 <!-- Javascript -->
       <script src="${ pageContext.request.contextPath }/resources/js/jquery-3.3.1.min.js"></script>
       <script src="${ pageContext.request.contextPath }/resources/js/jquery-migrate-3.0.0.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-      <script src="${ pageContext.request.contextPath }/resources/js/jquery.backstretch.min.js"></script>
-        <script src="${ pageContext.request.contextPath }/resources/js/wow.min.js"></script>
-        <script src="${ pageContext.request.contextPath }/resources/js/waypoints.min.js"></script>
-        <script src="${ pageContext.request.contextPath }/resources/js/scripts.js"></script>
 </html>
