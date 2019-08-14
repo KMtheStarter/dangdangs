@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html>
 <head>
@@ -10,10 +11,11 @@
 	src="${ pageContext.request.contextPath }/resources/js/jquery-3.3.1.min.js"></script>
 <script
 	src="${ pageContext.request.contextPath }/resources/js/jquery-migrate-3.0.0.min.js"></script>
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet"> 
 
-</head>
 
 <style>
+
 footer {
   background: #222;
   color: #aaa;
@@ -78,83 +80,150 @@ footer .copyright {
 footer .copyright span {
   color: #0894d1;
 }
+
+h7{
+	color: white; font-size:1.7rem; white-space: nowrap;
+}
+h8{
+	font-size:1.4rem; white-space: nowrap;
+	font-weight:700;
+
+}
+h8:hover {
+	text-decoration: none;
+	color: #fff;
+}
+h8:focus {
+	color: #fff;
+}
+
+i.fab{
+	font-size:3rem; color:white;
+}
 </style>
+</head>
+
+
+
 <body>
-<footer>
-
-	<div class="container">
-		<div class="row">
-
-			<div class="col-lg-4 col-md-6">
-				<h3>Site Map</h3>
-				<ul class="list-unstyled three-column">
-					<li>Home</li>
-					<li>Services</li>
-					<li>About</li>
-					<li>Code</li>
-					<li>Design</li>
-					<li>Host</li>
-					<li>Contact</li>
-					<li>Company</li>
-				</ul>
-				<ul class="list-unstyled socila-list">
-					<li><img src="http://placehold.it/48x48" alt="" /></li>
-					<li><img src="http://placehold.it/48x48" alt="" /></li>
-					<li><img src="http://placehold.it/48x48" alt="" /></li>
-					<li><img src="http://placehold.it/48x48" alt="" /></li>
-					<li><img src="http://placehold.it/48x48" alt="" /></li>
-					<li><img src="http://placehold.it/48x48" alt="" /></li>
-				</ul>
-			</div>
-
-			<div class="col-lg-4 col-md-6">
-				<h3>latest Articles</h3>
-				<div class="media">
-					<a href="#" class="pull-left"> <img
-						src="http://placehold.it/64x64" alt="" class="media-object" />
-					</a>
-					<div class="media-body">
-						<h4 class="media-heading">Programming</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+<!-- Footer -->
+		<footer class="pt-5 pb-4" id="contact">
+		<form method="get" action="${ pageContext.request.contextPath }/board">
+						</form>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+						<h7 class="mb-4 font-weight-bold">ABOUT US</h7>
+						<h8 class="mb-4" >댕댕이를 사랑하는 사람들</h8>
+						<ul class="f-address">
+							<li>
+								<div class="row">
+									<div class="col-1"><i class="fas fa-map-marker"></i></div>
+									<div class="col-10">
+										<h6 class="font-weight-bold mb-0">Address:</h6>
+										<p>서울특별시 서초구 서초대로74길33 비트빌 3층</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="row">
+									<div class="col-1"><i class="far fa-envelope"></i></div>
+									<div class="col-10">
+										<h6 class="font-weight-bold mb-0">Anything to ask?</h6>
+										<p>wkrleksm1@naver.com</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="row">
+									<div class="col-1"><i class="fas fa-phone-volume"></i></div>
+									<div class="col-10">
+										<h6 class="font-weight-bold mb-0">Address:</h6>
+										<p>010-2051-2131</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+						<h7 class="mb-4 font-weight-bold">NAVIGATION</h7>
+						<ul class="f-address" style=" margin-top:1rem; " >
+							<li style="padding-top: 1rem;padding-bottom: 1rem;">
+								<div class="row">
+									<div class="col-1"><i class="fas fa-arrow-right"></i></div>
+									<div class="col-10">
+									
+										<h8 onclick="location.href='${ pageContext.request.contextPath }/board'"> 게시판 </h8>
+										
+									</div>
+								</div>
+							</li>
+							<li style="padding-top: 1rem;padding-bottom: 1rem;">
+								<div class="row">
+									<div class="col-1"><i class="fas fa-arrow-right"></i></div>
+									<div class="col-10">
+										<h8 onclick="location.href='${ pageContext.request.contextPath }/diag'"> 진단하기</h8>
+										
+									</div>
+								</div>
+							</li>
+							<li style="padding-top: 1rem;padding-bottom: 1rem;">
+								<div class="row">
+									<div class="col-1"><i class="fas fa-arrow-right"></i></div>
+									<div class="col-10">
+										<h8 onclick="location.href='${ pageContext.request.contextPath }/login'">로그인 </h8> 
+										
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+						<h7 class="mb-4 font-weight-bold">LATEST UPDATES</h7>
+						<ul class="recent-post">
+						<c:choose>
+						<c:when test="${ not empty bList }">
+							<c:forEach items="${ bList }" var="board" begin="1" end="3">
+								<li>
+									<div>${ board.dname}</div>
+									<div>안녕나는동우기얌</div>
+								</li>
+							</c:forEach>
+						</c:when>
+						<c:otherwise>
+						<li>
+							<h8 class="mb-4 font-weight-bold"> 글이 없습니다.</h7>
+							</li>
+						</c:otherwise>
+						</c:choose>
+					</ul>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+						<h7 class="mb-4 font-weight-bold">CONNECT WITH US</h7>
+						
+						<div class="mt-4" >
+							<div class="row container" align="center"><a href="#" title="facebook"><i class="fab fa-facebook-f" ></i></a></div>
+							<div class="row container" align="center"><a href="#" title="twitter"><i class="fab fa-twitter" ></i></a></div>
+							<div class="row container" align="center"><a href="#" title="google-plus"><i class="fab fa-google-plus-g" ></i></a></div>
+							<div class="row container" align="center"><a href="#" title="instagram"><i class="fab fa-instagram"></i></a></div>
+							
+						</div>
 					</div>
 				</div>
-
-				<div class="media">
-					<a href="#" class="pull-left"> <img
-						src="http://placehold.it/64x64" alt="" class="media-object" />
-					</a>
-					<div class="media-body">
-						<h4 class="media-heading">Coding</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			</div>
+		</footer>
+		<!-- Copyright -->
+		<section class="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 ">
+						<div class="text-center text-white">
+							&copy; 2018 Your Company. All Rights Reserved.
+						</div>
 					</div>
 				</div>
-
-				<div class="media">
-					<a href="#" class="pull-left"> <img
-						src="http://placehold.it/64x64" alt="" class="media-object" />
-					</a>
-					<div class="media-body">
-						<h4 class="media-heading">Web Sesign</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-					</div>
-				</div>
-
 			</div>
-
-			<div class="col-lg-4">
-				<h3>Our Work</h3>
-				<img class="img-thumbnail" src="http://placehold.it/150x100" alt="" />
-				<img class="img-thumbnail" src="http://placehold.it/150x100" alt="" />
-				<img class="img-thumbnail" src="http://placehold.it/150x100" alt="" />
-				<img class="img-thumbnail" src="http://placehold.it/150x100" alt="" />
-			</div>
-
-		</div>
-	</div>
-	<div class="copyright text-center">
-		Copyright &copy; 2017 <span>Your Template Name</span>
-	</div>
-</footer>
+		</section>
 </body>
 </html>
 
