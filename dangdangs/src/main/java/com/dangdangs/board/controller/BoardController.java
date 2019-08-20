@@ -38,8 +38,8 @@ public class BoardController {
 	
 	@PostMapping("/board")
 	public String board(BoardVO boardVO, DiagVO diagVO, MultipartFile uploadFile) {
-//		boardService.insertDiagParams(diagVO);
-//		boardService.insertBoard(boardVO, uploadFile);
+		boardService.insertDiagParams(diagVO);
+		boardService.insertBoard(boardVO, uploadFile);
 		return "redirect:/board";
 	}
 	
@@ -64,16 +64,16 @@ public class BoardController {
 	
 	@RequestMapping("/post")
 	public ModelAndView post(HttpServletRequest req) {
-//		MemberVO sessionVO = (MemberVO)(req.getSession().getAttribute("loginVO"));
+		MemberVO sessionVO = (MemberVO)(req.getSession().getAttribute("loginVO"));
 		ModelAndView mav;
-//		if (sessionVO == null || !sessionVO.getMid().equals("admin")) {
-//			mav = new ModelAndView("fail");
-//			mav.addObject("msg", "권한이 없습니다.");
-//		} else {
-//			mav = new ModelAndView("board/write");
-//			BoardVO boardVO = new BoardVO();
-//			mav.addObject("boardVO", boardVO);
-//		}
+		if (sessionVO == null || !sessionVO.getMid().equals("admin")) {
+			mav = new ModelAndView("fail");
+			mav.addObject("msg", "권한이 없습니다.");
+		} else {
+			mav = new ModelAndView("board/write");
+			BoardVO boardVO = new BoardVO();
+			mav.addObject("boardVO", boardVO);
+		}
 		mav = new ModelAndView("board/write");
 		BoardVO boardVO = new BoardVO();
 		mav.addObject("boardVO", boardVO);

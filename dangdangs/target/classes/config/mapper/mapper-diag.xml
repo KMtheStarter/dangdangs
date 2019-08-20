@@ -20,7 +20,7 @@
 		insert into d_disease values (#{dname}, #{dage})
 	</insert>
 	<insert id="insertSymptom" parameterType="diagVO">
-		insert into d_sympton values (d_symptom_seq.nextval, #{dname}, #{tempSyname})
+		insert into d_symptom values (d_symptom_seq.nextval, #{dname}, #{tempSyname})
 	</insert>
 	<insert id="insertWeaken" parameterType="diagVO">
 		insert into d_weaken values (d_weaken_seq.nextval, #{dname}, #{spcode})
