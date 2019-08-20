@@ -53,9 +53,9 @@ img { max-width: 100%;}
 
 /***** Top menu *****/
 
-.navbar { width: 100%; background: #444; backface-visibility: hidden; padding-right: 0px; padding-left: 0px; margin-right: auto; margin-left: auto; }
+.navbar { width: 100%; background: #444; backface-visibility: hidden;  padding-right: 0px; padding-left: 0px; margin-right: auto; margin-left: auto; }
 
-.navbar.navbar-no-bg { width: 100%; background: #444; background: rgba(0, 0, 0, 0.8); height:5rem; width:100%; position: relative; padding-right: 0px; padding-left: 0px; margin-right: auto; margin-left: auto;
+.navbar.navbar-no-bg { width: 100%; background: #444; background: rgba(0, 0, 0, 0.7); height:5rem; width:100%; position: relative; padding-right: 0px; padding-left: 0px; margin-right: auto; margin-left: auto;
 
 異쒖쿂: https://unikys.tistory.com/371 [All-round programmer]}
 .navbar-nav ml-auto{width : 100%;}
@@ -148,15 +148,27 @@ input {
 }
 
 .ourstyle{
-	max-width:25rem; background-color:rgba(0,0,0,0.6); border-radius: 1rem; padding:0;
+	max-width:20rem; background-color:rgba(0,0,0,0.85); border-radius: 1rem; padding:0;
 }
 .ourfont{
 	font-family: 'Nanum Square', 'Open Sans'; font-color:white; font-weight:700; white-space: nowrap; text-overflow: ellipsis;
 	margin:0; padding:0; z-index:999999; 
+	
 }
 
 .ourbutton{
-	font-weight:700; color:white; background-color:#e50914;
+	font-weight:700; color:white; background-color:#FFCAC4; 
+}
+.ourbutton2{
+	font-weight:700; color:white; background-color:#85C0FF; 
+}
+
+
+.ourbutton:hover{
+	background-color:#FFCA84; 
+}
+.ourbutton2:hover{
+	background-color:#85A5FF;
 }
 input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
 

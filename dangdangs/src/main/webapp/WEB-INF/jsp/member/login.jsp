@@ -48,22 +48,25 @@ function checkVal(){
    <header>
       <jsp:include page="/WEB-INF/jsp/include/topMenu.jsp" />
    </header>
-   <div class="backgroundForm" style="background-image: url('${ pageContext.request.contextPath }/resources/img/backgrounds/blackimg.jpg');">
-   <div class="container ourstyle"   align="center"    >
-      <h1  style="color:white; font-weight:700; ">로그인하기</h1> 
-      <form method="post" name="loginForm" onsubmit="return checkVal()"  style="margin: 1rem auto;  width:20rem; padding:1rem;">
-       <input type="text" name="mid" placeholder="Username" required="required" />
+   <div class="backgroundForm" style="background-image: url('${ pageContext.request.contextPath }/resources/img/backgrounds/whitedog.jpg');">
+   <div class="container ourstyle"   align="center"  style="margin:0, padding:0; width:14rem;"  >
+      <h1  style="color:white; font-weight:700; margin:0;padding:0; font-size: 1.3rem;">로그인</h1> 
+      <form method="post" name="loginForm" onsubmit="return checkVal()"  style="margin-top: 0rem; margin-left:0;margin-right:0;  width:13rem; padding:0rem;">
+       <input type="text" name="mid" placeholder="Username" required="required" style="color:black;" />
        <br>
-       <br>
-        <input type="password" name="mpassword" placeholder="Password"  required="required"  />
+       
+        <input type="password" name="mpassword" placeholder="Password"  required="required" style="color:black;"  />
         <br>
         <br>
-        <button type="submit" class="btn btn-danger btn-block" style="font-weight:700; background-color:#e50914;">로그인하기</button>
-        <br>
-        <button  class="btn btn-danger btn-block"   style="font-weight:700; background-color:#e50914;"    onclick="location.href='singup.jsp' ">회원가입</button>
+        <button type="submit" class="btn btn-block ourbutton2" style="font-weight:700; color:white;   ">로그인</button>
+        
+        <button  class="btn  btn-block ourbutton"   style="font-weight:700; color:white; margin-bottom:1rem;"    onclick="location.href='singup.jsp' ">회원가입</button>
     </form>
    </div>
    </div>
    </div>
+	<footer>
+		<jsp:include page="/WEB-INF/jsp/include/footer.jsp" />
+	</footer>
 </body>
 </html>

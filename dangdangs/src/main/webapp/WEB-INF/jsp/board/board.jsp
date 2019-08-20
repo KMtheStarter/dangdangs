@@ -43,12 +43,19 @@
 	<header>
 		<jsp:include page="/WEB-INF/jsp/include/topMenu.jsp" />
 	</header>
-	<form method="get" action="${ pageContext.request.contextPath }/board">
-	<input type="text" style="width:50%" name="query"><button type="submit">검색</button>
-	</form>
+	
 	<div class="backgroundForm"
 		style="background-image: url('${ pageContext.request.contextPath }/resources/img/backgrounds/2.jpg'); ">
-		<c:choose>
+			<div class="form-group">
+				<form method="get" class="form-inline"
+					action="${ pageContext.request.contextPath }/board">
+
+					<input type="text" placeholder="ex)피부병" class="form-control"
+						style="width: 100%; margin-top: 2rem;" name="query">
+					<button type="submit" class="btn form-control ourbutton2">검색</button>
+				</form>
+			</div>
+			<c:choose>
 		<c:when test="${ not empty boardList }">
 		<div class="container-fluid" style="margin: 2rem; padding: 1rem;">
 			<c:forEach items="${ boardList }" var="board">
@@ -57,13 +64,13 @@
 					<img class="card-img-top" style="border-top-left-radius:1rem; border-top-right-radius:1rem; min:height:35rem; max-height: 35rem;"
 						src="${ pageContext.request.contextPath }/upload/${ board.bfname }"
 						alt="Card image cap" >
-					<div class="card-body" style="background-color:rgba(0,0,0,0.8); border-bottom-left-radius:1rem; border-bottom-right-radius:1rem; ">
+					<div class="card-body" style="background-color:white; border-bottom-left-radius:1rem; border-bottom-right-radius:1rem; ">
 						<h5 class="card-title"
-							style="white-space: nowrap;color:white;	 overflow: hidden; font-size:2rem; text-overflow: ellipsis;">${ board.dname}</h5>
+							style="white-space: nowrap;color:black;	 overflow: hidden; font-size:2rem; text-overflow: ellipsis;">${ board.dname}</h5>
 						<p class="card-text">${ board.bdate}</p>
 						<a
 							href="${ pageContext.request.contextPath }/board/${ board.bno }"
-							class="btn btn-danger btn-block" style="backgorund-color:#e50914">더 알아보기</a>
+							class="btn ourbutton2 btn-block" style="backgorund-color:#e50914">더 알아보기</a>
 					</div>
 				</div>
 			</c:forEach>
@@ -77,7 +84,9 @@
 
 	</div>
 	</div>
-	
+	<footer>
+		<jsp:include page="/WEB-INF/jsp/include/footer.jsp" />
+	</footer>
 	
 </body>
 </html>
