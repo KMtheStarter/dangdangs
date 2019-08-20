@@ -90,8 +90,10 @@ public class BoardServiceImpl implements BoardService {
 		
 		List<String> spcodeList = diagVO.getSpcodeList();
 		for(String spcode: spcodeList) {
-			diagVO.setSpcode(spcode);
-			diagDAO.insertWeaken(diagVO);
+			if (!spcode.equals("etc")) {
+				diagVO.setSpcode(spcode);
+				diagDAO.insertWeaken(diagVO);
+			}
 		}
 		System.out.println("취약 견종 목록 갱신 완료");
 	}
