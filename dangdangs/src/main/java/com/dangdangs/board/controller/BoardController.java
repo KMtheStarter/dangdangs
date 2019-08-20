@@ -79,5 +79,4 @@ public class BoardController {
 		mav.addObject("boardVO", boardVO);
 		return mav;
 	}
-	
 }

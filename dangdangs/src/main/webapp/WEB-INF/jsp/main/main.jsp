@@ -174,13 +174,13 @@
 		</div>
 	</div>
 
-	<header>
+	<footer>
 		<jsp:include page="/WEB-INF/jsp/include/footer.jsp" />
-	</header>
+	</footer>
 
 	
 
 </body>
-
+	
 
 </html>

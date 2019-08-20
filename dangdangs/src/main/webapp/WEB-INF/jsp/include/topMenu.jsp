@@ -42,7 +42,7 @@
                      </c:if>
                      <c:if test="${ empty loginVO }">
                      <li class="nav-item">
-                         <a class="nav-link" href="${ pageContext.request.contextPath }/login">SIGN IN</a>
+                         <a class="nav-link" href="${ pageContext.request.contextPath }/login">LOGIN</a>
                      </li>
                      <li class="nav-item">
                          <a class="nav-link" href="${ pageContext.request.contextPath }/signup">SIGN UP</a>

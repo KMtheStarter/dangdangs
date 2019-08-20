@@ -218,7 +218,7 @@ i.fab{
 				<div class="row">
 					<div class="col-md-12 ">
 						<div class="text-center text-white">
-							&copy; 2018 Your Company. All Rights Reserved.
+							&copy; 2019 DangDang'S. All Rights Reserved.
 						</div>
 					</div>
 				</div>

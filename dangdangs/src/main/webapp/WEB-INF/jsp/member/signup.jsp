@@ -7,10 +7,11 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css"
-   href="${ pageContext.request.contextPath }/resources/css/layout.css">
+	href="${ pageContext.request.contextPath }/resources/css/layout.css">
 <link rel="stylesheet" type="text/css"
-   href="${ pageContext.request.contextPath }/resources/css/style.css">
-
+	href="${ pageContext.request.contextPath }/resources/css/style.css">
+<link rel="stylesheet" type="text/css"
+	href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script>
    var isChecked = {
@@ -34,18 +35,18 @@
     	         success: function(data){
     	            if (data == ""){
     	               if (idx == 0){
-    	                  $("#idchk").text(val + "은 사용 가능한 아이디입니다.");
+    	                  $("#idchk").text("사용 가능한 아이디입니다.");
     	                  isChecked.id = 1;
     	               } else{
-    	                  $("#nickchk").text(val + "은 사용 가능한 닉네임입니다.");
+    	                  $("#nickchk").text("사용 가능한 닉네임입니다.");
     	                  isChecked.nickname = 1;
     	               }
     	            } else {
     	               if (idx == 0) {
-    	                  $("#idchk").text(val + "은 사용 불가능한 아이디입니다." );
+    	                  $("#idchk").text("사용 불가능한 아이디입니다." );
     	                  isChecked.id = 0;
     	               } else{
-    	                  $("#nickchk").text(val + "은 사용 불가능한 닉네임입니다." );
+    	                  $("#nickchk").text("사용 불가능한 닉네임입니다." );
     	                  isChecked.nickname = 0;
     	               }
     	            }
@@ -64,48 +65,61 @@
 
 
 <body>
-<div class="container-fluid" style="padding-left: 0px; padding-right: 0px;">
-   <header>
-      <jsp:include page="/WEB-INF/jsp/include/topMenu.jsp" />
-   </header>
+	<div class="container-fluid"
+		style="padding-left: 0px; padding-right: 0px;">
+		<header>
+			<jsp:include page="/WEB-INF/jsp/include/topMenu.jsp" />
+		</header>
 
-   <div class="backgroundForm"
-      style="background-image: url('${ pageContext.request.contextPath }/resources/img/backgrounds/blackimg.jpg');">
-         
-      <div class="container ourstyle" >
-      <h1  style="color:white; font-weight:700; ">회원가입하기</h1>       
-      <form:form method="post" commandName="memberVO"  style="padding: 1rem;">
-         <table>
-            <tr >          
-               <td><form:input id="id" placeholder="아이디를 입력하세요" path="mid" /></td>
-               <td><input type="button"  class="btn-danger ourbutton" style="margin-left:1rem;" value="중복확인"  onclick="validCheck(0)"></td>
-            </tr>
-            <tr>
-               <td></td>
-               <td><form:errors path="mid" class="error" /><label id="idchk">&nbsp;</label></td>
-            </tr>
-            <tr>              
-               <td><form:input type="password" placeholder="비밀번호를 입력하세요" path="mpassword" size="30" /></td>
-            </tr>
-            <tr>
-               <td></td>
-               <td><form:errors path="mpassword" class="error" />&nbsp;</td>
-            </tr>
-            <tr>               
-               <td><form:input id="nick" placeholder="별명을 입력하세요" path="mnick" size="30" /></td>
-               <td><input type="button" class="btn-danger ourbutton" style="margin-left:1rem;" value="중복확인" onclick="validCheck(1)"></td>
-            </tr>
-            <tr>
-               <td></td>
-               <td><form:errors path="mnick" class="error" /><label
-                  id="nickchk">&nbsp;</label></td>
-            </tr>
-         </table>
-         <br>
-         <button id="submit"  type="submit"  class="ourbutton btn btn-block ">가입하기</button>
-      </form:form>
-   </div>
-   </div>
-   </div>
+		<div class="backgroundForm"
+			style="background-image: url('${ pageContext.request.contextPath }/resources/img/backgrounds/whitedog.jpg');">
+
+			<div class="container ourstyle" style="width: 15rem; diplay: inline;">
+				<h1
+					style="color: white; font-weight: 700; margin: 0; padding: 0; font-size: 1.3rem;">회원가입</h1>
+				<form:form class="form-inline" method="post" commandName="memberVO"
+					style=" margin-top: 0rem;  margin-right:0; margin-bottom:0;   padding-top:0; padding-bottom:0; ">
+					<div class="form-group">
+						<form:input id="id" class="form-inline" placeholder="id"
+							path="mid" style="color:black; width:8rem; margin-left:0.8rem; height:3rem;" />
+						<input type="button" class="btn form-control ourbutton2"
+							style="font-family: Noto Sans Kr; margin-left: 0.2rem; height:3rem; font-size:0.8rem; font-weight:700; " 
+							value="중복확인" onclick="validCheck(0)">
+					</div>
+					
+					<form:errors path="mid" class="error " />
+					
+					<label id="idchk" class="ourfont" style="text-align:center; margin-left:1rem;" >&nbsp;</label>
+					
+					<div class="form-group">
+						<form:input type="password" placeholder="password"
+							path="mpassword" class="form-inline" 
+							style=" color:black; width:8rem; margin-left:0.8rem; height:3rem;"  />
+						
+					</div>
+					<form:errors path="mpassword" class="error" />
+						<label class="ourfont" style="text-align:center; margin-left:1rem;" >
+						&nbsp;
+						</label>
+					<div class="form-group">
+						<form:input id="nick" class="form-inline" placeholder="nickname"
+							path="mnick" style=" color:black; width:8rem; margin-left:0.8rem; height:3rem;" />
+						<input type="button" class="btn form-control ourbutton2"
+							style="font-family: Noto Sans Kr; margin-left: 0.2rem; height:3rem; font-size:0.8rem; font-weight:700; " value="중복확인" onclick="validCheck(1)">
+					</div>
+					<form:errors path="mnick" class="error" />
+					<label id="nickchk" class="ourfont" style="text-align:center; margin-left:1rem;">&nbsp;</label>
+
+
+					
+					<button id="submit" type="submit" class="btn btn-block ourbutton"
+						style=" font-family: Noto Sans Kr; width:15rem; font-weight: 700; color: white; margin-left:0.8rem; margin-bottom: 1rem; margin-right:0.8rem;  ">회원가입</button>
+				</form:form>	
+			</div>
+		</div>
+	</div>
+	<footer>
+		<jsp:include page="/WEB-INF/jsp/include/footer.jsp" />
+	</footer>
 </body>
 </html>

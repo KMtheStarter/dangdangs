@@ -16,3 +16,5 @@ public interface BoardService {
 	public void insertBoard(BoardVO boardVO, MultipartFile mFile);
 	public void insertDiagParams(DiagVO diagVO);
 }
+
+
