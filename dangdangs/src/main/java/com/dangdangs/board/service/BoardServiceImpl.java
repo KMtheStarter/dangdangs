@@ -13,12 +13,16 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.dangdangs.board.dao.BoardDAO;
 import com.dangdangs.board.vo.BoardVO;
+import com.dangdangs.diag.dao.DiagDAO;
+import com.dangdangs.diag.vo.DiagVO;
 
 @Service
 public class BoardServiceImpl implements BoardService {
 
 	@Autowired
 	private BoardDAO boardDAO;
+	@Autowired
+	private DiagDAO diagDAO;
 	@Autowired
 	private ServletContext servletContext;
 
@@ -70,6 +74,26 @@ public class BoardServiceImpl implements BoardService {
 				e.printStackTrace();
 			}
 		}
+	}
+
+	@Override
+	public void insertDiagParams(DiagVO diagVO) {
+		diagDAO.insertDisease(diagVO);
+		System.out.println("질병 목록 갱신 완료");
+		
+		List<String> synameList = diagVO.getSyname();
+		for(String syname: synameList) {
+			diagVO.setTempSyname(syname);
+			diagDAO.insertSymptom(diagVO);
+		}
+		System.out.println("증상 목록 갱신 완료");
+		
+		List<String> spcodeList = diagVO.getSpcodeList();
+		for(String spcode: spcodeList) {
+			diagVO.setSpcode(spcode);
+			diagDAO.insertWeaken(diagVO);
+		}
+		System.out.println("취약 견종 목록 갱신 완료");
 	}
 
 }
