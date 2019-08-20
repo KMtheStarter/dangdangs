@@ -66,17 +66,17 @@
 	<hr style="border-color:#477AFF">
 	<ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item">
-    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">내 정보</a>
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true" style="color: #5CAB75;">내 정보</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">나의 댕댕이</a>
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false" style="color: #5CAB75;">나의 댕댕이</a>
   </li>
 </ul>
 <div class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab" style="text-align: left;">
   	<h2 style="color:white;">${ loginVO.mnick } 님 안녕하세요</h2> <br>
   	<h2 style="color:white;">아이디 : ${ loginVO.mid }</h2><br>
-  	<h3><a href="${ pageContext.request.contextPath }/mypage/checkPwd">회원정보 수정하기</a></h3>
+  	<h3><a href="${ pageContext.request.contextPath }/mypage/checkPwd" style="color: #5A79B8;">회원정보 수정하기</a></h3>
   </div>
   <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 	<h2 style="color:white;">내 댕댕이</h2>
@@ -90,7 +90,7 @@
 				</tr>
 				<c:forEach items="${ petList }" var="pet">
 				<tr style="color: black;">
-					<td><a href="${ pageContext.request.contextPath }/board/spcode/${ pet.spcode }">${ pet.pname } 관련 정보 보러가기</a></td>
+					<td><a href="${ pageContext.request.contextPath }/board/spcode/${ pet.spcode }" style="color: #4A8A5E;">${ pet.pname } 관련 정보 보러가기</a></td>
 					<td>${ pet.spname }</td>
 					<td style="width: 7%"><input type="button" value="삭제" onclick="deletePet(${ pet.pno })"></td>
 				</tr>
