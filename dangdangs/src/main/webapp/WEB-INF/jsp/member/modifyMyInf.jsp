@@ -64,7 +64,7 @@ function validCheck(idx){
 		<jsp:include page="/WEB-INF/jsp/include/topMenu.jsp" />
 	</header>
 	<div class="backgroundForm" style="background-image:url('${ pageContext.request.contextPath }/resources/img/backgrounds/mypage.jpg');">
-	<div class="container ourstyle"   align="center"    >
+	<div class="container ourstyle" align="center">
 <h1>내 정보 수정</h1>
 
 <form:form method="post" commandName="memberVO" action="${ pageContext.request.contextPath }/mypage/modifyMyInf">
