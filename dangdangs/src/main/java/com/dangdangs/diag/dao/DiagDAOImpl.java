@@ -6,6 +6,8 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.dangdangs.diag.vo.DiagVO;
+
 @Repository
 public class DiagDAOImpl implements DiagDAO {
 
@@ -25,6 +27,21 @@ public class DiagDAOImpl implements DiagDAO {
 	@Override
 	public List<String> selectDnameByDAge(int dage) {
 		return ss.selectList("diag.dao.DiagDAO.selectDnameByAge", dage);
+	}
+
+	@Override
+	public void insertDisease(DiagVO diagVO) {
+		ss.insert("diag.dao.DiagDAO.insertDisease", diagVO);
+	}
+
+	@Override
+	public void insertSymptom(DiagVO diagVO) {
+		ss.insert("diag.dao.DiagDAO.insertSymptom", diagVO);
+	}
+
+	@Override
+	public void insertWeaken(DiagVO diagVO) {
+		ss.insert("diag.dao.DiagDAO.insertWeaken", diagVO);
 	}
 
 }

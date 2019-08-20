@@ -18,6 +18,7 @@ import com.dangdangs.board.service.BoardService;
 import com.dangdangs.board.vo.BoardVO;
 import com.dangdangs.comment.service.CommentService;
 import com.dangdangs.comment.vo.CommentVO;
+import com.dangdangs.diag.vo.DiagVO;
 import com.dangdangs.member.vo.MemberVO;
 
 @Controller
@@ -36,8 +37,9 @@ public class BoardController {
 	}
 	
 	@PostMapping("/board")
-	public String board(BoardVO vo, MultipartFile uploadFile) {
-		boardService.insertBoard(vo, uploadFile);
+	public String board(BoardVO boardVO, DiagVO diagVO, MultipartFile uploadFile) {
+//		boardService.insertDiagParams(diagVO);
+//		boardService.insertBoard(boardVO, uploadFile);
 		return "redirect:/board";
 	}
 	
