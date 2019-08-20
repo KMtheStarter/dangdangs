@@ -64,12 +64,12 @@ function validCheck(idx){
 		<jsp:include page="/WEB-INF/jsp/include/topMenu.jsp" />
 	</header>
 	<div class="backgroundForm" style="background-image:url('${ pageContext.request.contextPath }/resources/img/backgrounds/mypage.jpg');">
-	<div class="container ourstyle" align="center">
-<h1>내 정보 수정</h1>
+	<div align="center" style="background-color: rgba(57,58,52, 0.5);">
+<h1 style="color: white;">내 정보 수정</h1>
 
 <form:form method="post" commandName="memberVO" action="${ pageContext.request.contextPath }/mypage/modifyMyInf">
 <form:hidden path="mid"	value="${ loginVO.mid }"/>
-	<table style="margin-right: auto; margin-left: auto;">
+	<table style="margin-right: auto; margin-left: auto; border-collapse: separate; border-spacing: 0 10px; color: white;">
 		<tr style="font-size: large;">
 			<td>id</td>
 			<td>${ loginVO.mid }</td>
@@ -77,9 +77,9 @@ function validCheck(idx){
 		</tr>
 		
 		<tr>
-			<td>닉네임</td>
-			<td><form:input id="nick" path="mnick" size="30"></form:input></td>
-			<td><input type="button" class="btn btn-outline-primary" style="margin-left:1rem;" value="중복확인" onclick="validCheck(1)"></td>
+			<td>닉네임 &nbsp</td>
+			<td><form:input id="nick" path="mnick" size="20"></form:input></td>
+			<td><input type="button" class="btn btn-outline-primary" style="margin-left:1rem; width: 90px;" value="중복확인" onclick="validCheck(1)"></td>
 		</tr>
 		<tr>
            <td></td>
@@ -87,8 +87,8 @@ function validCheck(idx){
               id="nickchk">&nbsp;</label></td>
         </tr>
 		<tr>
-			<td>비밀번호</td>
-			<td><form:input id="pwd" path="mpassword" size="40"></form:input></td>
+			<td>비밀번호 &nbsp</td>
+			<td><form:input id="pwd" path="mpassword" size="30"></form:input></td>
 		</tr>
 
 	</table>
