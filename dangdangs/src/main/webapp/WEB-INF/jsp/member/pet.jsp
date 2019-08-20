@@ -39,12 +39,7 @@
 </script>
 </head>
 <body>
-
-<%-- <header>
-		<jsp:include page="/WEB-INF/jsp/include/topMenu.jsp" />
-</header> --%>
-
-	<div align="center">
+	<div align="center" style="width: 80%; margin-left: auto; margin-right: auto;">
 		<br>
 		<hr>
 		<h2>마이 댕댕이 등록</h2>
@@ -62,7 +57,7 @@
 				<tr>
 					<th>댕댕이 이름</th>
 					<td>
-						<input type="text" name="pname" size="50" autofocus="autofocus"/>
+						<input type="text" name="pname" size="40" autofocus="autofocus"/>
 					</td>
 				</tr>
 				</tbody>

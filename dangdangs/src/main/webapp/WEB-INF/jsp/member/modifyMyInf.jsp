@@ -75,7 +75,6 @@ function validCheck(idx){
 			<td>${ loginVO.mid }</td>
 			<td></td>
 		</tr>
-		
 		<tr>
 			<td>닉네임 &nbsp</td>
 			<td><form:input id="nick" path="mnick" size="20"></form:input></td>
