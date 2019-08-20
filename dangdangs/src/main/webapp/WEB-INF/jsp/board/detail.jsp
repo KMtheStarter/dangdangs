@@ -23,6 +23,22 @@ table.list tr:nth-child(odd) {
    background-color: #F7F9D2;
 }
 </style>
+
+<link rel="stylesheet" type="text/css"
+	href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css"
+	href="${ pageContext.request.contextPath }/resources/css/bootstrap.min.css">
+
+
+<link rel="stylesheet" type="text/css"
+	href="${ pageContext.request.contextPath }/resources/css/layout.css">
+<link rel="stylesheet" type="text/css"
+	href="${ pageContext.request.contextPath }/resources/css/style.css">
+<link rel="stylesheet" href="resources/css/board.css">
 <link rel="stylesheet"
    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -47,18 +63,22 @@ table.list tr:nth-child(odd) {
 </script>
 </head>
 <body>
+<div class="container-fluid" style="padding-left: 0px; padding-right: 0px;">
+	<header>
+		<jsp:include page="/WEB-INF/jsp/include/topMenu.jsp" />
+	</header>
 	<br>
    <h2 style="margin-left: 100px; margin-right: 100px;">상세보기</h2>
    <hr style="margin-left: 100px; margin-right: 100px;">
    <div align="center">
-      <table style="width: 80%;">
+      <table style="width: 80%; border-collapse: separate; border-spacing: 0 20px;">
          <tr>
-            <th style="width: 7%">${ vo.bno }</th>
-            <th style="width: 80%">${ vo.dname }</th>
+            <th style="width: 7%;">${ vo.bno }</th>
+            <th style="width: 80%"><h3>${ vo.dname }</h3></th>
             <td>${ vo.bdate }</td>
          </tr>
          <tr>
-         	<th style="width: 7%">증상</th>
+         	<th style="width: 7%; font-size: x-large;">증상</th>
 	         	<td colspan="2">
 		         	<c:forEach items="${ syname }" var="syname">
 		         		<li style="list-style-type: circle;">${ syname }
@@ -66,19 +86,19 @@ table.list tr:nth-child(odd) {
 	         	</td>
          </tr>
          <tr>
-            <th style="width: 7%">요약</th>
+            <th style="width: 7%; font-size: x-large;">요약</th>
             <td colspan="2">${fn:replace(vo.bsum, replaceChar, "<br/>") }</td>
          </tr>
          <tr>
-            <th style="width: 7%">원인</th>
+            <th style="width: 7%; font-size: x-large;">원인</th>
             <td colspan="2">${fn:replace(vo.bcause, replaceChar, "<br/>") }</td>
          </tr>
          <tr>
-            <th style="width: 7%">치료법</th>
+            <th style="width: 7%; font-size: x-large;">치료법</th>
             <td colspan="2">${fn:replace(vo.btreat, replaceChar, "<br/>") }</td>
          </tr>
          <tr>
-            <th style="width: 7%">관리법</th>
+            <th style="width: 7%; font-size: x-large;">관리법</th>
             <td colspan="2">${fn:replace(vo.bcare, replaceChar, "<br/>") }</td>
          </tr>
       </table>
@@ -105,12 +125,15 @@ table.list tr:nth-child(odd) {
 	         <%-- 댓글 달기 폼 cno, mnick, bno, ccontent, cdate, ctype --%>
 	         <input type="hidden" name="mnick" value="${ loginVO.mnick }">
 	         <input type="hidden" name="bno" value="${ vo.bno }">
-	         <table style="width: 80% ">
+	         <table style="width:80%;">
 	            <tr>
 	               <th>작성자</th>
 	               <td>${ loginVO.mnick }</td>
 	               <th>내용</th>
-	               <td><textarea name="ccontent" rows="3" cols="150"></textarea>
+	               <td></td>
+	            </tr>
+	            <tr>
+	            <td><textarea name="ccontent" rows="3" cols="100"></textarea>
 	         		   <button type="submit" class="btn btn-outline-dark" >댓글작성</button></td>
 	            </tr>
 	         </table>
@@ -120,6 +143,7 @@ table.list tr:nth-child(odd) {
 	    	<div style="width:80%; margin-bottom: 10px;">로그인 후 댓글을 달 수 있습니다.</div>
 	    </c:otherwise>
 	    </c:choose>
+   </div>
    </div>
 </body>
 </html>

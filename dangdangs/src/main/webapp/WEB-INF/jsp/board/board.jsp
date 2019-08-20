@@ -31,23 +31,19 @@
 	integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
 	crossorigin="anonymous"></script>
 
-
-
 </head>
-<style>
 
-
-</style>
 <body>
 	<div class="container-fluid" style="padding-left: 0px; padding-right: 0px;">
 	<header>
 		<jsp:include page="/WEB-INF/jsp/include/topMenu.jsp" />
 	</header>
-	<form method="get" action="${ pageContext.request.contextPath }/board">
-	<input type="text" style="width:50%" name="query"><button type="submit">검색</button>
-	</form>
+	
 	<div class="backgroundForm"
 		style="background-image: url('${ pageContext.request.contextPath }/resources/img/backgrounds/2.jpg'); ">
+	<form method="get" action="${ pageContext.request.contextPath }/board">
+	<input type="text" style="width:60%" name="query">&nbsp;<button type="submit" class="btn btn-primary">검색</button>
+	</form>
 		<c:choose>
 		<c:when test="${ not empty boardList }">
 		<div class="container-fluid" style="margin: 2rem; padding: 1rem;">
