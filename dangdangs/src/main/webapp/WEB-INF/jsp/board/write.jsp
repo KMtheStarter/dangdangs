@@ -82,7 +82,7 @@ function getTd(age){
 	<div>
 		<form method="post"
 			action="${ pageContext.request.contextPath }/board" name="diagForm"
-			onsubmit="return checkVal()" enctype="multipart/form-data">
+			onsubmit="return writeCheckVal()" enctype="multipart/form-data">
 			<input type="hidden" name="mid" value="${ loginVO.mid }">
 			<div align="center">
 				<table>
@@ -141,7 +141,7 @@ function getTd(age){
 										</tr>
 										<tr>
 											<td>0~1세의 어린 강아지</td>
-											<td>1~7세의 성견 강아지</td>
+											<td>해당없음</td>
 											<td>7세 이상의 노견 강아지</td>
 										</tr>
 									</table>
@@ -163,94 +163,94 @@ function getTd(age){
 							<div class="card-body" align="left">
 								<ul>
 									<h3>ㄱ</h3>
-									<li><input type="radio" name="spcode" value="great">그레이트
+									<li><input type="checkbox" name="spcodeList" value="great">그레이트
 										데인</li>
 								</ul>
 								<ul>
 									<h3>ㄷ</h3>
-									<li><input type="radio" name="spcode" value="dachs">닥스훈트</li>
-									<li><input type="radio" name="spcode" value="dalma">달마시안</li>
-									<li><input type="radio" name="spcode" value="dober">도베르만핀셔</li>
+									<li><input type="checkbox" name="spcodeList" value="dachs">닥스훈트</li>
+									<li><input type="checkbox" name="spcodeList" value="dalma">달마시안</li>
+									<li><input type="checkbox" name="spcodeList" value="dober">도베르만핀셔</li>
 								</ul>
 								<ul>
 									<h3>ㄹ</h3>
-									<li><input type="radio" name="spcode" value="lassa">라사압소</li>
-									<li><input type="radio" name="spcode" value="rott">로트와일러</li>
-									<li><input type="radio" name="spcode" value="retri">리트리버</li>
+									<li><input type="checkbox" name="spcodeList" value="lassa">라사압소</li>
+									<li><input type="checkbox" name="spcodeList" value="rott">로트와일러</li>
+									<li><input type="checkbox" name="spcodeList" value="retri">리트리버</li>
 								</ul>
 								<ul>
 									<h3>ㅁ</h3>
-									<li><input type="radio" name="spcode" value="masti">마스티프</li>
-									<li><input type="radio" name="spcode" value="malte">말티즈</li>
+									<li><input type="checkbox" name="spcodeList" value="masti">마스티프</li>
+									<li><input type="checkbox" name="spcodeList" value="malte">말티즈</li>
 								</ul>
 								<ul>
 									<h3>ㅂ</h3>
-									<li><input type="radio" name="spcode" value="bhound">바셋
+									<li><input type="checkbox" name="spcodeList" value="bhound">바셋
 										하운드</li>
-									<li><input type="radio" name="spcode" value="bteri">보스턴테리어</li>
-									<li><input type="radio" name="spcode" value="bull">불독</li>
-									<li><input type="radio" name="spcode" value="buteri">불테리어</li>
-									<li><input type="radio" name="spcode" value="britt">브리트니</li>
-									<li><input type="radio" name="spcode" value="brteri">블랙러시안테리어</li>
-									<li><input type="radio" name="spcode" value="beagle">비글</li>
-									<li><input type="radio" name="spcode" value="bichon">비숑프리제</li>
+									<li><input type="checkbox" name="spcodeList" value="bteri">보스턴테리어</li>
+									<li><input type="checkbox" name="spcodeList" value="bull">불독</li>
+									<li><input type="checkbox" name="spcodeList" value="buteri">불테리어</li>
+									<li><input type="checkbox" name="spcodeList" value="britt">브리트니</li>
+									<li><input type="checkbox" name="spcodeList" value="brteri">블랙러시안테리어</li>
+									<li><input type="checkbox" name="spcodeList" value="beagle">비글</li>
+									<li><input type="checkbox" name="spcodeList" value="bichon">비숑프리제</li>
 								</ul>
 								<ul>
 									<h3>ㅅ</h3>
-									<li><input type="radio" name="spcode" value="samo">사모예드</li>
-									<li><input type="radio" name="spcode" value="shar">샤페이</li>
-									<li><input type="radio" name="spcode" value="stber">세인트버나드</li>
-									<li><input type="radio" name="spcode" value="schn">슈나우저</li>
-									<li><input type="radio" name="spcode" value="husky">시베리안
+									<li><input type="checkbox" name="spcodeList" value="samo">사모예드</li>
+									<li><input type="checkbox" name="spcodeList" value="shar">샤페이</li>
+									<li><input type="checkbox" name="spcodeList" value="stber">세인트버나드</li>
+									<li><input type="checkbox" name="spcodeList" value="schn">슈나우저</li>
+									<li><input type="checkbox" name="spcodeList" value="husky">시베리안
 										허스키</li>
-									<li><input type="radio" name="spcode" value="shitzu">시츄</li>
+									<li><input type="checkbox" name="spcodeList" value="shitzu">시츄</li>
 								</ul>
 								<ul>
 									<h3>ㅇ</h3>
-									<li><input type="radio" name="spcode" value="akita">아키타</li>
-									<li><input type="radio" name="spcode" value="amalam">알래스칸맬러뮤트</li>
-									<li><input type="radio" name="spcode" value="oeshee">올드
+									<li><input type="checkbox" name="spcodeList" value="akita">아키타</li>
+									<li><input type="checkbox" name="spcodeList" value="amalam">알래스칸맬러뮤트</li>
+									<li><input type="checkbox" name="spcodeList" value="oeshee">올드
 										잉글리쉬 쉽독</li>
-									<li><input type="radio" name="spcode" value="weima">와이마라너</li>
-									<li><input type="radio" name="spcode" value="yteri">요크셔테리어</li>
-									<li><input type="radio" name="spcode" value="welsh">웰시코기</li>
-									<li><input type="radio" name="spcode" value="esspan">잉글리쉬
+									<li><input type="checkbox" name="spcodeList" value="weima">와이마라너</li>
+									<li><input type="checkbox" name="spcodeList" value="yteri">요크셔테리어</li>
+									<li><input type="checkbox" name="spcodeList" value="welsh">웰시코기</li>
+									<li><input type="checkbox" name="spcodeList" value="esspan">잉글리쉬
 										스프링거 스파니엘</li>
-									<li><input type="radio" name="spcode" value="esett">잉글리쉬
+									<li><input type="checkbox" name="spcodeList" value="esett">잉글리쉬
 										세터</li>
 								</ul>
 								<ul>
 									<h3>ㅈ</h3>
-									<li><input type="radio" name="spcode" value="schaf">저먼셰퍼드</li>
-									<li><input type="radio" name="spcode" value="gpoint">저먼숏헤어포인터</li>
+									<li><input type="checkbox" name="spcodeList" value="schaf">저먼셰퍼드</li>
+									<li><input type="checkbox" name="spcodeList" value="gpoint">저먼숏헤어포인터</li>
 								</ul>
 
 								<ul>
 									<h3>ㅊ</h3>
-									<li><input type="radio" name="spcode" value="chihua">치와와</li>
+									<li><input type="checkbox" name="spcodeList" value="chihua">치와와</li>
 								</ul>
 								<ul>
 									<h3>ㅋ</h3>
-									<li><input type="radio" name="spcode" value="cteri">케언테리어</li>
-									<li><input type="radio" name="spcode" value="coca">코카스파니엘</li>
+									<li><input type="checkbox" name="spcodeList" value="cteri">케언테리어</li>
+									<li><input type="checkbox" name="spcodeList" value="coca">코카스파니엘</li>
 								</ul>
 								<ul>
 									<h3>ㅍ</h3>
-									<li><input type="radio" name="spcode" value="pug">퍼그</li>
-									<li><input type="radio" name="spcode" value="peki">페키니즈</li>
-									<li><input type="radio" name="spcode" value="pome">포메라니안</li>
-									<li><input type="radio" name="spcode" value="point">포인터</li>
-									<li><input type="radio" name="spcode" value="mpoo">(미니어쳐)푸들</li>
-									<li><input type="radio" name="spcode" value="tpoo">(토이)푸들</li>
-									<li><input type="radio" name="spcode" value="pitbull">핏불</li>
+									<li><input type="checkbox" name="spcodeList" value="pug">퍼그</li>
+									<li><input type="checkbox" name="spcodeList" value="peki">페키니즈</li>
+									<li><input type="checkbox" name="spcodeList" value="pome">포메라니안</li>
+									<li><input type="checkbox" name="spcodeList" value="point">포인터</li>
+									<li><input type="checkbox" name="spcodeList" value="mpoo">(미니어쳐)푸들</li>
+									<li><input type="checkbox" name="spcodeList" value="tpoo">(토이)푸들</li>
+									<li><input type="checkbox" name="spcodeList" value="pitbull">핏불</li>
 								</ul>
 								<ul>
 									<h3>ㅎ</h3>
-									<li><input type="radio" name="spcode" value="hava">하바네즈</li>
+									<li><input type="checkbox" name="spcodeList" value="hava">하바네즈</li>
 								</ul>
 								<ul>
 									<h3>기타</h3>
-									<li><input type="radio" name="spcode" value="etc">기타</li>
+									<li><input type="checkbox" name="spcodeList" value="etc">해당없음</li>
 								</ul>
 							</div>
 						</div>

@@ -48,7 +48,24 @@ function checkVal() {
 	if (isNull(form.dage, "나이를 입력하세요.")){
 		return false;
 	}
-	if (isNull(form.spcode, "종을 선택하세요.")){
+	if (isNull(form.spcode, "종을 입력하세요.")){
+		return false;
+	}
+	if(!$("input:checkbox[name='syname']").is(":checked")){
+		alert("증상을 입력하세요.");
+		return false;
+	}
+	else
+		return true;
+}
+
+function writeCheckVal() {
+	let form = document.diagForm;
+	if (isNull(form.dage, "나이를 입력하세요.")){
+		return false;
+	}
+	if (!$("input:checkbox[name='spcodeList']").is(":checked")){
+		alert("종을 입력하세요.")
 		return false;
 	}
 	if(!$("input:checkbox[name='syname']").is(":checked")){
