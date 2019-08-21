@@ -99,8 +99,20 @@ public class DiagServiceImpl implements DiagService {
 		}
 		return voList;
 	}
-
-
+	
+	@Override
+	public String makeURL(List<String> dnameList) {
+		StringBuffer sb = new StringBuffer("result?");
+		Iterator<String> itr = dnameList.iterator();
+		while(itr.hasNext()) {
+			sb.append("dname=");
+			sb.append(itr.next());
+			if (itr.hasNext()) {
+				sb.append("&");
+			}
+		}
+		return sb.toString();
+	}
 
 	// 가중치를 계산하여 맵 형태로 반환
 	private Map<String, Double> makeMap(Map<String, Double> map, List<String> list, double weight) {

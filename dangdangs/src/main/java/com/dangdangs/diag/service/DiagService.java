@@ -9,4 +9,5 @@ public interface DiagService {
 
 	public List<String> doDiag(DiagVO diagVO);
 	public List<BoardVO> getBnoByDname(List<String> dnameList);
+	public String makeURL(List<String> dnameList);
 }
