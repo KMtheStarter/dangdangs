@@ -64,34 +64,49 @@ function validCheck(idx){
 		<jsp:include page="/WEB-INF/jsp/include/topMenu.jsp" />
 	</header>
 	<div class="backgroundForm" style="background-image:url('${ pageContext.request.contextPath }/resources/img/backgrounds/mypage.jpg');">
-	<div align="center" style="background-color: rgba(57,58,52, 0.5);">
+	<div align="center" style="background-color: rgba(57,58,52, 0.5); padding: 1rem; border-radius: 1em;">
 <h1 style="color: white;">내 정보 수정</h1>
 
 <form:form method="post" commandName="memberVO" action="${ pageContext.request.contextPath }/mypage/modifyMyInf">
 <form:hidden path="mid"	value="${ loginVO.mid }"/>
-	<table style="margin-right: auto; margin-left: auto; border-collapse: separate; border-spacing: 0 10px; color: white;">
-		<tr style="font-size: large;">
-			<td>id</td>
-			<td>${ loginVO.mid }</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>닉네임 &nbsp</td>
-			<td><form:input id="nick" path="mnick" size="20"></form:input></td>
-			<td><input type="button" class="btn btn-outline-primary" style="margin-left:1rem; width: 90px;" value="중복확인" onclick="validCheck(1)"></td>
-		</tr>
-		<tr>
-           <td></td>
-           <td><form:errors path="mnick" class="error" /><label
-              id="nickchk">&nbsp;</label></td>
-        </tr>
-		<tr>
-			<td>비밀번호 &nbsp</td>
-			<td><form:input id="pwd" path="mpassword" size="30"></form:input></td>
-		</tr>
-
-	</table>
-	<button id="submit" type="submit" class="btn btn-outline-success">수정하기</button>
+	<div class="container" style="color: white; font-size: 20px; margin-bottom: 10px;">
+  		<div class="row" style="height: 50px;">
+    		<div class="col-sm">
+     		 id
+  		  </div>
+  		  <div class="col-sm">
+  		    ${ loginVO.mid }
+  		  </div>
+  		  <div class="col-sm"></div>
+ 		 </div>
+		  <div class="row">
+ 		   <div class="col-sm">
+  		    닉네임
+  		  </div>
+  		   <div class="col-sm">
+  		    <form:input id="nick" path="mnick" size="20"></form:input>
+  		  </div>
+  		   <div class="col-sm">
+   		   <input class="btn ourbutton2" type="button" style="margin-left:1rem; width: 90px;" value="중복확인" onclick="validCheck(1)">
+ 		   </div>
+ 		 </div>
+ 		 <div class="row">
+ 		 <div class="col-sm">
+   		   <form:errors path="mnick" class="error" /><label
+      		        id="nickchk">&nbsp;</label>
+   		 </div>
+  		</div>
+ 		 <div class="row">
+  		 <div class="col-sm">
+     		 비밀번호
+  		  </div>
+   		 <div class="col-sm">
+    		  <form:input id="pwd" path="mpassword" size="30"></form:input>
+   		 </div>
+   		 <div class="col-sm"></div>
+ 		 </div>
+		</div>
+			<button class="btn ourbutton" id="submit" type="submit">수정하기</button>
 </form:form>
 </div>
 </div>

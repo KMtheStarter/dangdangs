@@ -59,7 +59,7 @@
 		<jsp:include page="/WEB-INF/jsp/include/topMenu.jsp" />
 	</header>
 	<div class="backgroundForm" style="background-image:url('${ pageContext.request.contextPath }/resources/img/backgrounds/mypage.jpg');">
-	<div style="width: 50em; height:50em; text-align: center;">
+	<div style="width: 60em; height:50em; text-align: center; background-color: rgba(0,0,0,0.7); padding: 1rem; border-radius: 1em;">
 	<h2 style="color: white; font-weight: 700;">마이페이지</h2>
 	<hr style="border-color:#477AFF">
 	<h3 style="color: white;">로그인된 아이디: ${ loginVO.mid }</h3>
@@ -74,28 +74,32 @@
 </ul>
 <div class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab" style="text-align: left;">
-  	<h2 style="color:white;">${ loginVO.mnick } 님 안녕하세요</h2> <br>
-  	<h2 style="color:white;">아이디 : ${ loginVO.mid }</h2><br>
+  	<h2 style="color:white;"><strong>${ loginVO.mnick }</strong> 님 안녕하세요</h2> <br>
+  	<h2 style="color:white;">아이디 :<strong> ${ loginVO.mid }</strong></h2><br>
   	<h3><a href="${ pageContext.request.contextPath }/mypage/checkPwd" style="color: #5A79B8;">회원정보 수정하기</a></h3>
   </div>
   <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 	<h2 style="color:white;">내 댕댕이</h2>
 		<hr style="border-color:white;">
 		<div align="center">
-			<table class="table" style="background-color:#FFF6F2; border: 1px solid; width:50em; text-align: center;">
-				<tr style="color: #B5A6A3;">
-					<th scope="col">댕댕이 이름</th>
-					<th scope="col">댕댕이 종</th>
-					<th></th>
-				</tr>
+			<div class="container" style="font-size: 30px; margin-bottom: 10px;">
 				<c:forEach items="${ petList }" var="pet">
-				<tr style="color: black;">
-					<td><a href="${ pageContext.request.contextPath }/board/spcode/${ pet.spcode }" style="color: #4A8A5E;">${ pet.pname } 관련 정보 보러가기</a></td>
-					<td>${ pet.spname }</td>
-					<td style="width: 7%"><input type="button" value="삭제" onclick="deletePet(${ pet.pno })"></td>
-				</tr>
-				</c:forEach>
-			</table>
+ 				 <div class="row">
+  				  <div class="col-sm" style="color: white;">
+   					   ${ pet.pname }
+   				 </div>
+ 			   <div class="col-sm" style="color: white;">
+  			    ${ pet.spname }
+ 			   </div>
+ 			   <div class="col-sm" style="font-size: 20px;">
+  			    <a href="${ pageContext.request.contextPath }/board/spcode/${ pet.spcode }" style="color: #F9FF9E;">관련 정보<br>보러가기</a>
+  			  </div>
+  			   <div class="col-2">
+ 			   <input class="btn ourbutton"type="button" value="삭제" onclick="deletePet(${ pet.pno })">
+  			  </div>
+ 			 </div>
+ 			 </c:forEach>		
+			</div>
 			<div style="border: 1px solid;">
 			<h3><a style="color: #E8D1DD;" href="${ pageContext.request.contextPath }/pet">댕댕이 등록하기</a></h3>
 			</div>

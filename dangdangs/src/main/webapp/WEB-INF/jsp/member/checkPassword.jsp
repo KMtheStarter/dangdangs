@@ -26,7 +26,7 @@
 		<jsp:include page="/WEB-INF/jsp/include/topMenu.jsp" />
 	</header>
 	<div class="backgroundForm" style="background-image:url('${ pageContext.request.contextPath }/resources/img/backgrounds/mypage.jpg');">
-	<div style="margin-top: -50px;">
+	<div style="margin-top: -50px; background-color: rgba(0,0,0,0.7); padding: 1rem; border-radius: 1em;">
 	<h3 style="color: white;">
 		비밀번호 확인창입니다.
 		현재 비밀번호를 입력해주세요
