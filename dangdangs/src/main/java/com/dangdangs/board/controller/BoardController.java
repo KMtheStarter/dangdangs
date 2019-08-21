@@ -48,10 +48,10 @@ public class BoardController {
 		BoardVO vo = boardService.selectResultBoard(no);
 		List<CommentVO> list = commentService.selectByBnoComment(no);
 		List<String> listSyname = boardService.selectSynameByBno(no);
-		System.out.println(listSyname);
 		model.addAttribute("vo", vo);
 		model.addAttribute("commentList", list);
 		model.addAttribute("syname", listSyname);
+		model.addAttribute("replaceChar", "\n");
 		return "board/detail";
 	}
 

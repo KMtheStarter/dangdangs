@@ -2,7 +2,6 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<% pageContext.setAttribute("replaceChar", "\n");%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -60,6 +59,17 @@ body > div > span:hover{
 		$("body > div > div:nth-child(" + divid + ")").css("display", "block");
 		
 	}
+
+	function copy_to_clipboard(val) {
+	      var t = document.createElement("textarea");
+	        document.body.appendChild(t);
+	        t.value=val;
+	        t.select();
+	        document.execCommand("Copy");
+	        document.body.removeChild(t);
+	        alert("URL이 클립보드에 복사되었습니다!");
+	}
+
 </script>
 </head>
 <body>
@@ -79,6 +89,10 @@ body > div > span:hover{
 				</div>
 			</c:forEach>
 		</div>
+
+		<c:if test="${ not empty url }">
+			<button onclick="copy_to_clipboard('http://222.106.22.28:7777${ pageContext.request.contextPath }/${ url }')">공유하기</button>
+		</c:if>
 
 </body>
 </html>
