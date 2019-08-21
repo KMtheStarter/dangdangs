@@ -38,6 +38,7 @@
 	</header>
 		<div class="backgroundForm"
 			style="background-image: url('${ pageContext.request.contextPath }/resources/img/backgrounds/2.jpg'); ">
+			<div>
 		<h2 style="color: #EFF2E1;">내 댕댕이의 종에 따른 취약 질병 게시판</h2>
 		
 		<hr>
@@ -61,6 +62,7 @@
 			
 		</div>
 		</div>
+	</div>
 	</div>
 </body>
 </html>

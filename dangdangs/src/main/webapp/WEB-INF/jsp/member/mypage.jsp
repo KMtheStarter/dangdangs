@@ -61,9 +61,6 @@
 	<div class="backgroundForm" style="background-image:url('${ pageContext.request.contextPath }/resources/img/backgrounds/mypage.jpg');">
 	<div style="width: 60em; height:50em; text-align: center; background-color: rgba(0,0,0,0.7); padding: 1rem; border-radius: 1em;">
 	<h2 style="color: white; font-weight: 700;">마이페이지</h2>
-	<hr style="border-color:#477AFF">
-	<h3 style="color: white;">로그인된 아이디: ${ loginVO.mid }</h3>
-	<hr style="border-color:#477AFF">
 	<ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item">
     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true" style="color: #5CAB75;">내 정보</a>
@@ -98,7 +95,7 @@
  			   <input class="btn ourbutton"type="button" value="삭제" onclick="deletePet(${ pet.pno })">
   			  </div>
  			 </div>
- 			 </c:forEach>		
+ 			 </c:forEach>
 			</div>
 			<div style="border: 1px solid;">
 			<h3><a style="color: #E8D1DD;" href="${ pageContext.request.contextPath }/pet">댕댕이 등록하기</a></h3>
