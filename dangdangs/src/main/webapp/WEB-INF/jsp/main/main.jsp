@@ -87,7 +87,7 @@
 
 									</h6>
 									<div class="description wow fadeInUp">
-										<button type="button" class="btn btn-outline-light"
+										<button type="button" class="btn btn-outline-light" style="width:15rem;height:3rem; margin-top:2rem;"
 											onclick="location.href='${ pageContext.request.contextPath }/diag'">진단하러
 											가기</button>
 										<ol class="carousel-indicators"
@@ -115,7 +115,7 @@
 
 									</h6>
 									<div class="description wow fadeInUp">
-										<button type="button" class="btn btn-outline-light"
+										<button type="button" class="btn btn-outline-light" style="width:15rem;height:3rem; margin-top:2rem;"
 											onclick="location.href='${ pageContext.request.contextPath }/diag'">진단하러
 											가기</button>
 										<ol class="carousel-indicators"
@@ -143,7 +143,7 @@
 
 									</h6>
 									<div class="description wow fadeInUp">
-										<button type="button" class="btn btn-outline-light"
+										<button type="button" class="btn btn-outline-light" style="width:15rem;height:3rem; margin-top:2rem;"
 											onclick="location.href='${ pageContext.request.contextPath }/diag'">진단하러
 											가기</button>
 										<ol class="carousel-indicators"

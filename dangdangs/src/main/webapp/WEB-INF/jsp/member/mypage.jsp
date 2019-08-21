@@ -76,7 +76,7 @@
   <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab" style="text-align: left;">
   	<h2 style="color:white;"><strong>${ loginVO.mnick }</strong> 님 안녕하세요</h2> <br>
   	<h2 style="color:white;">아이디 :<strong> ${ loginVO.mid }</strong></h2><br>
-  	<h3><a href="${ pageContext.request.contextPath }/mypage/checkPwd" style="color: #5A79B8;">회원정보 수정하기</a></h3>
+  	<h3 class="text-center"><a href="${ pageContext.request.contextPath }/mypage/checkPwd" style="color: #5A79B8;">회원정보 수정하기</a></h3>
   </div>
   <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 	<h2 style="color:white;">내 댕댕이</h2>

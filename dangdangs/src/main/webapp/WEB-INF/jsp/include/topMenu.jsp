@@ -9,7 +9,7 @@
 <html>
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        
+        <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans|Do+Hyeon|Jua|Nanum+Gothic|Noto+Sans+KR&display=swap" rel="stylesheet">
         <!-- CSS -->
        
          <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
@@ -47,6 +47,9 @@
                      <li class="nav-item">
                          <a class="nav-link" href="${ pageContext.request.contextPath }/signup">SIGN UP</a>
                      </li>
+                     <li class="nav-item">
+                         <a class="nav-link" href="${ pageContext.request.contextPath }/naverApi">Maps</a> 
+                     </li>
                      </c:if>
                      <c:if test="${ not empty loginVO }">
                      <li class="nav-item">
@@ -54,6 +57,7 @@
                      </li>
                      <li class="nav-item">
                          <a class="nav-link" href="${ pageContext.request.contextPath }/logout">LOG OUT</a>
+                        
                      </li>
                      </c:if>
                  </ul>

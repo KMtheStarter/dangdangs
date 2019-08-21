@@ -48,7 +48,7 @@
 
 					<input type="text" placeholder="ex)피부병" class="form-control"
 						style="width: 100%; margin-top: 2rem;" name="query">
-					<button type="submit" class="btn form-control ourbutton2">검색</button>
+					<button type="submit" style="width:100%;"class="btn form-control ourbutton2">검색</button>
 				</form>
 			</div>
 			<c:choose>
