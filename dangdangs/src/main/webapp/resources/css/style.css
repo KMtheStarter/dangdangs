@@ -8,7 +8,7 @@ a:hover, a:focus { color: #a365bc; border: 0; text-decoration: none; }
 a1 { color: #a365bc; border-bottom: 1px dashed #a365bc; text-decoration: none; transition: all .3s; }
 a1:hover, a1:focus { color: #a365bc; border: 0; text-decoration: none; }
 p{margin-top: 3px; margin-bottom: 3px;}
-h1, h2 { margin: 0; font-size: 38px; font-weight: 300;  line-height: 80px; }
+h1, h2 { margin: 0; font-size: 2rem; font-weight: 400;  line-height: 80px; text-align: center; width:100%; text-overflow: none; }
 h3 { margin: 0; font-size: 22px; font-weight: 300; color: #555; line-height: 30px; }
 div{margin:0; margin: 0;
 	padding: 0;
@@ -59,7 +59,7 @@ img { max-width: 100%;}
 
 異쒖쿂: https://unikys.tistory.com/371 [All-round programmer]}
 .navbar-nav ml-auto{width : 100%;}
-.navbar-dark .navbar-nav { font-size: 15px; color: #fff; text-transform: uppercase; position: absolute; left:25%; padding-right: 0px; padding-left: 0px; margin-right: auto; margin-left: auto;}
+.navbar-dark .navbar-nav { font-size: 15px; color: #fff; text-transform: uppercase; position: absolute; left:35%; padding-right: 0px; padding-left: 0px; margin-right: auto; margin-left: auto;}
 .navbar-dark .navbar-nav .nav-link {  border: 0 !important; padding-right : 16rem; padding-left:16rem; font-style:Nanum square !important; font-size:3rem; font-weight:200 !important; }
 .navbar-dark .navbar-nav .nav-link:hover { color: #fff; }
 .navbar-dark .navbar-nav .nav-link:focus { color: #fff; outline: 0; } 
@@ -151,7 +151,7 @@ input {
 	max-width:20rem; background-color:rgba(0,0,0,0.85); border-radius: 1rem; padding:0;
 }
 .ourfont{
-	font-family: 'Nanum Square', 'Open Sans'; font-color:white; font-weight:700; white-space: nowrap; text-overflow: ellipsis;
+	font-family: 'Nanum Square', 'Noto Sans KR'; font-color:white; font-weight:700; white-space: nowrap; text-overflow: ellipsis;
 	margin:0; padding:0; z-index:999999; 
 	
 }

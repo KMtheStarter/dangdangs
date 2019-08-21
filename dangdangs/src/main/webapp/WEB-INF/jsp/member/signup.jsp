@@ -74,7 +74,7 @@
 		<div class="backgroundForm"
 			style="background-image: url('${ pageContext.request.contextPath }/resources/img/backgrounds/whitedog.jpg');">
 
-			<div class="container ourstyle" style="width: 15rem; diplay: inline;">
+			<div class="container ourstyle" style="width: 18rem; diplay: inline;">
 				<h1
 					style="color: white; font-weight: 700; margin: 0; padding: 0; font-size: 1.3rem;">회원가입</h1>
 				<form:form class="form-inline" method="post" commandName="memberVO"
@@ -113,7 +113,7 @@
 
 					
 					<button id="submit" type="submit" class="btn btn-block ourbutton"
-						style=" font-family: Noto Sans Kr; width:15rem; font-weight: 700; color: white; margin-left:0.8rem; margin-bottom: 1rem; margin-right:0.8rem;  ">회원가입</button>
+						style=" font-family: Noto Sans Kr; width:15rem; font-weight: 700; color: white; margin-left:0.8rem; margin-top:1.5rem; margin-bottom: 1rem; margin-right:0.8rem;  ">회원가입</button>
 				</form:form>	
 			</div>
 		</div>

@@ -8,21 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style>
-table, th, td {
-   border: 1px solid #D4E0EE;
-   border-collapse: collapse;
-   color: #555;
-}
 
-th, td {
-   padding: 5px;
-}
-
-table.list tr:nth-child(odd) {
-   background-color: #F7F9D2;
-}
-</style>
 
 <link rel="stylesheet" type="text/css"
 	href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
@@ -60,7 +46,19 @@ table.list tr:nth-child(odd) {
 			});
 		}
 	}
+	
+	
 </script>
+<script src=“https://cdn.jsdelivr.net/npm/vue”></script>
+<script src="${ pageContext.request.contextPath }/resources/js/detailVue.js"></script>
+<style>
+
+h2{
+margin-top:10rem;
+margin-bottom:10rem;
+}
+</style>
+
 </head>
 <body>
 <div class="container-fluid" style="padding-left: 0px; padding-right: 0px;">
@@ -68,43 +66,48 @@ table.list tr:nth-child(odd) {
 		<jsp:include page="/WEB-INF/jsp/include/topMenu.jsp" />
 	</header>
 	<br>
-   <h2 style="margin-left: 100px; margin-right: 100px;">상세보기</h2>
-   <hr style="margin-left: 100px; margin-right: 100px;">
-   <div align="center">
-      <table style="width: 80%; border-collapse: separate; border-spacing: 0 20px;">
-         <tr>
-            <th style="width: 7%;">${ vo.bno }</th>
-            <th style="width: 80%"><h3>${ vo.dname }</h3></th>
-            <td>${ vo.bdate }</td>
-         </tr>
-         <tr>
-         	<th style="width: 7%; font-size: x-large;">증상</th>
-	         	<td colspan="2">
-		         	<c:forEach items="${ syname }" var="syname">
-		         		<li style="list-style-type: circle;">${ syname }
-		         	</c:forEach>
-	         	</td>
-         </tr>
-         <tr>
-            <th style="width: 7%; font-size: x-large;">요약</th>
-            <td colspan="2">${fn:replace(vo.bsum, replaceChar, "<br/>") }</td>
-         </tr>
-         <tr>
-            <th style="width: 7%; font-size: x-large;">원인</th>
-            <td colspan="2">${fn:replace(vo.bcause, replaceChar, "<br/>") }</td>
-         </tr>
-         <tr>
-            <th style="width: 7%; font-size: x-large;">치료법</th>
-            <td colspan="2">${fn:replace(vo.btreat, replaceChar, "<br/>") }</td>
-         </tr>
-         <tr>
-            <th style="width: 7%; font-size: x-large;">관리법</th>
-            <td colspan="2">${fn:replace(vo.bcare, replaceChar, "<br/>") }</td>
-         </tr>
-      </table>
-   </div>
-   <br><br>
-   <div align="center">
+	<div class="backgroundForm"
+		 >
+
+			<div class="ourfont " style="font-size:1.5rem;  font-weight:400; color:black;">
+				
+				
+					<h2>{{title}}</h2>
+
+					<div>${ vo.bno }</div>
+					<div>
+						<h3>${ vo.dname }</h3>
+					</div>
+					<div>${ vo.bdate }</div>
+					
+					<img src="${ pageContext.request.contextPath }/upload/${ vo.bfname }" class="rounded-circle" alt="Cinque Terre" style="height:15rem;width:15rem;">
+
+					<div>증상</div>
+
+					<c:forEach items="${ syname }" var="syname">
+						<li style="list-style-type: circle;">${ syname } 	
+					</c:forEach>
+
+
+					<h2 style="width: 7%; font-size: x-large; position:relative; left:46%   ">요약</h2>
+					<div class="row" style="display:inline; height:50rem;">${fn:replace(vo.bsum, replaceChar, "<br/>") }</div>
+
+					<h2 style="width: 7%; font-size: x-large; position:relative; left:46%">원인</h2>
+					<div class="row" ><h2>${fn:replace(vo.bcause, replaceChar, "<br/>") }</h2></div>
+
+					<h2 style="width: 7%; font-size: x-large; position:relative; left:46%">치료법</h2>
+					<div class="row"><h2>${fn:replace(vo.btreat, replaceChar, "<br/>") }</h2></div>
+
+					<h2 style="width: 7%; font-size: x-large; position:relative; left:46%">관리법!</h2>
+					<div class="row"><h2>${fn:replace(vo.bcare, replaceChar, "<br/>") }</h2></div>
+					<h2 style="width: 7%; font-size: x-large;">사진!</h2>
+					
+					<br><br>
+					
+					
+					
+					
+					<div align="center">
    		<c:if test="${ commentList != null }">
    		<table style="width: 80% ">
    			<c:forEach items="${ commentList }" var="comment">
@@ -143,7 +146,25 @@ table.list tr:nth-child(odd) {
 	    	<div style="width:80%; margin-bottom: 10px;">로그인 후 댓글을 달 수 있습니다.</div>
 	    </c:otherwise>
 	    </c:choose>
-   </div>
-   </div>
+	    </div>
+   		</div>
+				
+			</div>
+			
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   <footer>
+		<jsp:include page="/WEB-INF/jsp/include/footer.jsp" />
+	</footer>
+	</div>
+   
 </body>
 </html>
