@@ -29,6 +29,10 @@ ul {
 	height: 200px;
 	border-color: transparent;
 }
+.ageBtn:hover .image {
+	opacity:0.65
+}
+
 
 .ageText{
 	 font-size:15px;
@@ -39,6 +43,9 @@ ul {
 
 
 </style>
+<link href="https://fonts.googleapis.com/css?family=Black+Han+Sans|Do+Hyeon|Jua|Nanum+Gothic|Noto+Sans+KR&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css"
+	href="${ pageContext.request.contextPath }/resources/css/style.css">
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -62,24 +69,30 @@ ul {
 		$("#section2").css("display", "block");
 	}
 </script>
+
+
+
 </head>
-<body>
+<body style="background-color:#F8F1EB">
 	<form method="post" name="diagForm" onsubmit="return checkVal()">
 		<div id="section1" style="display: block; text-align: center;">
-			<button class="ageBtn" type="button" style="margin-top: 100px;" onclick=setAge(-1)>
-				<img src="${ pageContext.request.contextPath }/resources/images/4.png">
+		
+		
+			<h5 style="color: #444444; margin-top: 3rem;  font-weight: 100; font-family: 'Black Han Sans'; font-size: 5rem;">댕댕이의 나이는?</h5>
+			<button class="ageBtn" type="button" style="margin-top: 1rem;" onclick=setAge(-1)>
+				<img class="image" style="width:100%;" src="${ pageContext.request.contextPath }/resources/images/4.png">
 			</button>
-			<p>0~1세의 어린 강아지</p>
+			<h2 style="color: #444444; margin-top: 1rem; font-weight: 700; font-family: 'Noto Sans KR'; font-size: 1.5rem;">0~1세의 어린 강아지</h2>
 			<br>
 			<button class="ageBtn" type="button" onclick=setAge(0)>
-				<img src="${ pageContext.request.contextPath }/resources/images/5.png">
+				<img class="image" style="width:100%;" src="${ pageContext.request.contextPath }/resources/images/5.png">
 			</button>
-			<p>1~7세의 성견 강아지</p>
+			<h2 style="color: #444444; margin-top: 1rem; font-weight: 700; font-family: 'Noto Sans KR'; font-size: 1.5rem;">1~7세의 성견 강아지</h2>
 			<br>
 			<button class="ageBtn" type="button" onclick=setAge(1)>
-				<img src="${ pageContext.request.contextPath }/resources/images/6.png">
+				<img class="image" style="width:100%;" src="${ pageContext.request.contextPath }/resources/images/6.png">
 			</button>
-			<p>7세 이상의 노견 강아지</p>
+			<h2 style="color: #444444; margin-top: 1rem; font-weight: 700; font-family: 'Noto Sans KR'; font-size: 1.5rem;">7세 이상의 노견 강아지</h2>
 			<input type="hidden" name="dage" id="check">
 		</div>
 		<div id="section2" style="display: none; margin-left: 100px; margin-right: 100px; margin-top: 10px; text-align: center;">
@@ -641,7 +654,7 @@ ul {
 				
 			</div>
 			<br>
-			<button type="submit" class="btn btn-primary" style="margin-bottom: 10px; background-color: #805959; border-color: #805959;">제출</button>
+			<button type="submit" class="btn ourbutton" style="color:white; background-color: #444444; width:15rem; height:3rem; margin-top:2rem; margin-bottom:2rem;">제출</button>
 		</div>
 	</form>
 </body>

@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
 <html>
+		
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans|Do+Hyeon|Jua|Nanum+Gothic|Noto+Sans+KR&display=swap" rel="stylesheet">
@@ -47,6 +48,7 @@
                      <li class="nav-item">
                          <a class="nav-link" href="${ pageContext.request.contextPath }/signup">SIGN UP</a>
                      </li>
+                     
                      <li class="nav-item">
                          <a class="nav-link" href="${ pageContext.request.contextPath }/naverApi">Maps</a> 
                      </li>

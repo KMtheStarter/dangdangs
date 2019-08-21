@@ -7,11 +7,13 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css"
+	href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+
+<link rel="stylesheet" type="text/css"
 	href="${ pageContext.request.contextPath }/resources/css/layout.css">
 <link rel="stylesheet" type="text/css"
 	href="${ pageContext.request.contextPath }/resources/css/style.css">
-<link rel="stylesheet" type="text/css"
-	href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script>
    var isChecked = {

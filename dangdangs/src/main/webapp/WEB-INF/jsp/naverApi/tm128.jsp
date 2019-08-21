@@ -12,12 +12,12 @@
 
 </head>
 
-<body>
+<body style="background-color:#F8F1EB">
 <div class="container-fluid" style="padding-left: 0px; padding-right: 0px;">
 	<header>
 		<jsp:include page="/WEB-INF/jsp/include/topMenu.jsp" />
 	</header>
-<h2 align="center">24시간 동물병원을 알려드립니다.</h2>
+<h5 class="text-center" style="color:black; font-family:'Noto Sans KR';font-size:2rem; margin-top:2rem;">24시간 동물병원을 알려드립니다.</h5>
 <hr>
 <div id="map" style="width:50%;height:500px;margin:auto;"></div>
 <script>
@@ -89,7 +89,7 @@
         }
         });
         var infoWindow = new naver.maps.InfoWindow({
-            content: '<div style="width:25rem; height:10rem text-align:center; white-space: pre-wrap;  line-height:2rem; font-size:2rem; margin-top:0px; margin-bottom:0;padding:0px; color:black;"><strong>'+'${hos.title}' + '</strong>' + '<h1 style="line-height:1rem; margin-top:0px; margin-bottom:0; padding:0; text-align:left; font-size:1rem; padding:10px; font-size:1rem;">' 
+            content: '<div style="width:28rem; height:10rem text-align:center; white-space: pre-wrap;  line-height:2rem; font-size:2rem; margin-top:0px; margin-bottom:0;padding:0px; color:black;"><strong>'+'${hos.title}' + '</strong>' + '<h1 style="line-height:1rem; margin-top:0px; margin-bottom:0; padding:0; text-align:left; font-size:1rem; padding:10px; font-size:1rem;">' 
             +'${hos.address}' +'</h1>'+'<h1 style="text-align:left; line-height:1rem;  margin-bottom:0; padding:0; font-size:1rem; padding:10px; font-size:1rem;">' + '${hos.roadAddress}'+'</h1>'+ '<h1 style=" line-height:1rem; margin-top:0px; margin-bottom:0; padding:0; text-align:left; font-size:1rem; padding:10px; font-size:1rem;">전화번호 ${hos.telephone}'+'</h1></div>'
         });
     markers.push(marker);

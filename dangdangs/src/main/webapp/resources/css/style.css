@@ -4,9 +4,10 @@ body {  font-family: 'Nanum Square','Noto Sans KR','Jua','Nanum Gothic', 'Open S
 strong { font-weight: 600; }
 /*
 a { color: #a365bc; border-bottom: 1px dashed #a365bc; text-decoration: none; transition: all .3s; }*/
-a:hover, a:focus { color: #a365bc; border: 0; text-decoration: none; }
+a:hover, a:focus { color: black; text-decoration: none; }
 a1 { color: #a365bc; border-bottom: 1px dashed #a365bc; text-decoration: none; transition: all .3s; }
 a1:hover, a1:focus { color: #a365bc; border: 0; text-decoration: none; }
+a2:hover{color:black;}
 p{margin-top: 3px; margin-bottom: 3px;}
 h1, h2 { margin: 0; font-size: 2rem; font-weight: 400;  line-height: 80px; text-align: center; width:100%; text-overflow: none; }
 h3 { margin: 0; font-size: 22px; font-weight: 300; color: #555; line-height: 30px; }
@@ -30,7 +31,7 @@ img { max-width: 100%;}
 
 .section-container { margin: 0 auto; padding-bottom: 0px; }
 
-.section-container-gray-bg { background: #f8f8f8; }
+.sec	tion-container-gray-bg { background: #f8f8f8; }
 
 .section-container-image-bg, 
 .section-container-image-bg h2, 
@@ -110,7 +111,7 @@ h5{
 }
 
 h6{
-	font-size:1.1rem;font-weight:400; display:block;
+	font-size:1.5rem;font-weight:400; display:block;
 }
 h4,h5,h6{
 	white-space: nowrap;

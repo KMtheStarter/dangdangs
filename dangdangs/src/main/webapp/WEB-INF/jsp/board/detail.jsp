@@ -125,10 +125,10 @@ h7:first-child:first-line { font-weight: bold; font-size: 2.8rem; color: #7f7664
 			<h5
 				style="color: #444444; margin-top: 10rem; font-weight: 300; font-size: 6rem; font-family: 'Black Han Sans';">요약</h5>
 
-			<div class="container" style="width: 50rem; text-overflow: ellipsis;">
+			<div class="container" style="width: 120%; text-overflow: ellipsis; white-space: pre-wrap; ">
 				<h7 class="text-left"
-					style="color: #444444; white-space: pre-wrap;	 overflow: hidden; margin-top:2rem; line-height:5rem; margin-right:10rem;
-						 font-weight:700; font-size: 2.5rem; width:50rem; display:block; font-family:'Noto Sans KR';">${fn:replace(vo.bsum, replaceChar, "<br/>") }</h7>
+					style="color: #444444; white-space: pre-line;	 overflow: hidden; margin-top:2rem; line-height:5rem; margin-right:10rem;
+						 font-weight:700; font-size: 2.5rem; width:100%; display:block; font-family:'Noto Sans KR';">${fn:replace(vo.bsum, replaceChar, "<br/>") }</h7>
 			</div>
 
 			<h5
@@ -136,7 +136,7 @@ h7:first-child:first-line { font-weight: bold; font-size: 2.8rem; color: #7f7664
 
 
 			<h2 class="text-left"
-				style="color: #444444; overflow: hidden; margin-top: 2rem; line-height: 5rem; font-weight: 700; font-size: 2.5rem; width: 50rem; display: block; font-family: 'Noto Sans KR';">
+				style="color: #444444; white-space: pre-line; margin-top: 2rem; line-height: 5rem; font-weight: 700; font-size: 2.5rem; width: 100%; display: block; font-family: 'Noto Sans KR';">
 				${fn:replace(vo.bcause, replaceChar, "<br/>") }</h2>
 
 
@@ -146,16 +146,16 @@ h7:first-child:first-line { font-weight: bold; font-size: 2.8rem; color: #7f7664
 
 			<div class="container" style="width: 50rem; text-overflow: ellipsis;">
 				<h5 class="text-left"
-					style="color: #444444; white-space: pre-line; overflow: hidden; margin-top: 2rem; line-height: 5rem; margin-right: 10rem; font-weight: 700; font-size: 2.5rem; width: 50rem; display: block; font-family: 'Noto Sans KR';">${fn:replace(vo.btreat, replaceChar, "<br/>") }</h5>
+					style="color: #444444; white-space: pre-line; margin-top: 2rem; line-height: 5rem; margin-right: 10rem; font-weight: 700; font-size: 2.5rem; width: 100%; display: block; font-family: 'Noto Sans KR';">${fn:replace(vo.btreat, replaceChar, "<br/>") }</h5>
 			</div>
 
 
 			<h5
 				style="color: #444444; margin-top: 10rem; font-weight: 300; font-size: 6rem; font-family: 'Black Han Sans';">관리법</h5>
 
-			<div class="container" style="width: 50rem; text-overflow: ellipsis;">
+			<div class="container" style="width: 120%; white-space: pre-line;">
 				<h5 class="text-left"
-					style="color: #444444; white-space: pre-line; overflow: hidden; margin-top: 2rem; line-height: 5rem; margin-right: 10rem; font-weight: 700; font-size: 2.5rem; width: 50rem; display: block; font-family: 'Noto Sans KR';">${fn:replace(vo.bcare, replaceChar, "<br/>") }</h5>
+					style="color: #444444; white-space: pre-line;  margin-top: 2rem; line-height: 5rem; margin-right: 10rem; font-weight: 700; font-size: 2.5rem; width: 100%; display: block; font-family: 'Noto Sans KR';">${fn:replace(vo.bcare, replaceChar, "<br/>") }</h5>
 			</div>
 
 
