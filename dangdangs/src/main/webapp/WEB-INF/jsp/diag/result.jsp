@@ -60,7 +60,7 @@ body > div > span:hover{
 		$("body > div > div:nth-child(" + divid + ")").css("display", "block");
 		
 	}
-	
+
 	function copy_to_clipboard(val) {
 	      var t = document.createElement("textarea");
 	        document.body.appendChild(t);
@@ -70,6 +70,7 @@ body > div > span:hover{
 	        document.body.removeChild(t);
 	        alert("URL이 클립보드에 복사되었습니다!");
 	}
+
 </script>
 </head>
 <body>
@@ -89,8 +90,10 @@ body > div > span:hover{
 				</div>
 			</c:forEach>
 		</div>
+
 		<c:if test="${ not empty url }">
 			<button onclick="copy_to_clipboard('http://222.106.22.28:7777${ pageContext.request.contextPath }/${ url }')">공유하기</button>
 		</c:if>
+
 </body>
 </html>
