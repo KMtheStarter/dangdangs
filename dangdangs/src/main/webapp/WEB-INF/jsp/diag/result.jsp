@@ -60,6 +60,15 @@ body > div > span:hover{
 		$("body > div > div:nth-child(" + divid + ")").css("display", "block");
 		
 	}
+	function copy_to_clipboard(val) {
+		var t = document.createElement("textarea");
+		  document.body.appendChild(t);
+		  t.value=val;
+		  t.select();
+		  document.execCommand("Copy");
+		  document.body.removeChild(t);
+		}
+	
 </script>
 </head>
 <body>
@@ -79,6 +88,7 @@ body > div > span:hover{
 				</div>
 			</c:forEach>
 		</div>
+		<button onclick="copy_to_clipboard('hello')">공유하기</button>
 
 </body>
 </html>
