@@ -63,7 +63,7 @@
 						alt="Card image cap" >
 					<div class="card-body" style="background-color:white; border-bottom-left-radius:1rem; border-bottom-right-radius:1rem; ">
 						<h5 class="card-title"
-							style="white-space: nowrap;color:black;	 overflow: hidden; font-size:2rem; text-overflow: ellipsis;">${ board.dname}</h5>
+							style="white-space: nowrap;color:black;	font-family:'Black Han Sans'; font-weight:100; overflow: hidden; font-size:2.5rem; text-overflow: ellipsis;">${ board.dname}</h5>
 						<p class="card-text">${ board.bdate}</p>
 						<a
 							href="${ pageContext.request.contextPath }/board/${ board.bno }"
