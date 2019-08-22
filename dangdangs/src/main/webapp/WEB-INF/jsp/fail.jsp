@@ -8,7 +8,7 @@
 <script>
 	$(document).ready(function(){
 		alert("${ msg }");
-		location.href="${ pageContext.request.contextPath }/";
+		location.href="${ pageContext.request.contextPath }/${ location }";
 	});
 </script>
 </head>
