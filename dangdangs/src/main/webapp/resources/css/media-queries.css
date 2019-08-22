@@ -37,7 +37,7 @@ h7{
 @media (min-width: 768px) and (max-width: 959px) {
 	
 	.navbar-expand-md .navbar-nav .nav-link { padding-left: 0.1rem; padding-right: 0.1rem; font-size:1.9rem; letter-spacing: 0}
-	.top-content .carousel-caption { position: absolute; top: 50%; left: 50%; transform : translate(-50%,-50%); }
+	.top-content .carousel-caption { width:80%; position: absolute; top: 50%; left: 50%; transform : translate(-50%,-50%); }
 h4{
 	font-size:2.3rem;font-weight:300;
 }
@@ -61,7 +61,7 @@ h6{
 	.navbar-dark .navbar-toggler:focus { background: #333; outline: 0; }
 	
 	
-	.top-content .carousel-caption { position: absolute; top: 50%; left: 50%; transform : translate(-50%,-50%); }
+	.top-content .carousel-caption { width:80%; position: absolute; top: 50%; left: 50%; transform : translate(-50%,-50%); }
 h4{
 	font-size:2.3rem;font-weight:300;
 }
@@ -76,7 +76,7 @@ h6{
 
 @media (max-width: 575px) {
 	
-	.top-content .carousel-caption { bottom: 0; position: absolute; top: 50%; left: 50%; transform : translate(-50%,-50%);}
+	.top-content .carousel-caption { bottom: 0; position: absolute; width:80%; top: 50%; left: 50%; transform : translate(-50%,-50%);}
 	.top-content h1 { font-size: 18px; line-height: 30px; }
 	.top-content .carousel-indicators li{display:none;}
 	.navbar-brand{position:absolute; left:43%;}
@@ -93,7 +93,7 @@ h6{
 
 @media (max-width: 415px) {
 	
-	
+	.top-content .carousel-caption { bottom: 0; position: absolute; width:60%; top: 50%; left: 50%; transform : translate(-50%,-50%);}
 h4{
 	font-size:2.3rem;font-weight:300;
 }

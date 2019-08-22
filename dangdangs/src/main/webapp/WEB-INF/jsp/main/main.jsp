@@ -77,12 +77,12 @@
 							<div class="carousel-item active" style="background-size:100% 100%; 
 							background-image:url(${ pageContext.request.contextPath }/resources/img/backgrounds/1.jpg);">
 								
-								<div class="carousel-caption">
-									<h4>
+								<div class="carousel-caption  text-center" style="width:80%;white-spacing:pre-line;">
+									<h4 >
 										소중한 우리 아이<br>
 									</h4>
 									<h5>더 이상 아프지 않게</h5>
-									<h6 class="c3">
+									<h6 >
 										이제 우리 댕댕이가 어떤 병에 걸렸는지, <br>어떻게 치료해야 할 지 알아보세요.
 
 									</h6>
@@ -104,13 +104,13 @@
 							<div class="carousel-item" style="background-size:100% 100%; 
 							background-image:url(${ pageContext.request.contextPath }/resources/img/backgrounds/2.jpg);">
 								
-								<div class="carousel-caption">
+								<div class="carousel-caption text-center" style="width:80%;white-spacing:pre-line;">
 
 									<h4 class="c1">
 										내 옆의 단짝친구<br>
 									</h4>
 									<h5 class="c2">요즘 끼니를 거른다면</h5>
-									<h6 class="c3">
+									<h6 >
 										이제 우리 댕댕이가 어떤 병에 걸렸는지, <br>어떻게 치료해야 할 지 알아보세요.
 
 									</h6>
@@ -132,13 +132,13 @@
 							<div class="carousel-item" style="background-size:100% 100%; 
 							background-image:url(${ pageContext.request.contextPath }/resources/img/backgrounds/3.jpg);">
 								
-								<div class="carousel-caption">
+								<div class="carousel-caption text-center" style="width:80%;white-spacing:pre-line;">
 
 									<h4 class="c1">
 										활발하던 댕댕이<br>
 									</h4>
 									<h5 class="c2">힘 없어 보인다면</h5>
-									<h6 class="c3">
+									<h6 >
 										이제 우리 댕댕이가 어떤 병에 걸렸는지, <br>어떻게 치료해야 할 지 알아보세요.
 
 									</h6>
