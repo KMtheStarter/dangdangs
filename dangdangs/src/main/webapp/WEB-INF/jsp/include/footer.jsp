@@ -199,7 +199,7 @@ i.fab{
 					</ul>
 					</div>
 					<div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
-						<h7 class="mb-4 font-weight-bold">CONNECT WITH US</h7>
+						<h7 class="mb-4 font-weight-bold">CONTACT WITH US</h7>
 						
 						<div class="mt-4" style="position:relative;">
 							<div class="row" style="position: absolute; left:100%;" ><a href="#" title="facebook"><i class="fab fa-facebook-f"  ></i></a></div>

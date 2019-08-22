@@ -72,41 +72,54 @@ body > div > span:hover{
 
 </script>
 </head>
-<body style="background-color:#F8F1EB">
+<body style="background-color:#F8F1EB; text-align:center;">
 
 
 		<header>
 			<jsp:include page="/WEB-INF/jsp/include/topMenu.jsp" />
 		</header>
-
 		<h5 class="text-center"
-				style="color: #444444; margin-top: 5rem; font-weight: 300; font-family: 'Black Han Sans'; font-size: 8rem; margin-bottom: 0; padding: 0;">진단결과</h5>
-		<hr style="margin-left: 100px; margin-right: 100px;">
-		<div align="center" style="margin-left: 100px; margin-right: 100px;">
-			<h5 style="color: #314c79; margin-top: 0; margin-bottom:2rem; font-family: 'Noto Sans KR'; font-size: 2rem;">가장 유력한 질병은 ${ dnameList[0] } 입니다.</h5>
+			style="color: #444444; margin-top: 5rem; font-weight: 300; white-space: pre-line; width:100%; font-family: 'Black Han Sans'; font-size: 8rem; margin-bottom: 0; padding: 0;">진단결과</h5>
+	
+	<hr style="margin-left: 100px; margin-right: 100px;">
+		<div class="bsum container" style=" width:100%;">
+			<h5 class="text-center" style="color: #314c79; margin-top: 0; margin-left:10%;	 white-space:pre-line; width:80%; margin-bottom:2rem; font-family: 'Noto Sans KR'; font-size: 2rem;">가장 유력한 질병은 ${ dnameList[0] } 입니다.</h5>
 			<c:forEach items="${ voList }" var="vo" varStatus="status">
-				<span class="dname" style="color: #444444; margin-top: 1rem; font-weight: 300; font-family: 'Noto Sans KR'; font-size: 2rem;"><strong onclick="viewSummary('${ status.index }')">${ vo.dname }</strong></span>
+				<span class="dname" style="color: #444444; margin-top: 1rem;  font-weight: 300; font-family: 'Noto Sans KR'; font-size: 2rem;"><strong onclick="viewSummary('${ status.index }')">${ vo.dname }</strong></span>
 			</c:forEach>
 			<hr>
 			<c:forEach items="${ voList }" var="vo">
-				<div class="bsum" style="color: #444444; margin-top: 1rem; font-weight: 700; font-family: 'Noto Sans KR'; font-size: 1.5rem; border: 1px solid; border-color: #77C7D9; border-bottom-right-radius: 2em; background-color: ">
-					<span>${fn:replace(vo.bsum, replaceChar, "<br/>") }</span>
+				<div class="bsum" style="color: #444444; width:90%; margin-left:10%; margin-right:10%; margin-top: 1rem; font-weight: 700; font-family: 'Noto Sans KR'; font-size: 1.5rem; text-align:center; ">
+					<span class="text-center">${fn:replace(vo.bsum, replaceChar, "<br/>") }</span>
 					<br><br><br>
-					<a
-							href="${ pageContext.request.contextPath }/board/${ vo.bno }"
-							class="btn ourbutton" style="color:white; background-color: #444444; width:15rem; height:3rem; margin-top:2rem; margin-bottom:2rem;">더 알아보기</a>
+					<button
+					onclick="location.href='${ pageContext.request.contextPath }/board/${ vo.bno }'"
+							class="btn ourbutton3" style="color:white; width:15rem; height:3rem; margin-top:2rem; margin-bottom:2rem; ">더 알아보기</button>
 					
 				</div>
 			</c:forEach>
 		</div>
 
 		<c:if test="${ not empty url }">
-			<button class = "btn ourbutton" style="background-color: #444444; width:15rem; height:3rem; margin-top:2rem; margin-bottom:2rem;" onclick="copy_to_clipboard('http://222.106.22.28:7777${ pageContext.request.contextPath }/${ url }')">결과 공유하기</button>
-		</c:if>
+		
+		<h5
+				style="color: #444444; width:100%; white-space:pre-line; margin-top: 2rem; font-weight: 700; font-size: 3rem; font-family: 'Noto Sans KR';">결과를 공유하고 싶다면?</h5>
+	
+		<div class="imgcontainer" style=" left:50%; width:10rem;height:10rem;margin-top:2rem;margin-bottom:5rem; ">
+			<img src="${ pageContext.request.contextPath }/resources/ico/clipboard.png" alt="share" class="backimage"
+				style="width: 100%; ">
+			<div class="middle" style="margin-top:1rem;">
+				<div class="poptext" style="padding:0;"><button class = "btn" style=" white-space:nowrap; font-family: 'Black Han Sans'; font-weight:100;color:white; width:6rem; height:2rem; margin-top:0; padding:0; border-radius:0;" 
+			onclick="copy_to_clipboard('http://222.106.22.28:7777${ pageContext.request.contextPath }/${ url }')">공유하기</button></div>
+			</div>
+		</div>
+		
+		
+	</c:if>
 
 
 	<footer>
 		<jsp:include page="/WEB-INF/jsp/include/footer.jsp" />
 	</footer>
 </body>
-</html>
+</html> 

@@ -42,16 +42,34 @@ function checkVal(){
    return true;
 }
 </script>
+
+<style>
+
+#linearback{
+}
+
+</style>
+
 </head>
 <body>
-<div class="container-fluid" style="padding-left: 0px; padding-right: 0px;">
+<div class="container-fluid" style="padding-left: 0px; padding-right: 0px; text-align:center;">
    <header>
       <jsp:include page="/WEB-INF/jsp/include/topMenu.jsp" />
    </header>
-   <div class="backgroundForm" style="background-image: url('${ pageContext.request.contextPath }/resources/img/backgrounds/whitedog.jpg');">
-   <div class="container ourstyle"   align="center"  style="margin:0, padding:0; width:14rem;"  >
-      <h1  style="color:white; font-weight:700; margin:0;padding:0; font-size: 1.3rem;">로그인</h1> 
-      <form method="post" name="loginForm" onsubmit="return checkVal()"  style="margin-top: 0rem; margin-left:0;margin-right:0;  width:13rem; padding:0rem;">
+   <div class="backgroundForm" style="background-color:#444444; padding:0;
+   background-image: url('${ pageContext.request.contextPath }/resources/img/backgrounds/seamless.jpg');
+  background-blend-mode: darken;">
+  
+  <div class="text-center" style="margin-top:0; padding:0; width:80%; margin-left:24%; display:block; margin-bottom:0;  ">
+   <h5
+				style=" display: block; width:70%;white-space:pre-line; color: white; margin-top: 3rem; margin-bottom:0; font-weight: 700; font-size: 2.5rem; font-family: 'Noto Sans KR';">더 밝은 <strong>댕댕이</strong>의 미래</h5>
+  <h5
+				style=" display: block; width:70%; white-space:pre-line; color: white; margin-top: 1rem; margin-bottom:3rem; font-weight: 700; font-size: 1.5rem; font-family: 'Noto Sans KR';">이제, 댕댕쓰와 함께하세요</h5>
+ </div>
+  
+   <div class="container ourstyle"   align="center"  style="margin-top:0; margin-bottom:10rem; padding:0; width:30rem;"  >
+      <h1  style="color:black; font-family:'Noto Sans KR'; font-weight:700; margin:0;padding:0; font-size: 1.3rem;">로그인</h1> 
+      <form method="post" name="loginForm" onsubmit="return checkVal()"  style="margin-top: 0rem; height: 80%; margin-left:0;margin-right:0;  width:85%; padding:0rem;">
        <input type="text" name="mid" placeholder="Username" required="required" style="color:black;" />
        <br>
        
@@ -59,7 +77,8 @@ function checkVal(){
         <br>
         <br>
         <button type="submit" class="btn btn-block ourbutton2" style="font-weight:700; color:white;   ">로그인</button>
-        
+        <h5
+				style="color: #white; margin-top: 2rem; margin-bottom:1rem; font-weight: 700; font-size:1rem; font-family: 'Noto Sans KR';"><strong>회원</strong>이 아니신가요?</h5>
         <button  class="btn  btn-block ourbutton"   style="font-weight:700; color:white; margin-bottom:1rem;"    onclick="location.href='singup.jsp' ">회원가입</button>
     </form>
    </div>
