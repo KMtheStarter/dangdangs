@@ -25,7 +25,7 @@ h5{
 	font-size:2.3rem;font-weight:800;
 }
 h6{
-	font-size:0.9rem;font-weight:400;
+	font-size:1.4rem;font-weight:400;
 }
 
 h7{
@@ -39,15 +39,14 @@ h7{
 	.navbar-expand-md .navbar-nav .nav-link { padding-left: 0.1rem; padding-right: 0.1rem; font-size:1.9rem; letter-spacing: 0}
 	.top-content .carousel-caption { position: absolute; top: 50%; left: 50%; transform : translate(-50%,-50%); }
 h4{
-	font-size:2.0rem;font-weight:300;
+	font-size:2.3rem;font-weight:300;
 }
 h5{
-	font-size:2.0rem;font-weight:800;
+	font-size:2.3rem;font-weight:800;
 }
 h6{
-	font-size:0.7rem;font-weight:400;
+	font-size:1.4rem;font-weight:400;
 }
-	
 	
 	
 	
@@ -64,13 +63,13 @@ h6{
 	
 	.top-content .carousel-caption { position: absolute; top: 50%; left: 50%; transform : translate(-50%,-50%); }
 h4{
-	font-size:1.8rem;font-weight:300;
+	font-size:2.3rem;font-weight:300;
 }
 h5{
-	font-size:1.8rem;font-weight:800;
+	font-size:2.3rem;font-weight:800;
 }
 h6{
-	font-size:0.6rem;font-weight:400;
+	font-size:1.4rem;font-weight:400;
 }
 
 }
@@ -81,29 +80,28 @@ h6{
 	.top-content h1 { font-size: 18px; line-height: 30px; }
 	.top-content .carousel-indicators li{display:none;}
 	.navbar-brand{position:absolute; left:43%;}
-	
 h4{
-	font-size:1.8rem;font-weight:300;
+	font-size:2.3rem;font-weight:300;
 }
 h5{
-	font-size:1.8rem;font-weight:800;
+	font-size:2.3rem;font-weight:800;
 }
 h6{
-	font-size:0.6rem;font-weight:400;
+	font-size:1.4rem;font-weight:400;
 }
 }
 
 @media (max-width: 415px) {
 	
 	
-	h4{
-	font-size:1.5rem;font-weight:300;
+h4{
+	font-size:2.3rem;font-weight:300;
 }
 h5{
-	font-size:1.5rem;font-weight:800;
+	font-size:2.3rem;font-weight:800;
 }
 h6{
-	font-size:0.6rem;font-weight:400;
+	font-size:1.4rem;font-weight:400;
 }
 	
 	.navbar-brand{position:absolute; left:43%; size: 25%;}

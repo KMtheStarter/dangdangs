@@ -10,4 +10,4 @@
 <body>
 	<jsp:include page="/WEB-INF/jsp/main/main.jsp" />
 </body>
-</html>
+</html>	

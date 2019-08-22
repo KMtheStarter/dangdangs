@@ -139,30 +139,34 @@ public class DiagServiceImpl implements DiagService {
 	// 동점 개수에 따른 결과 list 반환
 	private List<String> makeResult(List<String> sortedKeyset, int count){
 		List<String> result = new ArrayList<>();
-		if (count != 1) {
-			// 동점 있을 때 처리
-			// 0번째 인덱스에 동점 컬럼 합치기
-        	StringBuffer sb = new StringBuffer();
-        	for(int i = 0; i < count; i++) {
-        		sb.append(sortedKeyset.get(i));
-        		if (i == (count - 1)) break;
-        		sb.append(", ");
-        	}
-        	sortedKeyset.set(0, sb.toString());
-        	for(int i = 1; i < count; i++) {
-        		sortedKeyset.remove(1);
-        	}
-        }
-		// 결과가 6개 이상일 때 상위 5개 항목만 출력
-		if(sortedKeyset.size() > 5) {
-			for(int i = 0; i < 6-count; i++) {
-	    		result.add(sortedKeyset.get(i));
-	    	}
+		StringBuffer sb = new StringBuffer();
+		if (count > 5 ) {
+			return null;
 		} else {
-			for(String s: sortedKeyset) {
-				result.add(s);
+			if (count != 1) {
+				// 동점 있을 때 처리
+				// 0번째 인덱스에 동점 컬럼 합치기
+	        	for(int i = 0; i < count; i++) {
+	        		sb.append(sortedKeyset.get(i));
+	        		if (i == (count - 1)) break;
+	        		sb.append(", ");
+	        	}
+	        	sortedKeyset.set(0, sb.toString());
+	        	for(int i = 1; i < count; i++) {
+	        		sortedKeyset.remove(1);
+	        	}
+	        }
+			// 결과가 6개 이상일 때 상위 5개 항목만 출력
+			if(sortedKeyset.size() > 5) {
+				for(int i = 0; i < 6-count; i++) {
+		    		result.add(sortedKeyset.get(i));
+		    	}
+			} else {
+				for(String s: sortedKeyset) {
+					result.add(s);
+				}
 			}
+			return result;
 		}
-		return result;
 	}
 }

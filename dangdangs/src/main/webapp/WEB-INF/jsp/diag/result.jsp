@@ -72,27 +72,41 @@ body > div > span:hover{
 
 </script>
 </head>
-<body>
-		<h2 style="margin-left: 100px; margin-right: 100px;">결과 페이지</h2>
+<body style="background-color:#F8F1EB">
+
+
+		<header>
+			<jsp:include page="/WEB-INF/jsp/include/topMenu.jsp" />
+		</header>
+
+		<h5 class="text-center"
+				style="color: #444444; margin-top: 5rem; font-weight: 300; font-family: 'Black Han Sans'; font-size: 8rem; margin-bottom: 0; padding: 0;">진단결과</h5>
 		<hr style="margin-left: 100px; margin-right: 100px;">
 		<div align="center" style="margin-left: 100px; margin-right: 100px;">
-			<h2>가장 유력한 질병은 ${ dnameList[0] } 입니다.</h2>
+			<h5 style="color: #314c79; margin-top: 0; margin-bottom:2rem; font-family: 'Noto Sans KR'; font-size: 2rem;">가장 유력한 질병은 ${ dnameList[0] } 입니다.</h5>
 			<c:forEach items="${ voList }" var="vo" varStatus="status">
-				<span class="dname"><strong onclick="viewSummary('${ status.index }')">${ vo.dname }</strong></span>
+				<span class="dname" style="color: #444444; margin-top: 1rem; font-weight: 300; font-family: 'Noto Sans KR'; font-size: 2rem;"><strong onclick="viewSummary('${ status.index }')">${ vo.dname }</strong></span>
 			</c:forEach>
 			<hr>
 			<c:forEach items="${ voList }" var="vo">
-				<div class="bsum" style="border: 1px solid; border-color: #77C7D9; border-bottom-right-radius: 2em; background-color: ">
+				<div class="bsum" style="color: #444444; margin-top: 1rem; font-weight: 700; font-family: 'Noto Sans KR'; font-size: 1.5rem; border: 1px solid; border-color: #77C7D9; border-bottom-right-radius: 2em; background-color: ">
 					<span>${fn:replace(vo.bsum, replaceChar, "<br/>") }</span>
 					<br><br><br>
-					<a href="${ pageContext.request.contextPath }/board/${ vo.bno }">자세히 보기</a>
+					<a
+							href="${ pageContext.request.contextPath }/board/${ vo.bno }"
+							class="btn ourbutton" style="color:white; background-color: #444444; width:15rem; height:3rem; margin-top:2rem; margin-bottom:2rem;">더 알아보기</a>
+					
 				</div>
 			</c:forEach>
 		</div>
 
 		<c:if test="${ not empty url }">
-			<button onclick="copy_to_clipboard('http://222.106.22.28:7777${ pageContext.request.contextPath }/${ url }')">공유하기</button>
+			<button class = "btn ourbutton" style="background-color: #444444; width:15rem; height:3rem; margin-top:2rem; margin-bottom:2rem;" onclick="copy_to_clipboard('http://222.106.22.28:7777${ pageContext.request.contextPath }/${ url }')">결과 공유하기</button>
 		</c:if>
 
+
+	<footer>
+		<jsp:include page="/WEB-INF/jsp/include/footer.jsp" />
+	</footer>
 </body>
 </html>

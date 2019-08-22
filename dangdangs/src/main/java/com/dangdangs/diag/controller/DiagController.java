@@ -29,15 +29,22 @@ public class DiagController {
 	@PostMapping("/diag")
 	public String diag(DiagVO diagVO, Model model) {
 		List<String> dnameList = diagService.doDiag(diagVO);
-		List<BoardVO> voList = diagService.getBnoByDname(dnameList);
-		String url = diagService.makeURL(dnameList);
-		System.out.println(voList);
-		System.out.println("가장 유력한 질병: " + dnameList.get(0));
-		model.addAttribute("dnameList", dnameList);
-		model.addAttribute("voList", voList);
-		model.addAttribute("url", url);
-		model.addAttribute("replaceChar", "\n");
-		return "diag/result";
+		if (dnameList != null) {
+			List<BoardVO> voList = diagService.getBnoByDname(dnameList);
+			String url = diagService.makeURL(dnameList);
+			System.out.println(voList);
+			System.out.println("가장 유력한 질병: " + dnameList.get(0));
+			model.addAttribute("dnameList", dnameList);
+			model.addAttribute("voList", voList);
+			model.addAttribute("url", url);
+			model.addAttribute("replaceChar", "\n");
+			return "diag/result";
+		} else {
+			model.addAttribute("msg", "증상이 뚜렷하지 않아 정확한 병명을 찾을 수 없습니다.");
+			model.addAttribute("location", "diag");
+			return "fail";
+		}
+		
 	}
 	
 	@RequestMapping("/result")
