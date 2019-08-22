@@ -41,6 +41,7 @@
                          <a class="nav-link" href="${ pageContext.request.contextPath }/post">POSTING</a>
                      </li>
                      </c:if>
+                     <!-- 로그인 안됐을때 -->
                      <c:if test="${ empty loginVO }">
                      <li class="nav-item">
                          <a class="nav-link" href="${ pageContext.request.contextPath }/login">LOGIN</a>
@@ -48,11 +49,8 @@
                      <li class="nav-item">
                          <a class="nav-link" href="${ pageContext.request.contextPath }/signup">SIGN UP</a>
                      </li>
-                     
-                     <li class="nav-item">
-                         <a class="nav-link" href="${ pageContext.request.contextPath }/naverApi">Maps</a> 
-                     </li>
                      </c:if>
+                     <!-- 로그인 됐을때 -->
                      <c:if test="${ not empty loginVO }">
                      <li class="nav-item">
                          <a class="nav-link" href="${ pageContext.request.contextPath }/mypage">MY PAGE</a>
@@ -62,6 +60,9 @@
                         
                      </li>
                      </c:if>
+                     <li class="nav-item">
+                         <a class="nav-link" href="${ pageContext.request.contextPath }/naverApi">Maps</a> 
+                     </li>
                  </ul>
              </div>
           </div>

@@ -63,16 +63,19 @@ function validCheck(idx){
 <header>
 		<jsp:include page="/WEB-INF/jsp/include/topMenu.jsp" />
 	</header>
-	<div class="backgroundForm" style="background-image:url('${ pageContext.request.contextPath }/resources/img/backgrounds/mypage.jpg');">
-	<div align="center" style="background-color: rgba(57,58,52, 0.5); padding: 1rem; border-radius: 1em;">
-<h1 style="color: white;">내 정보 수정</h1>
-
+	<div class="backgroundForm" style="background-color:#666666;
+	 background-image:url('${ pageContext.request.contextPath }/resources/img/backgrounds/mypage.jpg'); background-blend-mode: multiply;">
+	<div align="center" style="background-color: rgba(255,255,255, 0.9); padding: 1rem; border-radius: 1em;">
+	<br>
+	<div style="font-weight: 700; font-size: 40px; color: black; margin-bottom: 30px;">내 정보 수정</div>
+	<hr>
+<br>
 <form:form method="post" commandName="memberVO" action="${ pageContext.request.contextPath }/mypage/modifyMyInf">
 <form:hidden path="mid"	value="${ loginVO.mid }"/>
-	<div class="container" style="color: white; font-size: 20px; margin-bottom: 10px;">
+	<div class="container" style="color: black; font-size: 20px; margin-bottom: 10px;">
   		<div class="row" style="height: 50px;">
     		<div class="col-sm">
-     		 id
+     		 ID
   		  </div>
   		  <div class="col-sm">
   		    ${ loginVO.mid }
@@ -80,14 +83,14 @@ function validCheck(idx){
   		  <div class="col-sm"></div>
  		 </div>
 		  <div class="row">
- 		   <div class="col-sm">
+ 		   <div class="col-sm" style="padding-top: 9px;">
   		    닉네임
   		  </div>
   		   <div class="col-sm">
-  		    <form:input id="nick" path="mnick" size="20"></form:input>
+  		    <form:input id="nick" path="mnick" size="20"  style="height: 45px; color: black;"></form:input>
   		  </div>
   		   <div class="col-sm">
-   		   <input class="btn ourbutton2" type="button" style="margin-left:1rem; width: 90px;" value="중복확인" onclick="validCheck(1)">
+   		   <input class="btn ourbutton2" type="button" style="margin-left:1rem; width: 90px; height: 40px;" value="중복확인" onclick="validCheck(1)">
  		   </div>
  		 </div>
  		 <div class="row">
@@ -97,16 +100,18 @@ function validCheck(idx){
    		 </div>
   		</div>
  		 <div class="row">
-  		 <div class="col-sm">
+  		 <div class="col-sm" style="padding-top: 9px;">
      		 비밀번호
   		  </div>
    		 <div class="col-sm">
-    		  <form:input id="pwd" path="mpassword" size="30"></form:input>
+    		  <form:input id="pwd" path="mpassword" size="30" style="color: black; height: 45px;"></form:input>
    		 </div>
    		 <div class="col-sm"></div>
  		 </div>
 		</div>
-			<button class="btn ourbutton" id="submit" type="submit">수정하기</button>
+		<br>
+			<button class="btn ourbutton" id="submit" type="submit" style="height: 40px;">수정하기</button>
+			<br><br>
 </form:form>
 </div>
 </div>

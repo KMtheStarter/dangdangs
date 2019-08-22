@@ -7,7 +7,29 @@
 <head>
 <meta charset="UTF-8">
 <title>마이페이지</title>
+<style>
+#home-tab, #profile-tab, #alink{
+color: #0455BF;
+}
+#home-tab:hover, #profile-tab:hover, #alink:hover{
+color: #06BFBF;
+}
 
+#btnInf:hover{
+	opacity: 0.5;
+}
+
+#btnDel{
+	background: transparent;
+	border: none;
+	width:45px;
+	height:45px;
+}
+
+#btnDel:hover{
+	opacity:0.5;
+}
+</style>
 <link rel="stylesheet" type="text/css"
 	href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
 <meta name="viewport"
@@ -58,48 +80,61 @@
 	<header>
 		<jsp:include page="/WEB-INF/jsp/include/topMenu.jsp" />
 	</header>
-	<div class="backgroundForm" style="background-image:url('${ pageContext.request.contextPath }/resources/img/backgrounds/mypage.jpg');">
-	<div style="width: 60em; height:50em; text-align: center; background-color: rgba(0,0,0,0.7); padding: 1rem; border-radius: 1em;">
-	<h2 style="color: white; font-weight: 700;">마이페이지</h2>
+	<div class="backgroundForm"
+	 style="background-color:#666666; background-image:url('${ pageContext.request.contextPath }/resources/img/backgrounds/mypage.jpg');
+	  background-blend-mode: multiply;">
+	<div class="text-center" style="margin-top:0; padding:0; width:80%; margin-left:24%; display:block; margin-bottom:0;  ">
+   <h5
+            style=" display: block; width:70%;white-space:pre-line; color: white; margin-top: 3rem; margin-bottom:0; font-weight: 700; font-size: 2.5rem; font-family: 'Noto Sans KR';">우리 댕댕이는 어떤 질병에 취약할까?</h5>
+  <h5
+            style=" display: block; width:70%; white-space:pre-line; color: white; margin-top: 1rem; margin-bottom:3rem; font-weight: 700; font-size: 1.5rem; font-family: 'Noto Sans KR';">이제, 걱정마세요.</h5>
+ </div>
+	<div style="width: 50em; text-align: center; background-color: rgba(255,255,255,0.9); padding: 1rem; border-radius: 1em; magin-top: 0; margin-bottom: 15rem;">
+	<h2 style="color: black; font-weight: 700;">마이페이지</h2>
 	<ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item">
-    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true" style="color: #5CAB75;">내 정보</a>
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">내 정보</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false" style="color: #5CAB75;">나의 댕댕이</a>
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">나의 댕댕이</a>
   </li>
 </ul>
 <div class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab" style="text-align: left;">
-  	<h2 style="color:white;"><strong>${ loginVO.mnick }</strong> 님 안녕하세요</h2> <br>
-  	<h2 style="color:white;">아이디 :<strong> ${ loginVO.mid }</strong></h2><br>
-  	<h3 class="text-center"><a href="${ pageContext.request.contextPath }/mypage/checkPwd" style="color: #5A79B8;">회원정보 수정하기</a></h3>
+  	<h2 style="color:black;"><strong>${ loginVO.mnick }</strong> 님 안녕하세요</h2> <br>
+  	<h2 style="color:black;">아이디 :<strong> ${ loginVO.mid }</strong></h2><br>
+  	<h3 class="text-center"><a id="alink" href="${ pageContext.request.contextPath }/mypage/checkPwd">회원정보 수정하기</a></h3>
   </div>
   <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-	<h2 style="color:white;">내 댕댕이</h2>
-		<hr style="border-color:white;">
+	<h2 style="color:black;">내 댕댕이</h2>
+		<hr style="border-color:black;">
 		<div align="center">
 			<div class="container" style="font-size: 30px; margin-bottom: 10px;">
 				<c:forEach items="${ petList }" var="pet">
  				 <div class="row">
-  				  <div class="col-sm" style="color: white;">
+ 				 <div class="col-1"><img src="${ pageContext.request.contextPath }/resources/img/icons/dogIcon.png"
+ 				  style="background: transparent; width:40px; height:40px;"></div>
+  				  <div class="col-sm" style="color: black;">
    					   ${ pet.pname }
    				 </div>
- 			   <div class="col-sm" style="color: white;">
+ 			   <div class="col-sm" style="color: black; font-size: 20px;">
   			    ${ pet.spname }
  			   </div>
  			   <div class="col-sm" style="font-size: 20px;">
-  			    <a href="${ pageContext.request.contextPath }/board/spcode/${ pet.spcode }" style="color: #F9FF9E;">관련 정보<br>보러가기</a>
+  			    <button onclick="location.href='${ pageContext.request.contextPath }/board/spcode/${ pet.spcode }'"
+  			     style="background: transparent; border: none;">
+  			    	<img id="btnInf" src="${ pageContext.request.contextPath }/resources/img/icons/inform_icon.png"
+  			    	 style="width:35px; height:35px;"></button>
   			  </div>
-  			   <div class="col-2">
- 			   <input class="btn ourbutton"type="button" value="삭제" onclick="deletePet(${ pet.pno })">
+  			   <div class="col-sm" style="text-align: center;">
+ 			   <input id="btnDel" type="image" src="${ pageContext.request.contextPath }/resources/img/icons/del_icon.png"
+ 			    onclick="deletePet(${ pet.pno })">
   			  </div>
  			 </div>
  			 </c:forEach>
 			</div>
-			<div style="border: 1px solid;">
-			<h3><a style="color: #E8D1DD;" href="${ pageContext.request.contextPath }/pet">댕댕이 등록하기</a></h3>
-			</div>
+			<br>
+			<button class="btn btn-info" onclick="location.href='${ pageContext.request.contextPath }/pet'">댕댕이 등록하기</button>
 			<br>
 		</div>
 	</div>

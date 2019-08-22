@@ -38,15 +38,15 @@
 	</header>
 		<div class="backgroundForm"
 			style="background-image: url('${ pageContext.request.contextPath }/resources/img/backgrounds/2.jpg'); ">
-			<div>
+			<div class="container-fluid" style="margin: 2rem; padding: 1rem;">
 		<h2 style="color: #EFF2E1;">내 댕댕이의 종에 따른 취약 질병 게시판</h2>
 		
 		<hr>
 		<div align="center">
 			<c:forEach items="${ boardListBySp }" var="boardSp">
 				<div class="card"
-					style="width: 18rem; padding:0.25rem; border-radius:1rem; display: inline-block; margin-top: 4rem; margin-left: 1rem; margin-right: 1rem; border: 2px solid rgba(255,255,255,0.6);">
-					<img class="card-img-top" style="border-top-left-radius:1rem; border-top-right-radius:1rem;"
+					style="width: 18rem; padding:0.25rem; border-radius:1rem; display: inline-block; margin-top: 4rem; margin-left: 1rem; margin-right: 1rem; border: 5px solid #FF528D;">
+					<img class="card-img-top" style="border-top-left-radius:1rem; border-top-right-radius:1rem; height:15rem; height: 15rem;"
 						src="${ pageContext.request.contextPath }/upload/${ boardSp.bfname }"
 						alt="Card image cap" >
 					<div class="card-body" style="background-color:rgba(0,0,0,0.8); border-bottom-left-radius:1rem; border-bottom-right-radius:1rem; ">
@@ -59,7 +59,6 @@
 					</div>
 				</div>
 			</c:forEach>
-			
 		</div>
 		</div>
 	</div>

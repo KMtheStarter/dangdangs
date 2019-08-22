@@ -174,41 +174,42 @@ h7:first-child:first-line { font-weight: bold; font-size: 2.8rem; color: #7f7664
 
 
 
-					<div align="center">
+					<div align="center" style="width: 80%; text-align: center; margin-left: auto; margin-right: auto;">
 						<c:if test="${ commentList != null }">
-							<table style="width : 80%">
+							<div class="container"></div>
 								<c:forEach items="${ commentList }" var="comment">
-									<tr>
-										<th style="width: 5%">작성자</th>
-										<td style="width: 7%">${ comment.mnick }</td>
-										<th style="width: 5%">내용</th>
-										<td>${ comment.ccontent }</td>
-										<td style="width: 7%">${ comment.cdate }</td>
-										<td style="width: 7%"><input type="button" value="삭제"
-											onclick="deleteComment(${ comment.cno })"></td>
-									</tr>
+									<div class="row">
+										<div class="col">${ comment.mnick }</div>
+										<div class="col-6" style="color: black;">${ comment.ccontent }</div>
+										<div class="col">${ comment.cdate }</div>
+										<c:if test="${ loginVO.mnick == comment.mnick }">
+										<div class="col-1"><input class="btn btn-secondary" type="button" style="width: 50px;" value="삭제"
+											onclick="deleteComment(${ comment.cno })"></div>
+										</c:if>
+									</div>
+									<br>
+									<hr>
 								</c:forEach>
-							</table>
+								
+							</div>
 						</c:if>
+						<br>
+						<div align="center" style="width: 80%; text-align: center; margin-left: auto; margin-right: auto;">
 						<c:choose>
+						
 							<c:when test="${ not empty loginVO }">
 								<form method="post"
 									action="${ pageContext.request.contextPath }/comment/${ vo.bno }">
 									<%-- 댓글 달기 폼 cno, mnick, bno, ccontent, cdate, ctype --%>
 									<input type="hidden" name="mnick" value="${ loginVO.mnick }">
 									<input type="hidden" name="bno" value="${ vo.bno }">
-									<table style="width: 80%;">
-										<tr>
-											<th>작성자</th>
-											<td>${ loginVO.mnick }</td>
-											<th>내용</th>
-											<td></td>
-										</tr>
-										<tr>
-											<td><textarea name="ccontent" rows="3" cols="100"></textarea>
-												<button type="submit" class="btn btn-outline-dark">댓글작성</button></td>
-										</tr>
-									</table>
+									<div class="container">
+										<div class="row">
+											<div class="col-3">${ loginVO.mnick }</div>
+											<div class="col"><textarea name="ccontent" rows="2" cols="100"></textarea>
+												<button type="submit" class="btn btn-outline-dark">댓글작성</button></div>
+										</div>
+									</div>
 								</form>
 							</c:when>
 							<c:otherwise>
@@ -217,7 +218,10 @@ h7:first-child:first-line { font-weight: bold; font-size: 2.8rem; color: #7f7664
 									수 있습니다.</a>
 								</div>
 							</c:otherwise>
+							
 						</c:choose>
+						</div>
+						<br>
 					</div>
 				
 

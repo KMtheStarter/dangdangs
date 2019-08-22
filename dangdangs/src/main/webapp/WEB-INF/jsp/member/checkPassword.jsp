@@ -25,15 +25,17 @@
 	<header>
 		<jsp:include page="/WEB-INF/jsp/include/topMenu.jsp" />
 	</header>
-	<div class="backgroundForm" style="background-image:url('${ pageContext.request.contextPath }/resources/img/backgrounds/mypage.jpg');">
-	<div style="margin-top: -50px; background-color: rgba(0,0,0,0.7); padding: 1rem; border-radius: 1em;">
-	<h3 style="color: white;">
-		비밀번호 확인창입니다.
-		현재 비밀번호를 입력해주세요
+	<div class="backgroundForm" style="background-color:#666666;
+	 background-image:url('${ pageContext.request.contextPath }/resources/img/backgrounds/mypage.jpg'); background-blend-mode: multiply;">
+	<div style="margin-top: -50px; background-color: rgba(255,255,255,0.9); padding: 1rem; border-radius: 1em; width: 30rem;">
+	<h3 style="color: black;">
+		<strong>비밀번호</strong> 확인창입니다.</h3><br>
+	<h3 style="color: black; margin-top: -10px;">
+	현재 비밀번호를 입력해주세요
 	</h3><br>
 		<form method="post" action="${ pageContext.request.contextPath }/mypage/check">
 			<input type="hidden" name="mid" value="${ loginVO.mid }">
-			<input type="password" id="pwd" name="mpassword" size="20" style="width: 20em;">
+			<input type="password" id="pwd" name="mpassword" size="20" style="width: 15em; color: black;">
 			<button id="submit" type="submit" class="btn btn-outline-danger">확인</button>
 		</form>
 	</div>
