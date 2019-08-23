@@ -59,7 +59,7 @@
 <body>
 
 	<!-- bootstrap container-fluid 기본 padding값이 15px이라서 여백을 없애기 위해 스타일 설정 -->
-	<div class="container-fluid" style="padding-left: 0px; padding-right: 0px;">
+	<div class="container-fluid"  style="padding-left: 0px; padding-right: 0px;" >
 	<header>
 		<jsp:include page="/WEB-INF/jsp/include/topMenu.jsp" />
 	</header>
@@ -67,15 +67,14 @@
 
 	
 		<!-- Top content 메롱 -->
-		<div class="top-content">
+		<div class="top-content" >
 			<div class="row no-gutters">
 				<div class="col">
 					<div id="carousel-example" class="carousel slide"
 						data-ride="carousel">
 
 						<div class="carousel-inner">
-							<div class="carousel-item active" style="background-size:100% 100%; 
-							background-image:url(${ pageContext.request.contextPath }/resources/img/backgrounds/1.jpg);">
+							<div class="carousel-item active" id="bg1">
 								
 								<div class="carousel-caption  text-center" style="width:80%;white-spacing:pre-line;">
 									<h4 >
@@ -101,8 +100,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="carousel-item" style="background-size:100% 100%; 
-							background-image:url(${ pageContext.request.contextPath }/resources/img/backgrounds/2.jpg);">
+							<div class="carousel-item" id="bg2">
 								
 								<div class="carousel-caption text-center" style="width:80%;white-spacing:pre-line;">
 
@@ -129,8 +127,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="carousel-item" style="background-size:100% 100%; 
-							background-image:url(${ pageContext.request.contextPath }/resources/img/backgrounds/3.jpg);">
+							<div class="carousel-item" id="bg3" >
 								
 								<div class="carousel-caption text-center" style="width:80%;white-spacing:pre-line;">
 

@@ -57,7 +57,7 @@
 		<div class="container-fluid" style="margin: 2rem; padding: 1rem;">
 			<c:forEach items="${ boardList }" var="board">
 				<div class="card"
-					style="width: 18rem; padding:0.25rem; border-radius:1rem; display: inline-block; margin-top: 4rem; margin-left: 1rem; margin-right: 1rem; border: 5px solid #FF528D;">
+					style="width: 17rem; padding:0.25rem; border-radius:1rem; display: inline-block; margin-top: 4rem; margin-left: 1rem; margin-right: 1rem; border: 5px solid #FF528D;">
 					<img class="card-img-top" style="border-top-left-radius:1rem; border-top-right-radius:1rem; height:15rem; height: 15rem;"
 						src="${ pageContext.request.contextPath }/upload/${ board.bfname }"
 						alt="Card image cap" >

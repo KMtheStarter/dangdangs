@@ -21,9 +21,11 @@
 
 <link rel="stylesheet" type="text/css"
 	href="${ pageContext.request.contextPath }/resources/css/layout.css">
+	<link rel="stylesheet" type="text/css"
+	href="${ pageContext.request.contextPath }/resources/css/detailmobile.css">
 <link rel="stylesheet" type="text/css"
 	href="${ pageContext.request.contextPath }/resources/css/style.css">
-<link rel="stylesheet" href="resources/css/board.css">
+
 <link rel="stylesheet"
    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -52,17 +54,7 @@
 
 <style>
 
-h2{
-margin-top:10rem;
-margin-bottom:10rem;
-}
 
-
-h7:first-child:first-letter { font-size: 5rem; float: left; padding: 10px; height: 64px; 
-font-family: 'HominisNormal'; background-color: #7F7664; margin-right: 10px; color: white; border-radius: 5px; line-height: 5rem; } 
-
-
-h7:first-child:first-line { font-weight: bold; font-size: 2.8rem; color: #7f7664; }
 
 
 
@@ -82,22 +74,22 @@ h7:first-child:first-line { font-weight: bold; font-size: 2.8rem; color: #7f7664
 
 
 		<div class="container ourfont"
-			style="font-size: 1.5rem; width: 40rem; font-weight: 400; color: black; display: inline-block;">
+			style="font-size: 1.5rem;  font-weight: 400; color: black; display: inline-block;">
 
 
 			
 
 
-			<h5 class="text-center"
-				style="color: #444444; margin-top: 10rem; font-weight: 300; font-family: 'Black Han Sans'; font-size: 10rem; margin-bottom: 0; padding: 0;">${ vo.dname }</h5>
+			<h5 class="text-center" id="head1"
+				>${ vo.dname }</h5>
 
 
 
 
 
 
-			<h4 class="text-right"
-				style="color: #314c79; margin-top: 0; font-family: 'Noto Sans KR'; font-size: 1.7rem;">
+			<h4 class="text-center"
+				id="head2">
 				<strong>작성일</strong>: ${ vo.bdate }
 			</h4>
 
@@ -111,57 +103,57 @@ h7:first-child:first-line { font-weight: bold; font-size: 2.8rem; color: #7f7664
 			</h5>
 
 			<h5
-				style="color: #444444; margin-top: 10rem; font-weight: 300; font-size: 6rem; font-family: 'Black Han Sans';">나타나는
+				class="titlefont">나타나는
 				증상들</h5>
 
-			<ul class="text-left" style="margin-right: 2rem;">
+			<ul class="text-left" style="margin-left:2%;">
 				<c:forEach items="${ syname }" var="syname" varStatus="status">
 					<li><h1
-							style="font-weight: 400; color: #314c79; margin-top: 1rem; margin-left: 5rem; font-family: 'Jua'; margin-left: 0; font-size: 3rem;">
-							<small>${status.count}.</small>${ syname }</h1></li>
+							style="font-weight: 700; color:#666666; margin-top: 1rem; margin-left: 5%; font-family: 'Noto Sans KR'; margin-left: 0; font-size: 2.5rem;">
+							<strong style="color: #666666; font-family:'Black Han Sans'; font-weight:100; font-size:3.2rem; margin-right:2%;">${status.count}.</strong>${ syname }</h1></li>
 				</c:forEach>
 			</ul>
 
 			<h5
-				style="color: #444444; margin-top: 10rem; font-weight: 300; font-size: 6rem; font-family: 'Black Han Sans';">요약</h5>
+				class="titlefont">요약</h5>
 
-			<div class="container" style="width: 120%; text-overflow: ellipsis; white-space: pre-wrap; ">
+			<div class="container" style="width: 90%; white-space: pre-wrap; ">
 				<h7 class="text-left"
-					style="color: #444444; white-space: pre-line;	 overflow: hidden; margin-top:2rem; line-height:5rem; margin-right:10rem;
-						 font-weight:700; font-size: 2.5rem; width:100%; display:block; font-family:'Noto Sans KR';">${fn:replace(vo.bsum, replaceChar, "<br/>") }</h7>
+					style="color: #444444; white-space: pre-line; margin-top:2rem; line-height:5rem; margin-left:5%;
+						 font-weight:700; font-size: 1.5rem; width:95%; display:block; font-family:'Noto Sans KR';">${fn:replace(vo.bsum, replaceChar, "<br/>") }</h7>
 			</div>
 
 			<h5
-				style="color: #444444; margin-top: 10rem; font-weight: 300; font-size: 6rem; font-family: 'Black Han Sans';">원인</h5>
+				class="titlefont">원인</h5>
 
 
 			<h2 class="text-left"
-				style="color: #444444; white-space: pre-line; margin-top: 2rem; line-height: 5rem; font-weight: 700; font-size: 2.5rem; width: 100%; display: block; font-family: 'Noto Sans KR';">
+				style="color: #444444; white-space: pre-line; margin-left:5%;margin-top: 2rem; line-height: 5rem; font-weight: 700; font-size: 1.5rem; width: 90%; display: block; font-family: 'Noto Sans KR';">
 				${fn:replace(vo.bcause, replaceChar, "<br/>") }</h2>
 
 
 			<h5
-				style="color: #444444; margin-top: 10rem; font-weight: 300; font-size: 6rem; font-family: 'Black Han Sans';">치료법</h5>
+				class="titlefont">치료법</h5>
 
 
-			<div class="container" style="width: 50rem; text-overflow: ellipsis;">
+			<div class="container" style="width: 90%; white-space: pre-wrap;">
 				<h5 class="text-left"
-					style="color: #444444; white-space: pre-line; margin-top: 2rem; line-height: 5rem; margin-right: 10rem; font-weight: 700; font-size: 2.5rem; width: 100%; display: block; font-family: 'Noto Sans KR';">${fn:replace(vo.btreat, replaceChar, "<br/>") }</h5>
+					style="color: #444444; white-space: pre-line; margin-left:2%; width:80%; margin-top: 2rem;   font-weight: 700; font-size: 1.5rem; width: 90%; display: block; font-family: 'Noto Sans KR';">${fn:replace(vo.btreat, replaceChar, "<br/>") }</h5>
 			</div>
 
 
 			<h5
-				style="color: #444444; margin-top: 10rem; font-weight: 300; font-size: 6rem; font-family: 'Black Han Sans';">관리법</h5>
+				class="titlefont">관리법</h5>
 
-			<div class="container" style="width: 120%; white-space: pre-line;">
+			<div class="container" style="width: 90%; white-space: pre-line;">
 				<h5 class="text-left"
-					style="color: #444444; white-space: pre-line;  margin-top: 2rem; line-height: 5rem; margin-right: 10rem; font-weight: 700; font-size: 2.5rem; width: 100%; display: block; font-family: 'Noto Sans KR';">${fn:replace(vo.bcare, replaceChar, "<br/>") }</h5>
+					style="color: #444444; white-space: pre-line; margin-left:5%; width:80%;  margin-top: 2rem; line-height: 5rem; margin-left:5%; font-weight: 700; font-size: 1.5rem; width: 100%; display: block; font-family: 'Noto Sans KR';">${fn:replace(vo.bcare, replaceChar, "<br/>") }</h5>
 			</div>
 
 
 
 			<h5
-				style="color: #444444; margin-top: 10rem; font-weight: 300; font-size: 3rem; font-family: 'Black Han Sans';">우리 강아지가 걱정 된다면?</h5>
+				style="color: #444444; margin-left:10%;white-space: pre-line; width:80%;margin-top: 10rem; font-weight: 300; font-size: 3rem; font-family: 'Black Han Sans';">우리 강아지가 걱정 된다면?</h5>
 
 
 			<button type="button" class="btn ourbutton2" style="width:20rem;height:3rem; margin-top:1rem; margin-bottom:5rem; background-color:#444444;" 
@@ -174,7 +166,7 @@ h7:first-child:first-line { font-weight: bold; font-size: 2.8rem; color: #7f7664
 
 
 
-					<div align="center" style="width: 80%; text-align: center; margin-left: auto; margin-right: auto;">
+					<div align="center" style="width: 80%; text-align: center; margin-left: 5%;">
 						<c:if test="${ commentList != null }">
 							<div class="container"></div>
 								<c:forEach items="${ commentList }" var="comment">
@@ -203,10 +195,10 @@ h7:first-child:first-line { font-weight: bold; font-size: 2.8rem; color: #7f7664
 									<%-- 댓글 달기 폼 cno, mnick, bno, ccontent, cdate, ctype --%>
 									<input type="hidden" name="mnick" value="${ loginVO.mnick }">
 									<input type="hidden" name="bno" value="${ vo.bno }">
-									<div class="container">
+									<div class="container" style="width:90%">
 										<div class="row">
 											<div class="col-3">${ loginVO.mnick }</div>
-											<div class="col"><textarea name="ccontent" rows="2" cols="100"></textarea>
+											<div class="col"><textarea name="ccontent" rows="2" style="width:70%;"></textarea>
 												<button type="submit" class="btn btn-outline-dark">댓글작성</button></div>
 										</div>
 									</div>
@@ -214,7 +206,7 @@ h7:first-child:first-line { font-weight: bold; font-size: 2.8rem; color: #7f7664
 							</c:when>
 							<c:otherwise>
 								<div style="width: 80%; margin-bottom: 5rem;	" >
-									<a style="color:grey; font-size:2rem;"href="${ pageContext.request.contextPath }/login?no=${ vo.bno }"><strong style="color:red; font-size:3rem;">로그인</strong> 후 댓글을 달
+									<a style="color:grey; font-size:2rem;"href="${ pageContext.request.contextPath }/login"><strong style="color:red; font-size:3rem;">로그인</strong> 후 댓글을 달
 									수 있습니다.</a>
 								</div>
 							</c:otherwise>
@@ -223,11 +215,24 @@ h7:first-child:first-line { font-weight: bold; font-size: 2.8rem; color: #7f7664
 						</div>
 						<br>
 					</div>
+				
 
+			
+			
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
    <footer>
 		<jsp:include page="/WEB-INF/jsp/include/footer.jsp" />
 	</footer>
-	</div>
+
    
 </body>
 </html>

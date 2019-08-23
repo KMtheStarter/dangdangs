@@ -79,8 +79,9 @@ function checkVal(){
         <button type="submit" class="btn btn-block ourbutton2" style="font-weight:700; color:white;   ">로그인</button>
         <h5
 				style="color: #white; margin-top: 2rem; margin-bottom:1rem; font-weight: 700; font-size:1rem; font-family: 'Noto Sans KR';"><strong>회원</strong>이 아니신가요?</h5>
-        <button  class="btn  btn-block ourbutton"   style="font-weight:700; color:white; margin-bottom:1rem;"    onclick="location.href='singup.jsp' ">회원가입</button>
+       
     </form>
+     <button  class="btn  btn-block ourbutton" onclick="location.href='${ pageContext.request.contextPath }/signup'"   style="font-weight:700; width:85%; color:white; margin-bottom:1rem;"    onclick="location.href='singup.jsp' ">회원가입</button>
    </div>
    </div>
    </div>
