@@ -214,7 +214,7 @@ h7:first-child:first-line { font-weight: bold; font-size: 2.8rem; color: #7f7664
 							</c:when>
 							<c:otherwise>
 								<div style="width: 80%; margin-bottom: 5rem;	" >
-									<a style="color:grey; font-size:2rem;"href="${ pageContext.request.contextPath }/login"><strong style="color:red; font-size:3rem;">로그인</strong> 후 댓글을 달
+									<a style="color:grey; font-size:2rem;"href="${ pageContext.request.contextPath }/login?no=${ vo.bno }"><strong style="color:red; font-size:3rem;">로그인</strong> 후 댓글을 달
 									수 있습니다.</a>
 								</div>
 							</c:otherwise>
@@ -223,20 +223,7 @@ h7:first-child:first-line { font-weight: bold; font-size: 2.8rem; color: #7f7664
 						</div>
 						<br>
 					</div>
-				
 
-			
-			
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
    <footer>
 		<jsp:include page="/WEB-INF/jsp/include/footer.jsp" />
 	</footer>
