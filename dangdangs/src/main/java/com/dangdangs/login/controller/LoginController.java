@@ -1,5 +1,7 @@
 package com.dangdangs.login.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,23 +21,38 @@ public class LoginController {
 	private MemberService service;
 
 	@GetMapping("/login")
-	public String loginForm() {
+	public String loginForm(HttpServletRequest req, Model model) {
+		if(req.getParameter("no") != null) {
+			model.addAttribute("no", req.getParameter("no"));
+		}
 		return "member/login";
 	}
 	
 	@PostMapping("/login")
-	public String login(MemberVO memberVO, Model model) {
+	public String login(MemberVO memberVO, String no, Model model) {
 		MemberVO member = service.loginMember(memberVO);
-		
-		if (member == null) {
-			// 로그인 실패
-			model.addAttribute("msg", "아이디 또는 패스워드가 잘못되었습니다.");
-			return "redirect:/login";
+		if (no == null) {
+			if (member == null) {
+				// 로그인 실패
+				model.addAttribute("msg", "아이디 또는 패스워드가 잘못되었습니다.");
+				return "redirect:/login";
+			} else {
+				// 로그인 성공
+				model.addAttribute("loginVO", member);
+				return "redirect:/";
+			}
 		} else {
-			// 로그인 성공
-			model.addAttribute("loginVO", member);
-			return "redirect:/";
+			if (member == null) {
+				// 로그인 실패
+				model.addAttribute("msg", "아이디 또는 패스워드가 잘못되었습니다.");
+				return "redirect:/login";
+			} else {
+				// 로그인 성공
+				model.addAttribute("loginVO", member);
+				return "redirect:/board/" + no;
+			}
 		}
+		
 	}
 	
 	@GetMapping("/logout")
