@@ -32,7 +32,7 @@
 - 치료법			- btreat		CLOB
 - 관리법			- bcare		CLOB
 - 작성날짜		- bdate		date
-- 파일이름		- bfname		CLOB
+- 이미지경로		- bfname		CLOB
 
 회원 개 테이블		- d_pet
 - 번호 pk			- pno		number(5)
