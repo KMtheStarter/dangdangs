@@ -13,6 +13,7 @@ ul {
 	vertical-align: top;
 }
 </style>
+<link href="https://fonts.googleapis.com/css?family=Black+Han+Sans|Do+Hyeon|Jua|Nanum+Gothic|Noto+Sans+KR&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css"
 	href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
 <link rel="stylesheet"
@@ -46,13 +47,16 @@ ul {
 	}
 </script>
 </head>
-<body>
-	<div align="center" style="width: 80%; margin-left: auto; margin-right: auto;">
+<body style="background-color:#F8F1EB">
+	<div align="center" style="background-color: rgba(255,255,255,0.9); width: 80%; margin-left: auto; margin-right: auto; margin-top: 50px; border-radius: 1rem; padding-bottom: 10px;">
 		<br>
-		<hr>
-		<h2>마이 댕댕이 등록</h2>
-		<hr>
-		<h3>로그인중인 아이디: ${ loginVO.mid }</h3>
+		<hr style="margin-left: 50px; margin-right: 50px;">
+		
+			<h5 class="text-center"
+				style="color: #444444; font-weight: 100; font-family: 'Black Han Sans'; font-size: 5rem; margin-bottom: 0; padding: 0; width: 60%;">
+				마이 댕댕이 등록</h5>
+		<hr style="margin-left: 50px; margin-right: 50px;">
+		<h3 style="margin-left: 50px; margin-right: 50px; font-family:'Noto Sans KR'; font-weight: 700;">로그인중인 아이디<br> <strong>${ loginVO.mid }</strong></h3>
 		<br>
 
 		<form method="post" name="addPetForm" onsubmit="return checkVal()">
@@ -63,21 +67,21 @@ ul {
 			<table>
 			<tbody align="center">
 				<tr>
-					<th>댕댕이 이름</th>
+					<th style="font-family:'Noto Sans KR';">댕댕이 이름 </th>
 					<td>
-						<input type="text" name="pname" size="40" autofocus="autofocus"/>
+						<input type="text" class="form-control" name="pname" size="30" autofocus="autofocus"/>
 					</td>
 				</tr>
 				</tbody>
 			</table>
 			<br>
-			<div class="accordion" id="accordionExample">
-				<div class="card">
-					<div class="card-header" id="headingOne">
+			<div class="accordion" id="accordionExample" style="margin-left: 50px; margin-right: 50px;">
+				<div class="card" style="font-family:'Noto Sans KR';">
+					<div class="card-header" id="headingOne" style="background-color: #F8F1EB;">
 						<h2 class="mb-0">
 							<button class="btn btn-link" type="button" data-toggle="collapse"
 								data-target="#collapseOne" aria-expanded="true"
-								aria-controls="collapseOne">종을 입력하세요!</button>
+								aria-controls="collapseOne" style="color: #807666;">종을 입력하세요!</button>
 						</h2>
 					</div>
 					<div id="collapseOne" class="collapse show"

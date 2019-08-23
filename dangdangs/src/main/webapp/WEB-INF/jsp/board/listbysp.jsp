@@ -49,13 +49,13 @@
 					<img class="card-img-top" style="border-top-left-radius:1rem; border-top-right-radius:1rem; height:15rem; height: 15rem;"
 						src="${ pageContext.request.contextPath }/upload/${ boardSp.bfname }"
 						alt="Card image cap" >
-					<div class="card-body" style="background-color:rgba(0,0,0,0.8); border-bottom-left-radius:1rem; border-bottom-right-radius:1rem; ">
+					<div class="card-body" style="background-color:white; border-bottom-left-radius:1rem; border-bottom-right-radius:1rem; ">
 						<h5 class="card-title"
-							style="white-space: nowrap;color:white;	 overflow: hidden; font-size:2rem; text-overflow: ellipsis;">${ boardSp.dname }</h5>
+							style="white-space: nowrap;color:black;	font-family:'Black Han Sans'; font-weight:100; overflow: hidden; font-size:2.5rem; text-overflow: ellipsis;">${ boardSp.dname }</h5>
 						<p class="card-text">${ boardSp.bdate }</p>
 						<a
 							href="${ pageContext.request.contextPath }/board/${ boardSp.bno }"
-							class="btn btn-danger btn-block" style="backgorund-color:#e50914">더 알아보기</a>
+							class="btn ourbutton2 btn-block" style="backgorund-color:#e50914">더 알아보기</a>
 					</div>
 				</div>
 			</c:forEach>
