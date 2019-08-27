@@ -114,7 +114,7 @@ i.fab{
 				<div class="row">
 					<div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
 						<h7 class="mb-4 font-weight-bold">ABOUT US</h7>
-						<h8 class="mb-4" >댕댕이를 사랑하는 사람들</h8>
+						<h6 class="mb-4" style="font-family:'Black Han Sans';font-weight:100;">DangDang'S</h6>
 						<ul class="f-address">
 							<li>
 								<div class="row">
@@ -150,7 +150,6 @@ i.fab{
 						<ul class="f-address" style=" margin-top:1rem; " >
 							<li style="padding-top: 1rem;padding-bottom: 1rem;">
 								<div class="row">
-									<div class="col-1"><i class="fas fa-arrow-right"></i></div>
 									<div class="col-10">
 									
 										<h8 onclick="location.href='${ pageContext.request.contextPath }/board'"> 게시판 </h8>
@@ -160,7 +159,6 @@ i.fab{
 							</li>
 							<li style="padding-top: 1rem;padding-bottom: 1rem;">
 								<div class="row">
-									<div class="col-1"><i class="fas fa-arrow-right"></i></div>
 									<div class="col-10">
 										<h8 onclick="location.href='${ pageContext.request.contextPath }/diag'"> 진단하기</h8>
 										
@@ -169,7 +167,6 @@ i.fab{
 							</li>
 							<li style="padding-top: 1rem;padding-bottom: 1rem;">
 								<div class="row">
-									<div class="col-1"><i class="fas fa-arrow-right"></i></div>
 									<div class="col-10">
 										<h8 onclick="location.href='${ pageContext.request.contextPath }/login'">로그인 </h8> 
 										
@@ -202,10 +199,7 @@ i.fab{
 						<h7 class="mb-4 font-weight-bold">CONTACT WITH US</h7>
 						
 						<div class="mt-4" style="position:relative;">
-							<div class="row" style="position: absolute; left:100%;" ><a href="#" title="facebook"><i class="fab fa-facebook-f"  ></i></a></div>
-							<div class="row" style="position: absolute; left:70%;"><a href="#" title="twitter"><i class="fab fa-twitter" ></i></a></div>
-							<div class="row" style="position: absolute; left:40%;"><a href="#" title="google-plus"><i class="fab fa-google-plus-g" ></i></a></div>
-							<div class="row" style="position: absolute; left:10%;"><a href="#" title="instagram"><i class="fab fa-instagram"></i></a></div>
+							<div class="row font-weight-bold" style="position:relative; left:10%;">follow us on Instagram<a href="https://www.instagram.com/p/B1nlBNsnwsJ/?utm_source=ig_web_copy_link" title="instagram" style="margin-left:5%;"><i class="fab fa-instagram"></i></a></div>
 							
 						</div>
 					</div>

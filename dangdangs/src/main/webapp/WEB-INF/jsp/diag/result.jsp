@@ -47,7 +47,7 @@ body > div > span:hover{
 			$("body > div > div:nth-child(" + i + ")").css("display", "none");
 		}
 		$("body > div > div:nth-child(" + divStart + ")").css("display", "block");
-		$("body > div > span:nth-child(" + spanStart + ")").css("font-size", "25px");
+		$("body > div > span:nth-child(" + spanStart + ")").css("font-size", "40px");
 		$("body > div > span:nth-child(" + spanStart + ")").css("color", "red");
 	});
 	
@@ -55,10 +55,10 @@ body > div > span:hover{
 		var spanid = spanStart + parseInt(number);
 		var divid = divStart + parseInt(number);
 		for(var i = spanStart; i < (spanStart + listSize); i++){
-			$("body > div > span:nth-child(" + i + ")").css("font-size", "11px");
+			$("body > div > span:nth-child(" + i + ")").css("font-size", "18px");
 			$("body > div > span:nth-child(" + i + ")").css("color", "black");
 		}
-		$("body > div > span:nth-child(" + spanid + ")").css("font-size", "25px");
+		$("body > div > span:nth-child(" + spanid + ")").css("font-size", "32px");
 		$("body > div > span:nth-child(" + spanid + ")").css("color", "red");
 		for(var i = divStart; i < (divStart + listSize); i++){
 			$("body > div > div:nth-child(" + i + ")").css("display", "none");
@@ -90,14 +90,14 @@ body > div > span:hover{
 	
 	<hr style="margin-left: 100px; margin-right: 100px;">
 		<div class="bsum container" style=" width:100%;">
-			<h5 class="text-center" id="result1">가장 유력한 질병은<br> ${ dnameList[0] } 입니다.</h5>
+			<h5 id="result1">가장 유력한 질병은<br> ${ dnameList[0] } 입니다.</h5>
 			<c:forEach items="${ voList }" var="vo" varStatus="status">
-				<span class="dname" style="color: #444444; margin-top: 1rem;  font-weight: 300; font-family: 'Noto Sans KR'; font-size: 2rem;"><strong onclick="viewSummary('${ status.index }')">${ vo.dname }</strong></span>
+				<span class="dname" style="color: #444444; margin-top: 1rem;  font-weight: 300; font-family: 'Noto Sans KR';"><strong onclick="viewSummary('${ status.index }')">${ vo.dname }</strong></span>
 			</c:forEach>
 			<hr>
 			<c:forEach items="${ voList }" var="vo">
 				<div class="bsum" id="result2">
-					<span class="text-center">${fn:replace(vo.bsum, replaceChar, "<br/>") }</span>
+					<span class="text-center" >${fn:replace(vo.bsum, replaceChar, "<br/>") }</span>
 					<br><br><br>
 					<button
 					onclick="location.href='${ pageContext.request.contextPath }/board/${ vo.bno }'"
@@ -117,7 +117,7 @@ body > div > span:hover{
 				style="width: 100%; ">
 			<div class="middle" style="margin-top:1rem;">
 				<div class="poptext" style="padding:0;"><button class = "btn" style=" white-space:nowrap; font-family: 'Black Han Sans'; font-weight:100;color:white; width:6rem; height:2rem; margin-top:0; padding:0; border-radius:0;" 
-			onclick="copy_to_clipboard('http://222.106.22.28:7777${ pageContext.request.contextPath }/${ url }')">공유하기</button></div>
+			onclick="copy_to_clipboard('http://52.79.196.152:7777${ pageContext.request.contextPath }/${ url }')">공유하기</button></div>
 			</div>
 		</div>
 		

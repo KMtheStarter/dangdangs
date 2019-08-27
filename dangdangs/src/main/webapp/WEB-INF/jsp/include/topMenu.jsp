@@ -34,7 +34,7 @@
              <div class="collapse navbar-collapse" id="navbarNav">
                  <ul class="navbar-nav ml-auto"  >
                      <li class="nav-item"  >
-                         <a class="nav-link" href="${ pageContext.request.contextPath }/board"  >BOARD</a>
+                         <a class="nav-link" href="${ pageContext.request.contextPath }/board"  >ARTICLES</a>
                      </li>
                      <c:if test="${ loginVO.mid == 'admin' }">
                      <li class="nav-item">

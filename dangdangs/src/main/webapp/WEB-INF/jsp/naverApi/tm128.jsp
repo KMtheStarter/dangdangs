@@ -7,19 +7,24 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=83bfuniegk&submodules=geocoder"></script>
-
+<link rel="stylesheet" type="text/css" href="${ pageContext.request.contextPath }/resources/css/signinmobile.css">
 
 
 </head>
 
 <body style="background-color:#F8F1EB">
-<div class="container-fluid" style="padding-left: 0px; padding-right: 0px;">
+<div class="container-fluid" style="padding-left: 0px; padding-right: 0px; text-align:center;">
 	<header>
 		<jsp:include page="/WEB-INF/jsp/include/topMenu.jsp" />
 	</header>
-<h5 class="text-center" style="color:black; font-family:'Noto Sans KR';font-size:2rem; margin-top:2rem;">24시간 동물병원을 알려드립니다.</h5>
-<hr>
-<div id="map" style="width:50%;height:500px;margin:auto;"></div>
+	<div class="text-center" style="margin-top:1rem; margin-left:10%; padding:0; white-space:nowrap; width:80%; color:black; display:block; margin-bottom:1rem;  ">
+   <h5 id="title1"
+            style="color:#444444;">한밤중에 <strong style="color:#85C0FF; font-size:1.2em;">댕댕이가</strong><br>아픈가요?</h5>
+  <h5 id="title2"
+           style="color:#444444;" >24시간 동물병원 위치를 알려드려요</h5>
+ </div>
+ 
+<div id="map" style="width:95%;height:500px;margin:auto;"></div>
 <script>
 
     // 현재위치 만들어주기

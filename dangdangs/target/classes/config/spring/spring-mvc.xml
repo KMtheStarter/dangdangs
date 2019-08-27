@@ -37,9 +37,9 @@
 	<!-- db연동 -->
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
 		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
-		<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe" />
+		<property name="url" value="jdbc:oracle:thin:@kmdang.c8afjabwb27y.ap-northeast-2.rds.amazonaws.com:1521:xe" />
 		<property name="username" value="javabook" />
-		<property name="password" value="test00" />
+		<property name="password" value="javabook" />
 	</bean>
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />

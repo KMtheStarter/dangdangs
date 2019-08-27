@@ -39,7 +39,12 @@
 		<div class="backgroundForm"
 			style="background-image: url('${ pageContext.request.contextPath }/resources/img/backgrounds/2.jpg'); ">
 			<div class="container-fluid" style="margin: 2rem; padding: 1rem;">
-		<h2 style="color: #EFF2E1;">내 댕댕이의 종에 따른 취약 질병 게시판</h2>
+		  <div class="text-center" style="margin-top:0; padding:0; width:80%; margin-left:24%; display:block; margin-bottom:0;  ">
+   <h5
+				style=" display: block; width:70%;white-space:pre-line; color: white; margin-top: 3rem; margin-bottom:0; font-weight: 700; font-size: 2.5rem; font-family: 'Noto Sans KR';">우리  <strong style="color:#85C0FF; font-size:1.2em;">댕댕이</strong>의 취약질병</h5>
+  <h5
+				style=" display: block; width:70%; white-space:pre-line; color: white; margin-top: 1rem; margin-bottom:3rem; font-weight: 700; font-size: 1.5rem; font-family: 'Noto Sans KR';">이제, 댕댕쓰와 함께하세요</h5>
+ </div>
 		
 		<hr>
 		<div align="center">
@@ -63,5 +68,9 @@
 		</div>
 	</div>
 	</div>
+	<footer>
+		<jsp:include page="/WEB-INF/jsp/include/footer.jsp" />
+	</footer>
+	
 </body>
 </html>

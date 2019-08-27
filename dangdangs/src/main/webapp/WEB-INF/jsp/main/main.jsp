@@ -82,7 +82,7 @@
 									</h4>
 									<h5>더 이상 아프지 않게</h5>
 									<h6 >
-										이제 우리 댕댕이가 어떤 병에 걸렸는지, <br>어떻게 치료해야 할 지 알아보세요.
+										이제 우리 <strong style="color:#85C0FF; font-size:1.1em;">댕댕이</strong>가 어떤 병에 걸렸는지, <br>어떻게 치료해야 할 지 알아보세요.
 
 									</h6>
 									<div class="description wow fadeInUp">
@@ -109,7 +109,7 @@
 									</h4>
 									<h5 class="c2">요즘 끼니를 거른다면</h5>
 									<h6 >
-										이제 우리 댕댕이가 어떤 병에 걸렸는지, <br>어떻게 치료해야 할 지 알아보세요.
+										이제 우리  <strong style="color:#85C0FF; font-size:1.1em;">댕댕이</strong>가 어떤 병에 걸렸는지, <br>어떻게 치료해야 할 지 알아보세요.
 
 									</h6>
 									<div class="description wow fadeInUp">
@@ -136,7 +136,7 @@
 									</h4>
 									<h5 class="c2">힘 없어 보인다면</h5>
 									<h6 >
-										이제 우리 댕댕이가 어떤 병에 걸렸는지, <br>어떻게 치료해야 할 지 알아보세요.
+										이제 우리  <strong style="color:#85C0FF; font-size:1.1em;">댕댕이</strong>가 어떤 병에 걸렸는지, <br>어떻게 치료해야 할 지 알아보세요.
 
 									</h6>
 									<div class="description wow fadeInUp">

@@ -77,8 +77,13 @@ function getTd(age){
 }
 </script>
 </head>
-<body>
-<h2>게시글 추가</h2><hr>
+<body style="background-color:#F8F1EB">
+
+<div class="text-center" style="margin-top:0; padding:0; width:80%; margin-left:24%; display:block; margin-bottom:0;  ">
+   <h5
+				style=" display: block; width:70%;white-space:pre-line; color: black	; margin-top: 3rem; margin-bottom:2rem; font-weight: 700; font-size: 2.5rem; font-family: 'Noto Sans KR';">새로운 질병을 추가하세요</h5>
+  
+ </div>
 	<div>
 		<form method="post"
 			action="${ pageContext.request.contextPath }/board" name="diagForm"

@@ -22,7 +22,7 @@
    href="${ pageContext.request.contextPath }/resources/css/layout.css">
 <link rel="stylesheet" type="text/css"
    href="${ pageContext.request.contextPath }/resources/css/style.css">
-
+<link rel="stylesheet" type="text/css" href="${ pageContext.request.contextPath }/resources/css/signinmobile.css">
 <script
    src="${ pageContext.request.contextPath }/resources/js/jquery-3.3.1.min.js"></script>
 
@@ -41,6 +41,7 @@ function checkVal(){
    if (isNull(form.mpassword, "패스워드를 입력하세요.")) return false;
    return true;
 }
+
 </script>
 
 <style>
@@ -59,12 +60,12 @@ function checkVal(){
    <div class="backgroundForm" style="background-color:#444444; padding:0;
    background-image: url('${ pageContext.request.contextPath }/resources/img/backgrounds/seamless.jpg');
   background-blend-mode: darken;">
-  
-  <div class="text-center" style="margin-top:0; padding:0; width:80%; margin-left:24%; display:block; margin-bottom:0;  ">
-   <h5
-				style=" display: block; width:70%;white-space:pre-line; color: white; margin-top: 3rem; margin-bottom:0; font-weight: 700; font-size: 2.5rem; font-family: 'Noto Sans KR';">더 밝은 <strong>댕댕이</strong>의 미래</h5>
-  <h5
-				style=" display: block; width:70%; white-space:pre-line; color: white; margin-top: 1rem; margin-bottom:3rem; font-weight: 700; font-size: 1.5rem; font-family: 'Noto Sans KR';">이제, 댕댕쓰와 함께하세요</h5>
+
+ 	<div class="text-center" style="margin-top:1rem; padding:0; white-space:nowrap; width:80%;  display:block; margin-bottom:1rem;  ">
+   <h5 id="title1"
+            >더 밝은 <strong style="color:#85C0FF; font-size:1.2em;">댕댕이</strong>의 미래</h5>
+  <h5 id="title2"
+            >이제, 댕댕쓰와 함께하세요</h5>
  </div>
   
    <div class="container ourstyle"   align="center"  style="margin-top:0; margin-bottom:10rem; padding:0; width:30rem;"  >

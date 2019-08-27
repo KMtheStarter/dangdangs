@@ -109,7 +109,7 @@
 			<ul class="text-left" style="margin-left:2%;">
 				<c:forEach items="${ syname }" var="syname" varStatus="status">
 					<li><h1
-							style="font-weight: 700; color:#666666; margin-top: 1rem; margin-left: 5%; font-family: 'Noto Sans KR'; margin-left: 0; font-size: 2.5rem;">
+							style="font-weight: 700; color:#666666; margin-top: 1rem; margin-left: 5%; font-family: 'Noto Sans KR'; margin-left: 0; font-size: 1.8rem;">
 							<strong style="color: #666666; font-family:'Black Han Sans'; font-weight:100; font-size:3.2rem; margin-right:2%;">${status.count}.</strong>${ syname }</h1></li>
 				</c:forEach>
 			</ul>
@@ -119,7 +119,7 @@
 
 			<div class="container" style="width: 90%; white-space: pre-wrap; ">
 				<h7 class="text-left"
-					style="color: #444444; white-space: pre-line; margin-top:2rem; line-height:5rem; margin-left:5%;
+					style="color: #444444; white-space: pre-line; margin-top:0rem; line-height:3rem; margin-left:5%;
 						 font-weight:700; font-size: 1.5rem; width:95%; display:block; font-family:'Noto Sans KR';">${fn:replace(vo.bsum, replaceChar, "<br/>") }</h7>
 			</div>
 
@@ -128,7 +128,7 @@
 
 
 			<h2 class="text-left"
-				style="color: #444444; white-space: pre-line; margin-left:5%;margin-top: 2rem; line-height: 5rem; font-weight: 700; font-size: 1.5rem; width: 90%; display: block; font-family: 'Noto Sans KR';">
+				style="color: #444444; white-space: pre-line; margin-left:5%;margin-top: 1rem; line-height: 3rem; font-weight: 700; font-size: 1.5rem; width: 90%; display: block; font-family: 'Noto Sans KR';">
 				${fn:replace(vo.bcause, replaceChar, "<br/>") }</h2>
 
 
@@ -138,7 +138,7 @@
 
 			<div class="container" style="width: 90%; white-space: pre-wrap;">
 				<h5 class="text-left"
-					style="color: #444444; white-space: pre-line; margin-left:2%; width:80%; margin-top: 2rem;   font-weight: 700; font-size: 1.5rem; width: 90%; display: block; font-family: 'Noto Sans KR';">${fn:replace(vo.btreat, replaceChar, "<br/>") }</h5>
+					style="color: #444444; white-space: pre-line; margin-left:2%; width:80%; margin-top: 2rem;  line-height: 3rem; font-weight: 700; font-size: 1.5rem; width: 90%; display: block; font-family: 'Noto Sans KR';">${fn:replace(vo.btreat, replaceChar, "<br/>") }</h5>
 			</div>
 
 
@@ -147,7 +147,7 @@
 
 			<div class="container" style="width: 90%; white-space: pre-line;">
 				<h5 class="text-left"
-					style="color: #444444; white-space: pre-line; margin-left:5%; width:80%;  margin-top: 2rem; line-height: 5rem; margin-left:5%; font-weight: 700; font-size: 1.5rem; width: 100%; display: block; font-family: 'Noto Sans KR';">${fn:replace(vo.bcare, replaceChar, "<br/>") }</h5>
+					style="color: #444444; white-space: pre-line; margin-left:5%; width:80%;  margin-top: 2rem; line-height: 3rem; margin-left:5%; font-weight: 700; font-size: 1.5rem; width: 100%; display: block; font-family: 'Noto Sans KR';">${fn:replace(vo.bcare, replaceChar, "<br/>") }</h5>
 			</div>
 
 
@@ -195,10 +195,10 @@
 									<%-- 댓글 달기 폼 cno, mnick, bno, ccontent, cdate, ctype --%>
 									<input type="hidden" name="mnick" value="${ loginVO.mnick }">
 									<input type="hidden" name="bno" value="${ vo.bno }">
-									<div class="container" style="width:90%">
+									<div class="container" style="width:100%">
 										<div class="row">
 											<div class="col-3">${ loginVO.mnick }</div>
-											<div class="col"><textarea name="ccontent" rows="2" style="width:70%;"></textarea>
+											<div class="col-xs-8 col-md-6 col-lg-6"><textarea name="ccontent" rows="2" style="width:100%;"></textarea>
 												<button type="submit" class="btn btn-outline-dark">댓글작성</button></div>
 										</div>
 									</div>

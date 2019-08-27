@@ -87,14 +87,15 @@
 			background-blend-mode: darken;">	
 			
 			
-			<div class="text-center" style="margin-top:1rem; padding:0; white-space:nowrap; width:80%;  display:block; margin-bottom:1rem;  ">
-   <h5 id="title1"
-            >우리 댕댕이는<br>어떤 병을 조심해야 할까?</h5>
+			<div class="text-center" style="width:100%;display:block;  ">
+
+
+   <h5 id="title1" style="white-space:nowrap; display:block;"
+            >우리 <strong style="color:#85C0FF;  font-size:1.2em; ">댕댕이</strong>는<br>어떤 병을 조심해야 할까?</h5>
   <h5 id="title2"
-            >이제, 걱정마세요.</h5>
- </div>
- 
-			<div class="container ourstyle" style="width: 22rem; margin-bottom:10rem; diplay: inline;">
+            style="display:block;">이제, 걱정마세요.</h5>
+
+			<div class="container ourstyle" style="width: 22rem; margin-bottom:10rem; diplay: block;">
             <h1
                style="color:black; font-family:'Noto Sans KR'; font-weight: 700; margin: 0; padding: 0; font-size: 1.3rem;">회원가입</h1>
             <form:form  method="post" commandName="memberVO"
@@ -142,6 +143,8 @@
             <button type="submit" class="btn btn-block ourbutton2" onclick="location.href='${ pageContext.request.contextPath }/login'" style="font-weight:700;  margin-left:1rem;color:white; width:20rem; margin-bottom:1rem;  ">로그인</button>   
          </div>
       </div>
+       </div>
+ 
    </div>
    <footer>
       <jsp:include page="/WEB-INF/jsp/include/footer.jsp" />

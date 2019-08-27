@@ -85,12 +85,12 @@ color: #06BFBF;
 	  background-blend-mode: multiply;">
 	<div class="text-center" style="margin-top:0; padding:0; width:80%; margin-left:24%; display:block; margin-bottom:0;  ">
    <h5
-            style=" display: block; width:70%;white-space:pre-line; color: white; margin-top: 3rem; margin-bottom:0; font-weight: 700; font-size: 2.5rem; font-family: 'Noto Sans KR';">우리 댕댕이는 어떤 질병에 취약할까?</h5>
+            style=" display: block; width:70%;white-space:pre-line; color: white; margin-top: 3rem; margin-bottom:0; font-weight: 700; font-size: 2.5rem; font-family: 'Noto Sans KR';">우리 <strong style="color:#85C0FF; font-size:1.2em;">댕댕이</strong>는 어떤 질병에 취약할까?</h5>
   <h5
             style=" display: block; width:70%; white-space:pre-line; color: white; margin-top: 1rem; margin-bottom:3rem; font-weight: 700; font-size: 1.5rem; font-family: 'Noto Sans KR';">이제, 걱정마세요.</h5>
  </div>
 	<div style="width: 50em; text-align: center; background-color: rgba(255,255,255,0.9); padding: 1rem; border-radius: 1em; magin-top: 0; margin-bottom: 15rem;">
-	<h2 style="color: black; font-weight: 700;">마이페이지</h2>
+	<h2 style="color: black; font-weight: 100; font-size:3.2rem;font-family:'Black Han Sans';">마이페이지</h2>
 	<ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item">
     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">내 정보</a>
@@ -101,7 +101,7 @@ color: #06BFBF;
 </ul>
 <div class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab" style="text-align: left;">
-  	<h2 style="color:black;"><strong>${ loginVO.mnick }</strong> 님 안녕하세요</h2> <br>
+  	<h2 style="color:black;"><strong style="font-family:'Noto Sans KR';  font-size:1.2em; color:#42A0DE; ">${ loginVO.mnick }</strong> 님 안녕하세요</h2> <br>
   	<h2 style="color:black;">아이디 :<strong> ${ loginVO.mid }</strong></h2><br>
   	<h3 class="text-center"><a id="alink" href="${ pageContext.request.contextPath }/mypage/checkPwd">회원정보 수정하기</a></h3>
   </div>
@@ -142,5 +142,8 @@ color: #06BFBF;
 </div>
 	</div>
 	</div>
+	<footer>
+		<jsp:include page="/WEB-INF/jsp/include/footer.jsp" />
+	</footer>
 </body>
 </html>
