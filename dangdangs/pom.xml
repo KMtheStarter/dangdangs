@@ -43,7 +43,7 @@
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis</artifactId>
-			<version>3.5.2</version>
+			<version>3.5.6</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
 		<dependency>
@@ -67,7 +67,7 @@
 			<scope>test</scope>
 		</dependency>
 		
-		<!-- jdbc??maven?�서 ???�됨. 그럴 ??build path?�서 추�??�도 ?? -->
+		<!-- jdbc??maven?ì„œ ???ˆë¨. ê·¸ëŸ´ ??build path?ì„œ ì¶”ê??´ë„ ?? -->
 		<dependency>
 			<groupId>com.jslsolucoes</groupId>
 			<artifactId>ojdbc6</artifactId>
