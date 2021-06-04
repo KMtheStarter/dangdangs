@@ -67,7 +67,7 @@
 			<scope>test</scope>
 		</dependency>
 		
-		<!-- jdbc??maven?�서 ???�됨. 그럴 ??build path?�서 추�??�도 ?? -->
+		<!-- jdbc??maven?ì„œ ???ˆë¨. ê·¸ëŸ´ ??build path?ì„œ ì¶”ê??´ë„ ?? -->
 		<dependency>
 			<groupId>com.jslsolucoes</groupId>
 			<artifactId>ojdbc6</artifactId>
@@ -85,7 +85,7 @@
 		<dependency>
 			<groupId>org.hibernate.validator</groupId>
 			<artifactId>hibernate-validator</artifactId>
-			<version>6.0.18</version>
+			<version>6.0.20.Final</version>
 		</dependency>
 		
 		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
