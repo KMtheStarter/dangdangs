@@ -67,7 +67,7 @@
 			<scope>test</scope>
 		</dependency>
 		
-		<!-- jdbc??maven?�서 ???�됨. 그럴 ??build path?�서 추�??�도 ?? -->
+		<!-- jdbc??maven?ì„œ ???ˆë¨. ê·¸ëŸ´ ??build path?ì„œ ì¶”ê??´ë„ ?? -->
 		<dependency>
 			<groupId>com.jslsolucoes</groupId>
 			<artifactId>ojdbc6</artifactId>
@@ -98,7 +98,7 @@
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
-			<version>2.9.10.3</version>
+			<version>2.9.10.8</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations -->
 		<dependency>
